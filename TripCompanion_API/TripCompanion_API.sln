@@ -3,9 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API", "API\API.csproj", "{778135DB-2A3D-4F5A-8E26-A8EBE8C22163}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API", "API\API.csproj", "{778135DB-2A3D-4F5A-8E26-A8EBE8C22163}"
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "DB", "DB\DB.sqlproj", "{D8E3FE0C-C8C0-411C-B511-2B9578B0F713}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tools.DBConnections", "Tools.DBConnections\Tools.DBConnections.csproj", "{9D05C4B3-27C2-4A80-81EF-119A0CA6A79A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{A3F11BE4-0560-4A51-B76C-2E977DD59A7B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,6 +27,14 @@ Global
 		{D8E3FE0C-C8C0-411C-B511-2B9578B0F713}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D8E3FE0C-C8C0-411C-B511-2B9578B0F713}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D8E3FE0C-C8C0-411C-B511-2B9578B0F713}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{9D05C4B3-27C2-4A80-81EF-119A0CA6A79A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D05C4B3-27C2-4A80-81EF-119A0CA6A79A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D05C4B3-27C2-4A80-81EF-119A0CA6A79A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D05C4B3-27C2-4A80-81EF-119A0CA6A79A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3F11BE4-0560-4A51-B76C-2E977DD59A7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3F11BE4-0560-4A51-B76C-2E977DD59A7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3F11BE4-0560-4A51-B76C-2E977DD59A7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3F11BE4-0560-4A51-B76C-2E977DD59A7B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

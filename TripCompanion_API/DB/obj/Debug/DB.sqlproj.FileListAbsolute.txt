@@ -8,3 +8,9 @@ C:\Users\STG0765\Documents\PROJET FINAL\Projet_TripCompanion\TripCompanion_API\D
 C:\Users\STG0765\Documents\PROJET FINAL\Projet_TripCompanion\TripCompanion_API\DB\obj\Debug\predeploy.sql
 C:\Users\STG0765\Documents\PROJET FINAL\Projet_TripCompanion\TripCompanion_API\DB\obj\Debug\DB.dll
 C:\Users\STG0765\Documents\PROJET FINAL\Projet_TripCompanion\TripCompanion_API\DB\obj\Debug\DB.pdb
+C:\Users\STG0765\Documents\PROJET FINAL\Project_TripCompanion\TripCompanion_API\DB\bin\Debug\DB.dacpac
+C:\Users\STG0765\Documents\PROJET FINAL\Project_TripCompanion\TripCompanion_API\DB\bin\Debug\DB.dll
+C:\Users\STG0765\Documents\PROJET FINAL\Project_TripCompanion\TripCompanion_API\DB\bin\Debug\DB.pdb
+C:\Users\STG0765\Documents\PROJET FINAL\Project_TripCompanion\TripCompanion_API\DB\obj\Debug\DB.sqlproj.AssemblyReference.cache
+C:\Users\STG0765\Documents\PROJET FINAL\Project_TripCompanion\TripCompanion_API\DB\obj\Debug\DB.dll
+C:\Users\STG0765\Documents\PROJET FINAL\Project_TripCompanion\TripCompanion_API\DB\obj\Debug\DB.pdb
