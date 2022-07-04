@@ -1,7 +1,7 @@
 ﻿CREATE TABLE [dbo].[Trip]
 (
 	[IdTrip] INT NOT NULL identity,
-	[Name] VARCHAR(50) NOT NULL,
+	[Name] NVARCHAR(50) NOT NULL,
 	[StartingDate] DATE NOT NULL,
     [EndingDate] DATE NOT NULL,
     [Budget] int,

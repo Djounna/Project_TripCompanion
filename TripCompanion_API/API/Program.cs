@@ -1,3 +1,7 @@
+
+
+using Tools.Connections;
+
 namespace API
 {
     public class Program
@@ -12,6 +16,28 @@ namespace API
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+
+
+            // Config Injection
+            // - DB Connection
+            builder.Services.AddTransient<Connection>((service) =>
+            {
+                return new Connection(
+                    builder.Configuration.GetConnectionString("DBbf")
+                );
+            });
+
+
+            // DAL
+
+
+
+            // BLL
+
+
+
+
+
 
             var app = builder.Build();
 

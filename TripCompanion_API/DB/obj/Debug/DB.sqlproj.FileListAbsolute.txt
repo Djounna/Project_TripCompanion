@@ -14,3 +14,7 @@ C:\Users\STG0765\Documents\PROJET FINAL\Project_TripCompanion\TripCompanion_API\
 C:\Users\STG0765\Documents\PROJET FINAL\Project_TripCompanion\TripCompanion_API\DB\obj\Debug\DB.sqlproj.AssemblyReference.cache
 C:\Users\STG0765\Documents\PROJET FINAL\Project_TripCompanion\TripCompanion_API\DB\obj\Debug\DB.dll
 C:\Users\STG0765\Documents\PROJET FINAL\Project_TripCompanion\TripCompanion_API\DB\obj\Debug\DB.pdb
+C:\Users\STG0765\Documents\PROJET FINAL\Project_TripCompanion\TripCompanion_API\DB\obj\Debug\Model.xml
+C:\Users\STG0765\Documents\PROJET FINAL\Project_TripCompanion\TripCompanion_API\DB\obj\Debug\refactor.xml
+C:\Users\STG0765\Documents\PROJET FINAL\Project_TripCompanion\TripCompanion_API\DB\obj\Debug\postdeploy.sql
+C:\Users\STG0765\Documents\PROJET FINAL\Project_TripCompanion\TripCompanion_API\DB\obj\Debug\predeploy.sql
