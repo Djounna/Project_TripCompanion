@@ -14,6 +14,7 @@ namespace DAL.Entities
         public DateTime EndingDate { get; set; }
         public int? Budget { get; set; }
         public string? Comments { get; set; }
+        //FK
         public int IdUser { get; set; }
     }
 }

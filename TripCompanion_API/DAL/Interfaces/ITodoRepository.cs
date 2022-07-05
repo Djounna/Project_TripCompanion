@@ -9,6 +9,6 @@ namespace DAL.Interfaces
 {
     public interface ITodoRepository : IRepository<int, TodoEntity>
     {
-
+        TodoEntity GetByTodoname(string name);
     }
 }

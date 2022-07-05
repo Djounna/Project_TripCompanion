@@ -1,0 +1,5 @@
+﻿CREATE PROCEDURE [dbo].[GetAllTodo]
+	AS
+	SELECT * FROM [Todo];	
+RETURN 0
+

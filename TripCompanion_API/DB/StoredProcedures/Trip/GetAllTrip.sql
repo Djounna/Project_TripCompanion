@@ -1,0 +1,6 @@
+﻿CREATE PROCEDURE [dbo].[GetAllTrip]
+AS
+	SELECT * FROM [Trip];
+RETURN 0
+
+

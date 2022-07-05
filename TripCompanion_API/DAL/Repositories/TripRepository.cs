@@ -29,8 +29,8 @@ namespace DAL.Repositories
                 Name = (string)record["Name"],
                 StartingDate = (DateTime)record["StartingDate"],
                 EndingDate = (DateTime)record["EndingDate"],
-                Budget = (int)record["Budget"],
-                Comments = (string)record["Comments"]
+                Budget = record["Budget"] is DBNull ? null : (int)record["Budget"],
+                Comments = record["Comments"] is DBNull ? null : (string)record["Comments"]
                 
             };
         }

@@ -25,3 +25,15 @@ C:\Users\STG0765\Documents\PROJET FINAL\Project_TripCompanion\TripCompanion_API\
 C:\Users\STG0765\Documents\PROJET FINAL\Project_TripCompanion\TripCompanion_API\API\obj\Debug\net6.0\API.pdb
 C:\Users\STG0765\Documents\PROJET FINAL\Project_TripCompanion\TripCompanion_API\API\obj\Debug\net6.0\API.genruntimeconfig.cache
 C:\Users\STG0765\Documents\PROJET FINAL\Project_TripCompanion\TripCompanion_API\API\obj\Debug\net6.0\ref\API.dll
+C:\Users\STG0765\Documents\PROJET FINAL\Project_TripCompanion\TripCompanion_API\API\bin\Debug\net6.0\System.Data.SqlClient.dll
+C:\Users\STG0765\Documents\PROJET FINAL\Project_TripCompanion\TripCompanion_API\API\bin\Debug\net6.0\runtimes\win-arm64\native\sni.dll
+C:\Users\STG0765\Documents\PROJET FINAL\Project_TripCompanion\TripCompanion_API\API\bin\Debug\net6.0\runtimes\win-x64\native\sni.dll
+C:\Users\STG0765\Documents\PROJET FINAL\Project_TripCompanion\TripCompanion_API\API\bin\Debug\net6.0\runtimes\win-x86\native\sni.dll
+C:\Users\STG0765\Documents\PROJET FINAL\Project_TripCompanion\TripCompanion_API\API\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\STG0765\Documents\PROJET FINAL\Project_TripCompanion\TripCompanion_API\API\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\STG0765\Documents\PROJET FINAL\Project_TripCompanion\TripCompanion_API\API\bin\Debug\net6.0\BLL.dll
+C:\Users\STG0765\Documents\PROJET FINAL\Project_TripCompanion\TripCompanion_API\API\bin\Debug\net6.0\DAL.dll
+C:\Users\STG0765\Documents\PROJET FINAL\Project_TripCompanion\TripCompanion_API\API\bin\Debug\net6.0\Tools.DBConnections.dll
+C:\Users\STG0765\Documents\PROJET FINAL\Project_TripCompanion\TripCompanion_API\API\bin\Debug\net6.0\BLL.pdb
+C:\Users\STG0765\Documents\PROJET FINAL\Project_TripCompanion\TripCompanion_API\API\bin\Debug\net6.0\Tools.DBConnections.pdb
+C:\Users\STG0765\Documents\PROJET FINAL\Project_TripCompanion\TripCompanion_API\API\bin\Debug\net6.0\DAL.pdb

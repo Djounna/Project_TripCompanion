@@ -13,6 +13,7 @@ namespace DAL.Entities
         public int? Budget { get; set; }
         public double? Time { get; set; }
         public string? Comments { get; set; }
+        //FK
         public int IdTrip { get; set; }
     }
 }

@@ -1,0 +1,5 @@
+﻿CREATE PROCEDURE [dbo].[GetAllUser]
+	
+AS
+	SELECT * FROM [User];
+RETURN 0

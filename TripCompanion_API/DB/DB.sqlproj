@@ -57,6 +57,11 @@
   <ItemGroup>
     <Folder Include="Properties" />
     <Folder Include="Tables" />
+    <Folder Include="StoredProcedures" />
+    <Folder Include="StoredProcedures\User" />
+    <Folder Include="StoredProcedures\Step" />
+    <Folder Include="StoredProcedures\Trip" />
+    <Folder Include="StoredProcedures\Todo" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\User.sql" />
@@ -67,5 +72,22 @@
     <Build Include="Tables\AttachmentStep.sql" />
     <Build Include="Tables\AttachmentTodo.sql" />
     <Build Include="Tables\Role.sql" />
+    <Build Include="StoredProcedures\User\GetAllUser.sql" />
+    <Build Include="StoredProcedures\Step\GetAllStep.sql" />
+    <Build Include="StoredProcedures\Todo\GetAllTodo.sql" />
+    <Build Include="StoredProcedures\Trip\GetAllTrip.sql" />
+    <Build Include="StoredProcedures\User\GetUserById.sql" />
+    <Build Include="StoredProcedures\Step\GetStepById.sql" />
+    <Build Include="StoredProcedures\Trip\GetTripById.sql" />
+    <Build Include="StoredProcedures\Todo\GetTodoById.sql" />
+    <Build Include="StoredProcedures\User\DeleteUser.sql" />
+    <Build Include="StoredProcedures\Step\DeleteStep.sql" />
+    <Build Include="StoredProcedures\Trip\DeleteTrip.sql" />
+    <Build Include="StoredProcedures\Todo\DeleteTodo.sql" />
+    <Build Include="StoredProcedures\User\GetUserByUsername.sql" />
+    <Build Include="StoredProcedures\Step\GetStepByStepname.sql" />
+    <Build Include="StoredProcedures\Trip\GetTripByTripname.sql" />
+    <Build Include="StoredProcedures\Todo\GetTodoByTodoname.sql" />
+    <Build Include="StoredProcedures\User\CheckUserExists.sql" />
   </ItemGroup>
 </Project>

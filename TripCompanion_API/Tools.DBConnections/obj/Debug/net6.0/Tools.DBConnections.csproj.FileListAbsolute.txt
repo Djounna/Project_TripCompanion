@@ -1,0 +1,12 @@
+C:\Users\STG0765\Documents\PROJET FINAL\Project_TripCompanion\TripCompanion_API\Tools.DBConnections\bin\Debug\net6.0\Tools.DBConnections.deps.json
+C:\Users\STG0765\Documents\PROJET FINAL\Project_TripCompanion\TripCompanion_API\Tools.DBConnections\bin\Debug\net6.0\Tools.DBConnections.dll
+C:\Users\STG0765\Documents\PROJET FINAL\Project_TripCompanion\TripCompanion_API\Tools.DBConnections\bin\Debug\net6.0\Tools.DBConnections.pdb
+C:\Users\STG0765\Documents\PROJET FINAL\Project_TripCompanion\TripCompanion_API\Tools.DBConnections\obj\Debug\net6.0\Tools.DBConnections.csproj.AssemblyReference.cache
+C:\Users\STG0765\Documents\PROJET FINAL\Project_TripCompanion\TripCompanion_API\Tools.DBConnections\obj\Debug\net6.0\Tools.DBConnections.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\STG0765\Documents\PROJET FINAL\Project_TripCompanion\TripCompanion_API\Tools.DBConnections\obj\Debug\net6.0\Tools.DBConnections.AssemblyInfoInputs.cache
+C:\Users\STG0765\Documents\PROJET FINAL\Project_TripCompanion\TripCompanion_API\Tools.DBConnections\obj\Debug\net6.0\Tools.DBConnections.AssemblyInfo.cs
+C:\Users\STG0765\Documents\PROJET FINAL\Project_TripCompanion\TripCompanion_API\Tools.DBConnections\obj\Debug\net6.0\Tools.DBConnections.csproj.CoreCompileInputs.cache
+C:\Users\STG0765\Documents\PROJET FINAL\Project_TripCompanion\TripCompanion_API\Tools.DBConnections\obj\Debug\net6.0\Tools.DBConnections.dll
+C:\Users\STG0765\Documents\PROJET FINAL\Project_TripCompanion\TripCompanion_API\Tools.DBConnections\obj\Debug\net6.0\refint\Tools.DBConnections.dll
+C:\Users\STG0765\Documents\PROJET FINAL\Project_TripCompanion\TripCompanion_API\Tools.DBConnections\obj\Debug\net6.0\Tools.DBConnections.pdb
+C:\Users\STG0765\Documents\PROJET FINAL\Project_TripCompanion\TripCompanion_API\Tools.DBConnections\obj\Debug\net6.0\ref\Tools.DBConnections.dll

@@ -202,6 +202,32 @@
           }
         }
       },
+      "BLL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "DAL": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/BLL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BLL.dll": {}
+        }
+      },
+      "DAL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Tools.DBConnections": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/DAL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DAL.dll": {}
+        }
+      },
       "Tools.DBConnections/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -656,6 +682,16 @@
         "version.txt"
       ]
     },
+    "BLL/1.0.0": {
+      "type": "project",
+      "path": "../BLL/BLL.csproj",
+      "msbuildProject": "../BLL/BLL.csproj"
+    },
+    "DAL/1.0.0": {
+      "type": "project",
+      "path": "../DAL/DAL.csproj",
+      "msbuildProject": "../DAL/DAL.csproj"
+    },
     "Tools.DBConnections/1.0.0": {
       "type": "project",
       "path": "../Tools.DBConnections/Tools.DBConnections.csproj",
@@ -664,6 +700,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "BLL >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.2.3",
       "Tools.DBConnections >= 1.0.0"
     ]
@@ -696,6 +733,9 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
+            "C:\\Users\\STG0765\\Documents\\PROJET FINAL\\Project_TripCompanion\\TripCompanion_API\\BLL\\BLL.csproj": {
+              "projectPath": "C:\\Users\\STG0765\\Documents\\PROJET FINAL\\Project_TripCompanion\\TripCompanion_API\\BLL\\BLL.csproj"
+            },
             "C:\\Users\\STG0765\\Documents\\PROJET FINAL\\Project_TripCompanion\\TripCompanion_API\\Tools.DBConnections\\Tools.DBConnections.csproj": {
               "projectPath": "C:\\Users\\STG0765\\Documents\\PROJET FINAL\\Project_TripCompanion\\TripCompanion_API\\Tools.DBConnections\\Tools.DBConnections.csproj"
             }

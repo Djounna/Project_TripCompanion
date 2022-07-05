@@ -9,5 +9,6 @@ namespace DAL.Interfaces
 {
     public interface IStepRepository : IRepository<int, StepEntity>
     {
+        StepEntity GetByStepname(string name);
     }
 }

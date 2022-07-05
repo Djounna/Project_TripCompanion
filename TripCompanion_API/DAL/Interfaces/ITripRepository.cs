@@ -9,5 +9,6 @@ namespace DAL.Interfaces
 {
     public interface ITripRepository : IRepository<int, TripEntity>
     {
+        TripEntity GetByTripname(string Tripname);
     }
 }
