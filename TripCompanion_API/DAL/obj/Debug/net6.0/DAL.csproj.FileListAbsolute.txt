@@ -13,3 +13,18 @@ C:\Users\STG0765\Documents\PROJET FINAL\Project_TripCompanion\TripCompanion_API\
 C:\Users\STG0765\Documents\PROJET FINAL\Project_TripCompanion\TripCompanion_API\DAL\obj\Debug\net6.0\refint\DAL.dll
 C:\Users\STG0765\Documents\PROJET FINAL\Project_TripCompanion\TripCompanion_API\DAL\obj\Debug\net6.0\DAL.pdb
 C:\Users\STG0765\Documents\PROJET FINAL\Project_TripCompanion\TripCompanion_API\DAL\obj\Debug\net6.0\ref\DAL.dll
+C:\Users\Corentin\Documents\CODE\Project_TripCompanion\TripCompanion_API\DAL\bin\Debug\net6.0\DAL.deps.json
+C:\Users\Corentin\Documents\CODE\Project_TripCompanion\TripCompanion_API\DAL\bin\Debug\net6.0\DAL.dll
+C:\Users\Corentin\Documents\CODE\Project_TripCompanion\TripCompanion_API\DAL\bin\Debug\net6.0\DAL.pdb
+C:\Users\Corentin\Documents\CODE\Project_TripCompanion\TripCompanion_API\DAL\bin\Debug\net6.0\Tools.DBConnections.dll
+C:\Users\Corentin\Documents\CODE\Project_TripCompanion\TripCompanion_API\DAL\bin\Debug\net6.0\Tools.DBConnections.pdb
+C:\Users\Corentin\Documents\CODE\Project_TripCompanion\TripCompanion_API\DAL\obj\Debug\net6.0\DAL.csproj.AssemblyReference.cache
+C:\Users\Corentin\Documents\CODE\Project_TripCompanion\TripCompanion_API\DAL\obj\Debug\net6.0\DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Corentin\Documents\CODE\Project_TripCompanion\TripCompanion_API\DAL\obj\Debug\net6.0\DAL.AssemblyInfoInputs.cache
+C:\Users\Corentin\Documents\CODE\Project_TripCompanion\TripCompanion_API\DAL\obj\Debug\net6.0\DAL.AssemblyInfo.cs
+C:\Users\Corentin\Documents\CODE\Project_TripCompanion\TripCompanion_API\DAL\obj\Debug\net6.0\DAL.csproj.CoreCompileInputs.cache
+C:\Users\Corentin\Documents\CODE\Project_TripCompanion\TripCompanion_API\DAL\obj\Debug\net6.0\DAL.csproj.CopyComplete
+C:\Users\Corentin\Documents\CODE\Project_TripCompanion\TripCompanion_API\DAL\obj\Debug\net6.0\DAL.dll
+C:\Users\Corentin\Documents\CODE\Project_TripCompanion\TripCompanion_API\DAL\obj\Debug\net6.0\refint\DAL.dll
+C:\Users\Corentin\Documents\CODE\Project_TripCompanion\TripCompanion_API\DAL\obj\Debug\net6.0\DAL.pdb
+C:\Users\Corentin\Documents\CODE\Project_TripCompanion\TripCompanion_API\DAL\obj\Debug\net6.0\ref\DAL.dll

@@ -89,5 +89,11 @@
     <Build Include="StoredProcedures\Trip\GetTripByTripname.sql" />
     <Build Include="StoredProcedures\Todo\GetTodoByTodoname.sql" />
     <Build Include="StoredProcedures\User\CheckUserExists.sql" />
+    <Build Include="StoredProcedures\User\CreateUser.sql" />
+    <Build Include="StoredProcedures\User\UpdateUser.sql" />
+    <Build Include="StoredProcedures\Trip\CreateTrip.sql" />
+    <Build Include="StoredProcedures\Trip\UpdateTrip.sql" />
+    <Build Include="StoredProcedures\Step\CreateStep.sql" />
+    <Build Include="StoredProcedures\Step\UpdateStep.sql" />
   </ItemGroup>
 </Project>
