@@ -300,6 +300,671 @@ RETURN 0]]></Value>
 				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[CheckUserExists]&#xD;&#xA;&#x9;@Username nvarchar(50),&#xD;&#xA;&#x9;@Email nvarchar(50)&#xD;&#xA;AS" />
 			</Annotation>
 		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[CreateStep]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+	Insert into [Step](IdTrip, Name, Budget, Time, Comments)
+	Output Inserted.IdStep
+	Values (@IdTrip, @Name, @Budget, @Time, @Comments)
+RETURN 0]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Step]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Step].[IdTrip]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Step].[Name]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Step].[Budget]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Step].[Time]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Step].[Comments]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[CreateStep].[@IdTrip]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[CreateStep].[@Name]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[CreateStep].[@Budget]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[CreateStep].[@Time]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[CreateStep].[@Comments]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Step].[IdStep]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CreateStep].[@IdTrip]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CreateStep].[@Name]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CreateStep].[@Budget]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CreateStep].[@Time]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="2" />
+									<Property Name="Precision" Value="4" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CreateStep].[@Comments]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[text]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="280" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[CreateStep]&#xD;&#xA;&#x9;@IdTrip int,&#xD;&#xA;&#x9;@Name nvarchar(50),&#xD;&#xA;&#x9;@Budget int,&#xD;&#xA;&#x9;@Time decimal(4,2),&#xD;&#xA;&#x9;@Comments Text&#xD;&#xA;&#x9;&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[CreateTodo]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+	Insert into [Todo](IdMainTodo, Name, Done, Status, Type, Priority, Calendar, 
+	Location, PlannedTime, PlannedBudget, Comments)
+	Output inserted.IdTodo
+	Values (@IdMainTodo, @Name, @Done, @Status, @Type, @Priority, @Calendar, @Location,
+	@PlannedTime, @PlannedBudget, @Comments);
+RETURN 0]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Todo]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Todo].[IdMainTodo]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Todo].[Name]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Todo].[Done]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Todo].[Status]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Todo].[Type]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Todo].[Priority]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Todo].[Calendar]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Todo].[Location]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Todo].[PlannedTime]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Todo].[PlannedBudget]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Todo].[Comments]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[CreateTodo].[@IdMainTodo]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[CreateTodo].[@Name]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[CreateTodo].[@Done]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[CreateTodo].[@Status]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[CreateTodo].[@Type]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[CreateTodo].[@Priority]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[CreateTodo].[@Calendar]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[CreateTodo].[@Location]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[CreateTodo].[@PlannedTime]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[CreateTodo].[@PlannedBudget]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[CreateTodo].[@Comments]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Todo].[IdTodo]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CreateTodo].[@IdMainTodo]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CreateTodo].[@Name]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CreateTodo].[@Done]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CreateTodo].[@Status]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CreateTodo].[@Type]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CreateTodo].[@Priority]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CreateTodo].[@Calendar]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CreateTodo].[@Location]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CreateTodo].[@PlannedTime]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="2" />
+									<Property Name="Precision" Value="4" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CreateTodo].[@PlannedBudget]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CreateTodo].[@Comments]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[text]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="581" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[CreateTodo]&#xD;&#xA;&#x9;@IdMainTodo int,&#xD;&#xA;&#x9;@Name nvarchar(50),&#xD;&#xA;&#x9;@Done bit,&#xD;&#xA;&#x9;@Status nvarchar(50),&#xD;&#xA;&#x9;@Type nvarchar(50),&#xD;&#xA;&#x9;@Priority nvarchar(50),&#xD;&#xA;&#x9;@Calendar Datetime,&#xD;&#xA;&#x9;@Location nvarchar(50),&#xD;&#xA;&#x9;@PlannedTime decimal(4,2),&#xD;&#xA;&#x9;@PlannedBudget int,&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;@Comments Text&#xD;&#xA;&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[CreateTrip]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+	Insert into [Trip](Name, StartingDate, EndingDate, Budget, Comments, IdUser)
+	Output inserted.IdTrip
+	Values (@Name, @StartingDate, @EndingDate, @Budget, @Comments, @IdUser)
+RETURN 0]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Trip]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Trip].[Name]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Trip].[StartingDate]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Trip].[EndingDate]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Trip].[Budget]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Trip].[Comments]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Trip].[IdUser]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[CreateTrip].[@Name]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[CreateTrip].[@StartingDate]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[CreateTrip].[@EndingDate]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[CreateTrip].[@Budget]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[CreateTrip].[@Comments]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[CreateTrip].[@IdUser]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Trip].[IdTrip]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CreateTrip].[@Name]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CreateTrip].[@StartingDate]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[date]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CreateTrip].[@EndingDate]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[date]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CreateTrip].[@Budget]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CreateTrip].[@Comments]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[text]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CreateTrip].[@IdUser]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="340" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[CreateTrip]&#xD;&#xA;&#x9;@Name nvarchar(50),&#xD;&#xA;&#x9;@StartingDate Date,&#xD;&#xA;&#x9;@EndingDate Date,&#xD;&#xA;&#x9;@Budget int,&#xD;&#xA;&#x9;@Comments Text,&#xD;&#xA;&#x9;@IdUser int&#xD;&#xA;&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[CreateUser]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+	Insert into [User](Username, Email, Password) 
+	Output inserted.IdUser 
+	Values (@Username, @Email, @Password);
+RETURN 0]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[User]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[User].[Username]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[User].[Email]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[User].[Password]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[CreateUser].[@Username]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[CreateUser].[@Email]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[CreateUser].[@Password]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[User].[IdUser]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CreateUser].[@Username]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CreateUser].[@Email]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CreateUser].[@Password]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="239" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[CreateUser]&#xD;&#xA;&#x9;@Username nvarchar(50),&#xD;&#xA;&#x9;@Email nvarchar(50),&#xD;&#xA;&#x9;@Password nvarchar(50)&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
 		<Element Type="SqlProcedure" Name="[dbo].[DeleteStep]">
 			<Property Name="BodyScript">
 				<Value><![CDATA[
@@ -1925,6 +2590,766 @@ RETURN 0]]></Value>
 				</Entry>
 			</Relationship>
 			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="23" />
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[UpdateStep]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+	Update [Step]
+	Set IdTrip=@IdTrip, Name=@Name, Budget=@Budget, Time=@Time, Comments=@Comments 
+	Where IdStep = @IdStep
+RETURN 0]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Step]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Step].[IdTrip]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpdateStep].[@IdTrip]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Step].[Name]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpdateStep].[@Name]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Step].[Budget]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpdateStep].[@Budget]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Step].[Time]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpdateStep].[@Time]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Step].[Comments]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpdateStep].[@Comments]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Step].[IdStep]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpdateStep].[@IdStep]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpdateStep].[@IdStep]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpdateStep].[@IdTrip]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpdateStep].[@Name]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpdateStep].[@Budget]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpdateStep].[@Time]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="2" />
+									<Property Name="Precision" Value="4" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpdateStep].[@Comments]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[text]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="283" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[UpdateStep]&#xD;&#xA;&#x9;@IdStep int,&#xD;&#xA;&#x9;@IdTrip int,&#xD;&#xA;&#xD;&#xA;&#x9;@Name nvarchar(50),&#xD;&#xA;&#x9;@Budget int,&#xD;&#xA;&#x9;@Time decimal(4,2),&#xD;&#xA;&#x9;@Comments Text&#xD;&#xA;&#x9;&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[UpdateTodo]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+	Update [Todo]
+	Set IdMainTodo=@IdMainTodo, Name=@Name, Done=@Done, Status=@Status, Type=@Type,
+	Priority=@Priority, Calendar=@Calendar, Location=@Location, RealTime=@RealTime, RealBudget=@RealBudget,
+	PlannedTime=@PlannedTime, PlannedBudget=@PlannedBudget, Comments=@Comments
+	Where IdTodo=@IdTodo;
+RETURN 0]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Todo]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Todo].[IdMainTodo]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpdateTodo].[@IdMainTodo]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Todo].[Name]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpdateTodo].[@Name]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Todo].[Done]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpdateTodo].[@Done]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Todo].[Status]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpdateTodo].[@Status]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Todo].[Type]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpdateTodo].[@Type]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Todo].[Priority]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpdateTodo].[@Priority]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Todo].[Calendar]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpdateTodo].[@Calendar]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Todo].[Location]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpdateTodo].[@Location]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Todo].[RealTime]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpdateTodo].[@RealTime]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Todo].[RealBudget]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpdateTodo].[@RealBudget]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Todo].[PlannedTime]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpdateTodo].[@PlannedTime]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Todo].[PlannedBudget]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpdateTodo].[@PlannedBudget]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Todo].[Comments]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpdateTodo].[@Comments]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Todo].[IdTodo]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpdateTodo].[@IdTodo]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpdateTodo].[@IdTodo]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpdateTodo].[@IdMainTodo]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpdateTodo].[@Name]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpdateTodo].[@Done]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpdateTodo].[@Status]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpdateTodo].[@Type]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpdateTodo].[@Priority]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpdateTodo].[@Calendar]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpdateTodo].[@Location]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpdateTodo].[@PlannedTime]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="2" />
+									<Property Name="Precision" Value="4" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpdateTodo].[@PlannedBudget]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpdateTodo].[@RealTime]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="2" />
+									<Property Name="Precision" Value="4" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpdateTodo].[@RealBudget]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpdateTodo].[@Comments]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[text]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="656" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[UpdateTodo]&#xD;&#xA;&#x9;@IdTodo int,&#xD;&#xA;&#x9;@IdMainTodo int,&#xD;&#xA;&#x9;@Name nvarchar(50),&#xD;&#xA;&#x9;@Done bit,&#xD;&#xA;&#x9;@Status nvarchar(50),&#xD;&#xA;&#x9;@Type nvarchar(50),&#xD;&#xA;&#x9;@Priority nvarchar(50),&#xD;&#xA;&#x9;@Calendar Datetime,&#xD;&#xA;&#x9;@Location nvarchar(50),&#xD;&#xA;&#x9;@PlannedTime decimal(4,2),&#xD;&#xA;&#x9;@PlannedBudget int,&#xD;&#xA;&#x9;@RealTime decimal(4,2),&#xD;&#xA;&#x9;@RealBudget int,&#xD;&#xA;&#x9;@Comments Text&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[UpdateTrip]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+	Update [Trip]
+	Set Name=@Name, StartingDate=@StartingDate, EndingDate=@EndingDate, Budget=@Budget, Comments=@Comments
+	Where IdTrip = @IdTrip
+RETURN 0]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Trip]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Trip].[Name]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpdateTrip].[@Name]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Trip].[StartingDate]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpdateTrip].[@StartingDate]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Trip].[EndingDate]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpdateTrip].[@EndingDate]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Trip].[Budget]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpdateTrip].[@Budget]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Trip].[Comments]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpdateTrip].[@Comments]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Trip].[IdTrip]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpdateTrip].[@IdTrip]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpdateTrip].[@IdTrip]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpdateTrip].[@Name]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpdateTrip].[@StartingDate]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[date]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpdateTrip].[@EndingDate]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[date]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpdateTrip].[@Budget]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpdateTrip].[@Comments]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[text]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="309" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[UpdateTrip]&#xD;&#xA;&#x9;@IdTrip int,&#xD;&#xA;&#x9;@Name nvarchar(50),&#xD;&#xA;&#x9;@StartingDate Date,&#xD;&#xA;&#x9;@EndingDate Date,&#xD;&#xA;&#x9;@Budget int,&#xD;&#xA;&#x9;@Comments Text&#xD;&#xA;&#x9;&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[UpdateUser]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+	Update [User]
+	Set Username=@Username, Email=@Email, Password=@Password
+	Where IdUser=@Id;
+RETURN 0]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[User]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[User].[Username]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpdateUser].[@Username]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[User].[Email]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpdateUser].[@Email]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[User].[Password]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpdateUser].[@Password]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[User].[IdUser]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpdateUser].[@Id]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpdateUser].[@Id]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpdateUser].[@Username]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpdateUser].[@Email]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpdateUser].[@Password]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="229" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[UpdateUser]&#xD;&#xA;&#x9;@Id int,&#xD;&#xA;&#x9;@Username nvarchar(50),&#xD;&#xA;&#x9;@Email nvarchar(50),&#xD;&#xA;&#x9;@Password nvarchar(50)&#xD;&#xA;AS" />
+			</Annotation>
 		</Element>
 		<Element Type="SqlTable" Name="[dbo].[User]">
 			<Property Name="IsAnsiNullsOn" Value="True" />

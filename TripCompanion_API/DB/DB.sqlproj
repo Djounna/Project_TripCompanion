@@ -62,6 +62,7 @@
     <Folder Include="StoredProcedures\Step" />
     <Folder Include="StoredProcedures\Trip" />
     <Folder Include="StoredProcedures\Todo" />
+    <Folder Include="Scripts" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\User.sql" />
@@ -95,5 +96,10 @@
     <Build Include="StoredProcedures\Trip\UpdateTrip.sql" />
     <Build Include="StoredProcedures\Step\CreateStep.sql" />
     <Build Include="StoredProcedures\Step\UpdateStep.sql" />
+    <Build Include="StoredProcedures\Todo\CreateTodo.sql" />
+    <Build Include="StoredProcedures\Todo\UpdateTodo.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Scripts\Seed.sql" />
   </ItemGroup>
 </Project>

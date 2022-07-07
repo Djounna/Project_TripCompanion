@@ -8,6 +8,6 @@
 	
 AS
 	Update [Trip]
-	Set Name=@Name, StartingDate=@StartingDate, EndingDate=@EndingDate, Budget=@Budget, Comments=@Comments)
+	Set [Name]=@Name, [StartingDate]=@StartingDate, [EndingDate]=@EndingDate, [Budget]=@Budget, [Comments]=@Comments
 	Where IdTrip = @IdTrip
 RETURN 0

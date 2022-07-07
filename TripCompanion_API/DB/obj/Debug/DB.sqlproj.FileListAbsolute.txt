@@ -22,9 +22,9 @@ C:\Users\Corentin\Documents\CODE\Project_TripCompanion\TripCompanion_API\DB\bin\
 C:\Users\Corentin\Documents\CODE\Project_TripCompanion\TripCompanion_API\DB\bin\Debug\DB.dll
 C:\Users\Corentin\Documents\CODE\Project_TripCompanion\TripCompanion_API\DB\bin\Debug\DB.pdb
 C:\Users\Corentin\Documents\CODE\Project_TripCompanion\TripCompanion_API\DB\obj\Debug\DB.sqlproj.AssemblyReference.cache
+C:\Users\Corentin\Documents\CODE\Project_TripCompanion\TripCompanion_API\DB\obj\Debug\DB.dll
+C:\Users\Corentin\Documents\CODE\Project_TripCompanion\TripCompanion_API\DB\obj\Debug\DB.pdb
 C:\Users\Corentin\Documents\CODE\Project_TripCompanion\TripCompanion_API\DB\obj\Debug\Model.xml
 C:\Users\Corentin\Documents\CODE\Project_TripCompanion\TripCompanion_API\DB\obj\Debug\refactor.xml
 C:\Users\Corentin\Documents\CODE\Project_TripCompanion\TripCompanion_API\DB\obj\Debug\postdeploy.sql
 C:\Users\Corentin\Documents\CODE\Project_TripCompanion\TripCompanion_API\DB\obj\Debug\predeploy.sql
-C:\Users\Corentin\Documents\CODE\Project_TripCompanion\TripCompanion_API\DB\obj\Debug\DB.dll
-C:\Users\Corentin\Documents\CODE\Project_TripCompanion\TripCompanion_API\DB\obj\Debug\DB.pdb

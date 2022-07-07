@@ -5,6 +5,6 @@
 	@Password nvarchar(50)
 AS
 	Update [User]
-	Set Username=@Username, Email=@Email, Password=@Password
+	Set [Username]=@Username, [Email]=@Email, [Password]=@Password
 	Where IdUser=@Id;
 RETURN 0
