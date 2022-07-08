@@ -98,6 +98,7 @@
     <Build Include="StoredProcedures\Step\UpdateStep.sql" />
     <Build Include="StoredProcedures\Todo\CreateTodo.sql" />
     <Build Include="StoredProcedures\Todo\UpdateTodo.sql" />
+    <Build Include="StoredProcedures\User\GetPasswordHashByUsername.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Scripts\Seed.sql" />

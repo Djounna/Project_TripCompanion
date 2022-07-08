@@ -26,12 +26,33 @@ namespace API.Controllers
         {
             return Ok(userService.GetByName(username).ToApi());
         }
+
+
+        [HttpGet]
+        [Route("/{username}/{password}")]
+        public IActionResult GetCredentials(string username, string password)
+        {
+            UserApiModel? user = userService.GetByCredentials(username, password).ToApi();
+
+            if (user != null)
+            {
+                return Ok(user);
+            }
+            else
+            {
+                return BadRequest(); 
+            }
+        }
+
         [HttpPost]      
         public IActionResult AddUser(UserApiModel user)
         {
-            if (userService.Insert(user.ToDto()))
+
+            UserApiModel? receivedUser = userService.Insert(user.ToDto()).ToApi();
+
+            if (receivedUser != null)
             {
-                return Ok(user);
+                return Ok(receivedUser);
             }
             else
             {
@@ -50,9 +71,7 @@ namespace API.Controllers
                 return new BadRequestObjectResult(user);  //return BadRequest();
             }
         }
-
         [HttpDelete]
-
         public IActionResult DeleteUser(int id)
         {
             if (userService.Delete(id))

@@ -2,6 +2,40 @@
   "version": 3,
   "targets": {
     "net6.0": {
+      "Isopoh.Cryptography.Argon2/1.1.12": {
+        "type": "package",
+        "dependencies": {
+          "Isopoh.Cryptography.Blake2b": "1.1.12",
+          "Isopoh.Cryptography.SecureArray": "1.1.12"
+        },
+        "compile": {
+          "lib/net6.0/Isopoh.Cryptography.Argon2.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Isopoh.Cryptography.Argon2.dll": {}
+        }
+      },
+      "Isopoh.Cryptography.Blake2b/1.1.12": {
+        "type": "package",
+        "dependencies": {
+          "Isopoh.Cryptography.SecureArray": "1.1.12"
+        },
+        "compile": {
+          "lib/net6.0/Isopoh.Cryptography.Blake2b.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Isopoh.Cryptography.Blake2b.dll": {}
+        }
+      },
+      "Isopoh.Cryptography.SecureArray/1.1.12": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Isopoh.Cryptography.SecureArray.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Isopoh.Cryptography.SecureArray.dll": {}
+        }
+      },
       "Microsoft.Extensions.ApiDescription.Server/3.0.0": {
         "type": "package",
         "build": {
@@ -206,7 +240,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "DAL": "1.0.0"
+          "DAL": "1.0.0",
+          "Isopoh.Cryptography.Argon2": "1.1.12"
         },
         "compile": {
           "bin/placeholder/BLL.dll": {}
@@ -244,6 +279,63 @@
     }
   },
   "libraries": {
+    "Isopoh.Cryptography.Argon2/1.1.12": {
+      "sha512": "WlQhRLUV5zKiH3G+hP28nyJtmyqHITwhdxqc/946A2fBix7EvVoKJ4Mr35S6f/OJW052mvG+n+Ysvb/yU5uj8w==",
+      "type": "package",
+      "path": "isopoh.cryptography.argon2/1.1.12",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "isopoh.cryptography.argon2.1.1.12.nupkg.sha512",
+        "isopoh.cryptography.argon2.nuspec",
+        "isopoh.png",
+        "lib/net6.0/Isopoh.Cryptography.Argon2.dll",
+        "lib/net6.0/Isopoh.Cryptography.Argon2.xml",
+        "lib/netcoreapp3.1/Isopoh.Cryptography.Argon2.dll",
+        "lib/netcoreapp3.1/Isopoh.Cryptography.Argon2.xml",
+        "lib/netstandard2.0/Isopoh.Cryptography.Argon2.dll",
+        "lib/netstandard2.0/Isopoh.Cryptography.Argon2.xml"
+      ]
+    },
+    "Isopoh.Cryptography.Blake2b/1.1.12": {
+      "sha512": "JY1E1BZt4BzP+pOvASgzBv+ol8eBj575TkCV18l5qqgsIlJSsGU1n2be/O2OHk8UIqvRfNz6Y17MZKjls5p1xw==",
+      "type": "package",
+      "path": "isopoh.cryptography.blake2b/1.1.12",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "isopoh.cryptography.blake2b.1.1.12.nupkg.sha512",
+        "isopoh.cryptography.blake2b.nuspec",
+        "isopoh.png",
+        "lib/net6.0/Isopoh.Cryptography.Blake2b.dll",
+        "lib/net6.0/Isopoh.Cryptography.Blake2b.xml",
+        "lib/netcoreapp3.1/Isopoh.Cryptography.Blake2b.dll",
+        "lib/netcoreapp3.1/Isopoh.Cryptography.Blake2b.xml",
+        "lib/netstandard2.0/Isopoh.Cryptography.Blake2b.dll",
+        "lib/netstandard2.0/Isopoh.Cryptography.Blake2b.xml"
+      ]
+    },
+    "Isopoh.Cryptography.SecureArray/1.1.12": {
+      "sha512": "WQfgOnftqBsYYKznZoQHHzVOvra2bnlBT0VNZCTbu3fuWznvn8qRAl6bg1N7eD2NwlPL6fHIahxxAD372gn9CQ==",
+      "type": "package",
+      "path": "isopoh.cryptography.securearray/1.1.12",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "isopoh.cryptography.securearray.1.1.12.nupkg.sha512",
+        "isopoh.cryptography.securearray.nuspec",
+        "isopoh.png",
+        "lib/net6.0/Isopoh.Cryptography.SecureArray.dll",
+        "lib/net6.0/Isopoh.Cryptography.SecureArray.xml",
+        "lib/netcoreapp3.1/Isopoh.Cryptography.SecureArray.dll",
+        "lib/netcoreapp3.1/Isopoh.Cryptography.SecureArray.xml",
+        "lib/netstandard2.0/Isopoh.Cryptography.SecureArray.dll",
+        "lib/netstandard2.0/Isopoh.Cryptography.SecureArray.xml"
+      ]
+    },
     "Microsoft.Extensions.ApiDescription.Server/3.0.0": {
       "sha512": "LH4OE/76F6sOCslif7+Xh3fS/wUUrE5ryeXAMcoCnuwOQGT5Smw0p57IgDh/pHgHaGz/e+AmEQb7pRgb++wt0w==",
       "type": "package",

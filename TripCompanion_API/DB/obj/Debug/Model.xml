@@ -962,7 +962,7 @@ RETURN 0]]></Value>
 						<Relationship Name="Type">
 							<Entry>
 								<Element Type="SqlTypeSpecifier">
-									<Property Name="Length" Value="50" />
+									<Property Name="Length" Value="100" />
 									<Relationship Name="Type">
 										<Entry>
 											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
@@ -980,10 +980,10 @@ RETURN 0]]></Value>
 				</Entry>
 			</Relationship>
 			<Annotation Type="SysCommentsObjectAnnotation">
-				<Property Name="Length" Value="245" />
+				<Property Name="Length" Value="246" />
 				<Property Name="StartLine" Value="1" />
 				<Property Name="StartColumn" Value="1" />
-				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[CreateUser]&#xD;&#xA;&#x9;@Username nvarchar(50),&#xD;&#xA;&#x9;@Email nvarchar(50),&#xD;&#xA;&#x9;@Password nvarchar(50)&#xD;&#xA;AS" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[CreateUser]&#xD;&#xA;&#x9;@Username nvarchar(50),&#xD;&#xA;&#x9;@Email nvarchar(50),&#xD;&#xA;&#x9;@Password nvarchar(100)&#xD;&#xA;AS" />
 			</Annotation>
 		</Element>
 		<Element Type="SqlProcedure" Name="[dbo].[DeleteStep]">
@@ -1383,6 +1383,57 @@ RETURN 0]]></Value>
 				<Property Name="StartLine" Value="1" />
 				<Property Name="StartColumn" Value="1" />
 				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[GetAllUser]&#xD;&#xA;&#x9;&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[GetPasswordHashByUsername]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+	SELECT [Password] FROM [User] WHERE [Username] = @Username;
+RETURN 0]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[User]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[User].[Password]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[User].[Username]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[GetPasswordHashByUsername].[@Username]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[GetPasswordHashByUsername].[@Username]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="151" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[GetPasswordHashByUsername]&#xD;&#xA;&#x9;@Username nvarchar(50)&#xD;&#xA;AS" />
 			</Annotation>
 		</Element>
 		<Element Type="SqlProcedure" Name="[dbo].[GetStepById]">
@@ -3348,7 +3399,7 @@ RETURN 0]]></Value>
 						<Relationship Name="Type">
 							<Entry>
 								<Element Type="SqlTypeSpecifier">
-									<Property Name="Length" Value="50" />
+									<Property Name="Length" Value="100" />
 									<Relationship Name="Type">
 										<Entry>
 											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
@@ -3366,10 +3417,10 @@ RETURN 0]]></Value>
 				</Entry>
 			</Relationship>
 			<Annotation Type="SysCommentsObjectAnnotation">
-				<Property Name="Length" Value="235" />
+				<Property Name="Length" Value="236" />
 				<Property Name="StartLine" Value="1" />
 				<Property Name="StartColumn" Value="1" />
-				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[UpdateUser]&#xD;&#xA;&#x9;@Id int,&#xD;&#xA;&#x9;@Username nvarchar(50),&#xD;&#xA;&#x9;@Email nvarchar(50),&#xD;&#xA;&#x9;@Password nvarchar(50)&#xD;&#xA;AS" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[UpdateUser]&#xD;&#xA;&#x9;@Id int,&#xD;&#xA;&#x9;@Username nvarchar(50),&#xD;&#xA;&#x9;@Email nvarchar(50),&#xD;&#xA;&#x9;@Password nvarchar(100)&#xD;&#xA;AS" />
 			</Annotation>
 		</Element>
 		<Element Type="SqlTable" Name="[dbo].[User]">
@@ -3415,7 +3466,7 @@ RETURN 0]]></Value>
 						<Relationship Name="TypeSpecifier">
 							<Entry>
 								<Element Type="SqlTypeSpecifier">
-									<Property Name="Length" Value="50" />
+									<Property Name="Length" Value="100" />
 									<Relationship Name="Type">
 										<Entry>
 											<References ExternalSource="BuiltIns" Name="[nvarchar]" />

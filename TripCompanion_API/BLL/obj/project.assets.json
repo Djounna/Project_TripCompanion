@@ -2,6 +2,40 @@
   "version": 3,
   "targets": {
     "net6.0": {
+      "Isopoh.Cryptography.Argon2/1.1.12": {
+        "type": "package",
+        "dependencies": {
+          "Isopoh.Cryptography.Blake2b": "1.1.12",
+          "Isopoh.Cryptography.SecureArray": "1.1.12"
+        },
+        "compile": {
+          "lib/net6.0/Isopoh.Cryptography.Argon2.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Isopoh.Cryptography.Argon2.dll": {}
+        }
+      },
+      "Isopoh.Cryptography.Blake2b/1.1.12": {
+        "type": "package",
+        "dependencies": {
+          "Isopoh.Cryptography.SecureArray": "1.1.12"
+        },
+        "compile": {
+          "lib/net6.0/Isopoh.Cryptography.Blake2b.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Isopoh.Cryptography.Blake2b.dll": {}
+        }
+      },
+      "Isopoh.Cryptography.SecureArray/1.1.12": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Isopoh.Cryptography.SecureArray.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Isopoh.Cryptography.SecureArray.dll": {}
+        }
+      },
       "Microsoft.NETCore.Platforms/3.1.0": {
         "type": "package",
         "compile": {
@@ -160,6 +194,63 @@
     }
   },
   "libraries": {
+    "Isopoh.Cryptography.Argon2/1.1.12": {
+      "sha512": "WlQhRLUV5zKiH3G+hP28nyJtmyqHITwhdxqc/946A2fBix7EvVoKJ4Mr35S6f/OJW052mvG+n+Ysvb/yU5uj8w==",
+      "type": "package",
+      "path": "isopoh.cryptography.argon2/1.1.12",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "isopoh.cryptography.argon2.1.1.12.nupkg.sha512",
+        "isopoh.cryptography.argon2.nuspec",
+        "isopoh.png",
+        "lib/net6.0/Isopoh.Cryptography.Argon2.dll",
+        "lib/net6.0/Isopoh.Cryptography.Argon2.xml",
+        "lib/netcoreapp3.1/Isopoh.Cryptography.Argon2.dll",
+        "lib/netcoreapp3.1/Isopoh.Cryptography.Argon2.xml",
+        "lib/netstandard2.0/Isopoh.Cryptography.Argon2.dll",
+        "lib/netstandard2.0/Isopoh.Cryptography.Argon2.xml"
+      ]
+    },
+    "Isopoh.Cryptography.Blake2b/1.1.12": {
+      "sha512": "JY1E1BZt4BzP+pOvASgzBv+ol8eBj575TkCV18l5qqgsIlJSsGU1n2be/O2OHk8UIqvRfNz6Y17MZKjls5p1xw==",
+      "type": "package",
+      "path": "isopoh.cryptography.blake2b/1.1.12",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "isopoh.cryptography.blake2b.1.1.12.nupkg.sha512",
+        "isopoh.cryptography.blake2b.nuspec",
+        "isopoh.png",
+        "lib/net6.0/Isopoh.Cryptography.Blake2b.dll",
+        "lib/net6.0/Isopoh.Cryptography.Blake2b.xml",
+        "lib/netcoreapp3.1/Isopoh.Cryptography.Blake2b.dll",
+        "lib/netcoreapp3.1/Isopoh.Cryptography.Blake2b.xml",
+        "lib/netstandard2.0/Isopoh.Cryptography.Blake2b.dll",
+        "lib/netstandard2.0/Isopoh.Cryptography.Blake2b.xml"
+      ]
+    },
+    "Isopoh.Cryptography.SecureArray/1.1.12": {
+      "sha512": "WQfgOnftqBsYYKznZoQHHzVOvra2bnlBT0VNZCTbu3fuWznvn8qRAl6bg1N7eD2NwlPL6fHIahxxAD372gn9CQ==",
+      "type": "package",
+      "path": "isopoh.cryptography.securearray/1.1.12",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "isopoh.cryptography.securearray.1.1.12.nupkg.sha512",
+        "isopoh.cryptography.securearray.nuspec",
+        "isopoh.png",
+        "lib/net6.0/Isopoh.Cryptography.SecureArray.dll",
+        "lib/net6.0/Isopoh.Cryptography.SecureArray.xml",
+        "lib/netcoreapp3.1/Isopoh.Cryptography.SecureArray.dll",
+        "lib/netcoreapp3.1/Isopoh.Cryptography.SecureArray.xml",
+        "lib/netstandard2.0/Isopoh.Cryptography.SecureArray.dll",
+        "lib/netstandard2.0/Isopoh.Cryptography.SecureArray.xml"
+      ]
+    },
     "Microsoft.NETCore.Platforms/3.1.0": {
       "sha512": "z7aeg8oHln2CuNulfhiLYxCVMPEwBl3rzicjvIX+4sUuCwvXw5oXQEtbiU2c0z4qYL5L3Kmx0mMA/+t/SbY67w==",
       "type": "package",
@@ -486,7 +577,8 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "DAL >= 1.0.0"
+      "DAL >= 1.0.0",
+      "Isopoh.Cryptography.Argon2 >= 1.1.12"
     ]
   },
   "packageFolders": {
@@ -532,6 +624,12 @@
     "frameworks": {
       "net6.0": {
         "targetAlias": "net6.0",
+        "dependencies": {
+          "Isopoh.Cryptography.Argon2": {
+            "target": "Package",
+            "version": "[1.1.12, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",

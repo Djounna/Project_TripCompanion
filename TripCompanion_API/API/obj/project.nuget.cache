@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "QzE3RjOhcoAzuPql6GCBphXRBM2KFSZR0bOB+xVdvaavH86WbkfVt+ouzuxFhTFIKZ6FgQTn5QP7w18aViAdeA==",
+  "dgSpecHash": "LG4AWmBhiIkHTQDcYmMSFXRUW994gwQ4pXl//FshwwpHUrEwHq4oLJY2DeYYMsWG2mm4Op5AMSH3SKiwHvwPWw==",
   "success": true,
   "projectFilePath": "C:\\Users\\STG0765\\Documents\\PROJET FINAL\\Project_TripCompanion\\TripCompanion_API\\API\\API.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\STG0765\\.nuget\\packages\\isopoh.cryptography.argon2\\1.1.12\\isopoh.cryptography.argon2.1.1.12.nupkg.sha512",
+    "C:\\Users\\STG0765\\.nuget\\packages\\isopoh.cryptography.blake2b\\1.1.12\\isopoh.cryptography.blake2b.1.1.12.nupkg.sha512",
+    "C:\\Users\\STG0765\\.nuget\\packages\\isopoh.cryptography.securearray\\1.1.12\\isopoh.cryptography.securearray.1.1.12.nupkg.sha512",
     "C:\\Users\\STG0765\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\STG0765\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\STG0765\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",

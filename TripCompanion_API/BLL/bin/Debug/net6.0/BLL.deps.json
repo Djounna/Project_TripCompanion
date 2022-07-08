@@ -8,10 +8,42 @@
     ".NETCoreApp,Version=v6.0": {
       "BLL/1.0.0": {
         "dependencies": {
-          "DAL": "1.0.0"
+          "DAL": "1.0.0",
+          "Isopoh.Cryptography.Argon2": "1.1.12"
         },
         "runtime": {
           "BLL.dll": {}
+        }
+      },
+      "Isopoh.Cryptography.Argon2/1.1.12": {
+        "dependencies": {
+          "Isopoh.Cryptography.Blake2b": "1.1.12",
+          "Isopoh.Cryptography.SecureArray": "1.1.12"
+        },
+        "runtime": {
+          "lib/net6.0/Isopoh.Cryptography.Argon2.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Isopoh.Cryptography.Blake2b/1.1.12": {
+        "dependencies": {
+          "Isopoh.Cryptography.SecureArray": "1.1.12"
+        },
+        "runtime": {
+          "lib/net6.0/Isopoh.Cryptography.Blake2b.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Isopoh.Cryptography.SecureArray/1.1.12": {
+        "runtime": {
+          "lib/net6.0/Isopoh.Cryptography.SecureArray.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "Microsoft.NETCore.Platforms/3.1.0": {},
@@ -112,6 +144,27 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Isopoh.Cryptography.Argon2/1.1.12": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-WlQhRLUV5zKiH3G+hP28nyJtmyqHITwhdxqc/946A2fBix7EvVoKJ4Mr35S6f/OJW052mvG+n+Ysvb/yU5uj8w==",
+      "path": "isopoh.cryptography.argon2/1.1.12",
+      "hashPath": "isopoh.cryptography.argon2.1.1.12.nupkg.sha512"
+    },
+    "Isopoh.Cryptography.Blake2b/1.1.12": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-JY1E1BZt4BzP+pOvASgzBv+ol8eBj575TkCV18l5qqgsIlJSsGU1n2be/O2OHk8UIqvRfNz6Y17MZKjls5p1xw==",
+      "path": "isopoh.cryptography.blake2b/1.1.12",
+      "hashPath": "isopoh.cryptography.blake2b.1.1.12.nupkg.sha512"
+    },
+    "Isopoh.Cryptography.SecureArray/1.1.12": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-WQfgOnftqBsYYKznZoQHHzVOvra2bnlBT0VNZCTbu3fuWznvn8qRAl6bg1N7eD2NwlPL6fHIahxxAD372gn9CQ==",
+      "path": "isopoh.cryptography.securearray/1.1.12",
+      "hashPath": "isopoh.cryptography.securearray.1.1.12.nupkg.sha512"
     },
     "Microsoft.NETCore.Platforms/3.1.0": {
       "type": "package",

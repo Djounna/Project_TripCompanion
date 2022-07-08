@@ -57,9 +57,9 @@ namespace DAL.Repositories
             return (int)_Connection.ExecuteScalar(cmd) == 1;
         }
 
-        public string? GetPasswordHash(string username) // A voir
+        public string? GetPasswordHash(string username) 
         {
-            CommandSP cmd = new CommandSP($"Get{TableName}PasswordHashByUsername");
+            CommandSP cmd = new CommandSP($"GetPasswordHashByUsername");
             cmd.AddParameter("Username", username);
 
             return _Connection.ExecuteScalar(cmd)?.ToString();
