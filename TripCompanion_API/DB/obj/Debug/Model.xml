@@ -303,7 +303,7 @@ RETURN 0]]></Value>
 		<Element Type="SqlProcedure" Name="[dbo].[CreateStep]">
 			<Property Name="BodyScript">
 				<Value><![CDATA[
-	Insert into [Step](IdTrip, Name, Budget, Time, Comments)
+	Insert into [Step]([IdTrip], [Name], [Budget], [Time], [Comments])
 	Output Inserted.IdStep
 	Values (@IdTrip, @Name, @Budget, @Time, @Comments)
 RETURN 0]]></Value>
@@ -433,7 +433,7 @@ RETURN 0]]></Value>
 				</Entry>
 			</Relationship>
 			<Annotation Type="SysCommentsObjectAnnotation">
-				<Property Name="Length" Value="280" />
+				<Property Name="Length" Value="290" />
 				<Property Name="StartLine" Value="1" />
 				<Property Name="StartColumn" Value="1" />
 				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[CreateStep]&#xD;&#xA;&#x9;@IdTrip int,&#xD;&#xA;&#x9;@Name nvarchar(50),&#xD;&#xA;&#x9;@Budget int,&#xD;&#xA;&#x9;@Time decimal(4,2),&#xD;&#xA;&#x9;@Comments Text&#xD;&#xA;&#x9;&#xD;&#xA;AS" />
@@ -442,8 +442,8 @@ RETURN 0]]></Value>
 		<Element Type="SqlProcedure" Name="[dbo].[CreateTodo]">
 			<Property Name="BodyScript">
 				<Value><![CDATA[
-	Insert into [Todo](IdMainTodo, Name, Done, Status, Type, Priority, Calendar, 
-	Location, PlannedTime, PlannedBudget, Comments)
+	Insert into [Todo]([IdMainTodo], [Name], [Done], [Status], [Type], [Priority], [Calendar], 
+	[Location], [PlannedTime], [PlannedBudget], [Comments])
 	Output inserted.IdTodo
 	Values (@IdMainTodo, @Name, @Done, @Status, @Type, @Priority, @Calendar, @Location,
 	@PlannedTime, @PlannedBudget, @Comments);
@@ -704,7 +704,7 @@ RETURN 0]]></Value>
 				</Entry>
 			</Relationship>
 			<Annotation Type="SysCommentsObjectAnnotation">
-				<Property Name="Length" Value="581" />
+				<Property Name="Length" Value="603" />
 				<Property Name="StartLine" Value="1" />
 				<Property Name="StartColumn" Value="1" />
 				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[CreateTodo]&#xD;&#xA;&#x9;@IdMainTodo int,&#xD;&#xA;&#x9;@Name nvarchar(50),&#xD;&#xA;&#x9;@Done bit,&#xD;&#xA;&#x9;@Status nvarchar(50),&#xD;&#xA;&#x9;@Type nvarchar(50),&#xD;&#xA;&#x9;@Priority nvarchar(50),&#xD;&#xA;&#x9;@Calendar Datetime,&#xD;&#xA;&#x9;@Location nvarchar(50),&#xD;&#xA;&#x9;@PlannedTime decimal(4,2),&#xD;&#xA;&#x9;@PlannedBudget int,&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;@Comments Text&#xD;&#xA;&#xD;&#xA;AS" />
@@ -713,7 +713,7 @@ RETURN 0]]></Value>
 		<Element Type="SqlProcedure" Name="[dbo].[CreateTrip]">
 			<Property Name="BodyScript">
 				<Value><![CDATA[
-	Insert into [Trip](Name, StartingDate, EndingDate, Budget, Comments, IdUser)
+	Insert into [Trip]([Name], [StartingDate], [EndingDate], [Budget], [Comments], [IdUser])
 	Output inserted.IdTrip
 	Values (@Name, @StartingDate, @EndingDate, @Budget, @Comments, @IdUser)
 RETURN 0]]></Value>
@@ -862,7 +862,7 @@ RETURN 0]]></Value>
 				</Entry>
 			</Relationship>
 			<Annotation Type="SysCommentsObjectAnnotation">
-				<Property Name="Length" Value="340" />
+				<Property Name="Length" Value="352" />
 				<Property Name="StartLine" Value="1" />
 				<Property Name="StartColumn" Value="1" />
 				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[CreateTrip]&#xD;&#xA;&#x9;@Name nvarchar(50),&#xD;&#xA;&#x9;@StartingDate Date,&#xD;&#xA;&#x9;@EndingDate Date,&#xD;&#xA;&#x9;@Budget int,&#xD;&#xA;&#x9;@Comments Text,&#xD;&#xA;&#x9;@IdUser int&#xD;&#xA;&#xD;&#xA;AS" />
@@ -871,7 +871,7 @@ RETURN 0]]></Value>
 		<Element Type="SqlProcedure" Name="[dbo].[CreateUser]">
 			<Property Name="BodyScript">
 				<Value><![CDATA[
-	Insert into [User](Username, Email, Password) 
+	Insert into [User]([Username], [Email], [Password]) 
 	Output inserted.IdUser 
 	Values (@Username, @Email, @Password);
 RETURN 0]]></Value>
@@ -959,7 +959,7 @@ RETURN 0]]></Value>
 				</Entry>
 			</Relationship>
 			<Annotation Type="SysCommentsObjectAnnotation">
-				<Property Name="Length" Value="239" />
+				<Property Name="Length" Value="245" />
 				<Property Name="StartLine" Value="1" />
 				<Property Name="StartColumn" Value="1" />
 				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[CreateUser]&#xD;&#xA;&#x9;@Username nvarchar(50),&#xD;&#xA;&#x9;@Email nvarchar(50),&#xD;&#xA;&#x9;@Password nvarchar(50)&#xD;&#xA;AS" />
@@ -2595,8 +2595,8 @@ RETURN 0]]></Value>
 			<Property Name="BodyScript">
 				<Value><![CDATA[
 	Update [Step]
-	Set IdTrip=@IdTrip, Name=@Name, Budget=@Budget, Time=@Time, Comments=@Comments 
-	Where IdStep = @IdStep
+	Set [IdTrip]=@IdTrip, [Name]=@Name, [Budget]=@Budget, [Time]=@Time, [Comments]=@Comments 
+	Where [IdStep] = @IdStep
 RETURN 0]]></Value>
 			</Property>
 			<Property Name="IsAnsiNullsOn" Value="True" />
@@ -2742,7 +2742,7 @@ RETURN 0]]></Value>
 				</Entry>
 			</Relationship>
 			<Annotation Type="SysCommentsObjectAnnotation">
-				<Property Name="Length" Value="283" />
+				<Property Name="Length" Value="295" />
 				<Property Name="StartLine" Value="1" />
 				<Property Name="StartColumn" Value="1" />
 				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[UpdateStep]&#xD;&#xA;&#x9;@IdStep int,&#xD;&#xA;&#x9;@IdTrip int,&#xD;&#xA;&#xD;&#xA;&#x9;@Name nvarchar(50),&#xD;&#xA;&#x9;@Budget int,&#xD;&#xA;&#x9;@Time decimal(4,2),&#xD;&#xA;&#x9;@Comments Text&#xD;&#xA;&#x9;&#xD;&#xA;AS" />
@@ -2752,10 +2752,10 @@ RETURN 0]]></Value>
 			<Property Name="BodyScript">
 				<Value><![CDATA[
 	Update [Todo]
-	Set IdMainTodo=@IdMainTodo, Name=@Name, Done=@Done, Status=@Status, Type=@Type,
-	Priority=@Priority, Calendar=@Calendar, Location=@Location, RealTime=@RealTime, RealBudget=@RealBudget,
-	PlannedTime=@PlannedTime, PlannedBudget=@PlannedBudget, Comments=@Comments
-	Where IdTodo=@IdTodo;
+	Set [IdMainTodo]=@IdMainTodo, [Name]=@Name, [Done]=@Done, [Status]=@Status, [Type]=@Type,
+	[Priority]=@Priority, [Calendar]=@Calendar, [Location]=@Location, [RealTime]=@RealTime, [RealBudget]=@RealBudget,
+	[PlannedTime]=@PlannedTime, [PlannedBudget]=@PlannedBudget, [Comments]=@Comments
+	Where [IdTodo]=@IdTodo;
 RETURN 0]]></Value>
 			</Property>
 			<Property Name="IsAnsiNullsOn" Value="True" />
@@ -3075,7 +3075,7 @@ RETURN 0]]></Value>
 				</Entry>
 			</Relationship>
 			<Annotation Type="SysCommentsObjectAnnotation">
-				<Property Name="Length" Value="656" />
+				<Property Name="Length" Value="684" />
 				<Property Name="StartLine" Value="1" />
 				<Property Name="StartColumn" Value="1" />
 				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[UpdateTodo]&#xD;&#xA;&#x9;@IdTodo int,&#xD;&#xA;&#x9;@IdMainTodo int,&#xD;&#xA;&#x9;@Name nvarchar(50),&#xD;&#xA;&#x9;@Done bit,&#xD;&#xA;&#x9;@Status nvarchar(50),&#xD;&#xA;&#x9;@Type nvarchar(50),&#xD;&#xA;&#x9;@Priority nvarchar(50),&#xD;&#xA;&#x9;@Calendar Datetime,&#xD;&#xA;&#x9;@Location nvarchar(50),&#xD;&#xA;&#x9;@PlannedTime decimal(4,2),&#xD;&#xA;&#x9;@PlannedBudget int,&#xD;&#xA;&#x9;@RealTime decimal(4,2),&#xD;&#xA;&#x9;@RealBudget int,&#xD;&#xA;&#x9;@Comments Text&#xD;&#xA;AS" />
@@ -3085,7 +3085,7 @@ RETURN 0]]></Value>
 			<Property Name="BodyScript">
 				<Value><![CDATA[
 	Update [Trip]
-	Set Name=@Name, StartingDate=@StartingDate, EndingDate=@EndingDate, Budget=@Budget, Comments=@Comments
+	Set [Name]=@Name, [StartingDate]=@StartingDate, [EndingDate]=@EndingDate, [Budget]=@Budget, [Comments]=@Comments
 	Where IdTrip = @IdTrip
 RETURN 0]]></Value>
 			</Property>
@@ -3230,7 +3230,7 @@ RETURN 0]]></Value>
 				</Entry>
 			</Relationship>
 			<Annotation Type="SysCommentsObjectAnnotation">
-				<Property Name="Length" Value="309" />
+				<Property Name="Length" Value="319" />
 				<Property Name="StartLine" Value="1" />
 				<Property Name="StartColumn" Value="1" />
 				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[UpdateTrip]&#xD;&#xA;&#x9;@IdTrip int,&#xD;&#xA;&#x9;@Name nvarchar(50),&#xD;&#xA;&#x9;@StartingDate Date,&#xD;&#xA;&#x9;@EndingDate Date,&#xD;&#xA;&#x9;@Budget int,&#xD;&#xA;&#x9;@Comments Text&#xD;&#xA;&#x9;&#xD;&#xA;AS" />
@@ -3240,7 +3240,7 @@ RETURN 0]]></Value>
 			<Property Name="BodyScript">
 				<Value><![CDATA[
 	Update [User]
-	Set Username=@Username, Email=@Email, Password=@Password
+	Set [Username]=@Username, [Email]=@Email, [Password]=@Password
 	Where IdUser=@Id;
 RETURN 0]]></Value>
 			</Property>
@@ -3345,7 +3345,7 @@ RETURN 0]]></Value>
 				</Entry>
 			</Relationship>
 			<Annotation Type="SysCommentsObjectAnnotation">
-				<Property Name="Length" Value="229" />
+				<Property Name="Length" Value="235" />
 				<Property Name="StartLine" Value="1" />
 				<Property Name="StartColumn" Value="1" />
 				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[UpdateUser]&#xD;&#xA;&#x9;@Id int,&#xD;&#xA;&#x9;@Username nvarchar(50),&#xD;&#xA;&#x9;@Email nvarchar(50),&#xD;&#xA;&#x9;@Password nvarchar(50)&#xD;&#xA;AS" />
