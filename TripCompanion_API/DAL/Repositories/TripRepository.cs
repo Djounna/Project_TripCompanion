@@ -26,11 +26,13 @@ namespace DAL.Repositories
             return new TripEntity()
             {
                 IdTrip = (int)record[TableId],
+                IdUser = (int)record["IdUser"],
                 Name = (string)record["Name"],
                 StartingDate = (DateTime)record["StartingDate"],
                 EndingDate = (DateTime)record["EndingDate"],
                 Budget = record["Budget"] is DBNull ? null : (int)record["Budget"],
                 Comments = record["Comments"] is DBNull ? null : (string)record["Comments"]
+                
                 
             };
         }

@@ -11,43 +11,43 @@ Post-Deployment Script Template
 */
 
 use [TripCompanion];
-Go;
+Go
 
 -- User --
 Set Identity_Insert [User] On;
-Go;
+Go
 
 Insert into [User] ([IdUser],[Username],[Password],[Email])
-Values (1, "Test", "Test", "test.test@test.test"),
-       (2, "Corentin","Corentin","corentin.corentin@test.test");
+Values (1, 'Test', 'Test', 'test.test@test.test'),
+       (2, 'Corentin','Corentin','corentin.corentin@test.test');
 
 Set Identity_Insert [User] Off;
-Go;
+Go
 
 Set Identity_Insert [Trip] On;
-Go;
+Go
 
 Insert into [Trip] ([IdTrip],[IdUser],[Name],[StartingDate],[EndingDate])
-Values(1,2,"France",01/09/2022,21/09/2022);
+Values(1,2,'France','2022-09-01','2022-09-21');
 
 Set Identity_Insert [Trip] Off;
-Go;
+Go
 
 Set Identity_Insert [Step] On;
-Go;
+Go
 
 Insert Into [Step]([IdStep],[IdTrip],[Name])
-Values (1,1,"Paris");
+Values (1,1,'Paris');
 
 Set Identity_Insert [Step] Off;
-Go;
+Go
 
 Set Identity_Insert [Todo] On;
-Go;
+Go
 
 Insert Into [Todo]([IdTodo],[IdStep],[Name],[Done],[Status])
-Values (1, 1, "MontMartre", 0, "Actif"),
-        (2,1, "Notre-Dame", 0, "Inactif");
+Values (1, 1, 'MontMartre', 0, 'Actif'),
+        (2,1, 'Notre-Dame', 0, 'Inactif');
 
 Set Identity_Insert [Todo] Off;
-Go;
+Go

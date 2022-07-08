@@ -1,4 +1,5 @@
 ﻿CREATE PROCEDURE [dbo].[CreateTodo]
+	@IdStep int,
 	@IdMainTodo int,
 	@Name nvarchar(50),
 	@Done bit,
@@ -13,9 +14,9 @@
 	@Comments Text
 
 AS
-	Insert into [Todo]([IdMainTodo], [Name], [Done], [Status], [Type], [Priority], [Calendar], 
+	Insert into [Todo]([IdStep],[IdMainTodo], [Name], [Done], [Status], [Type], [Priority], [Calendar], 
 	[Location], [PlannedTime], [PlannedBudget], [Comments])
 	Output inserted.IdTodo
-	Values (@IdMainTodo, @Name, @Done, @Status, @Type, @Priority, @Calendar, @Location,
+	Values (@IdStep, @IdMainTodo, @Name, @Done, @Status, @Type, @Priority, @Calendar, @Location,
 	@PlannedTime, @PlannedBudget, @Comments);
 RETURN 0

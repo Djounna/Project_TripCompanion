@@ -15,11 +15,12 @@ namespace BLL.Mappers
             return new StepDTO()
             {
                 IdStep = entity.IdStep,
+                IdTrip = entity.IdTrip,
                 Name = entity.Name,
                 Budget = entity.Budget,
                 Time = entity.Time,
-                Comments = entity.Comments,
-                IdTrip = entity.IdTrip              
+                Comments = entity.Comments
+                             
             };
         }
 
@@ -28,11 +29,12 @@ namespace BLL.Mappers
             return new StepEntity()
             {
                 IdStep = dto.IdStep,
+                IdTrip = dto.IdTrip,
                 Name = dto.Name,
                 Budget= dto.Budget,
                 Time= dto.Time,
-                Comments= dto.Comments,
-                IdTrip= dto.IdTrip     
+                Comments= dto.Comments
+                   
             };
         }
 

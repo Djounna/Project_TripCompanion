@@ -24,10 +24,13 @@ namespace DAL.Repositories
         {
             return new StepEntity()
             {
+                IdStep = (int)record[TableId],
+                IdTrip = (int)record["IdTrip"],
                 Name = (string)record["Name"],
                 Budget = record["Budget"] is DBNull ? null : (int)record["Budget"],
                 Time = record["Time"] is DBNull ? null : (double)record["Time"],              
                 Comments = record["Comments"] is DBNull ? null : (string)record["Comments"]
+               
             };
         }
         #endregion
@@ -41,6 +44,7 @@ namespace DAL.Repositories
             cmd.AddParameter("Budget", entity.Budget);
             cmd.AddParameter("Time", entity.Time);
             cmd.AddParameter("Comments", entity.Comments);
+            cmd.AddParameter("IdTrip", entity.IdTrip);
 
             return (int)_Connection.ExecuteScalar(cmd);
         }

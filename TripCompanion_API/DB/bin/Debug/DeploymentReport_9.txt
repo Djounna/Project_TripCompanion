@@ -1,0 +1,54 @@
+﻿** Met en surbrillance
+     Tables à reconstruire
+       Aucun
+     Index ordonnés en clusters à supprimer
+       Aucun
+     Index ordonnés en clusters à créer.
+       Aucun
+     Problèmes de données possibles
+       Aucun
+
+** Actions de l'utilisateur
+     Créer
+       [dbo].[AttachmentStep] (Table)
+       [dbo].[AttachmentTodo] (Table)
+       [dbo].[AttachmentTrip] (Table)
+       [dbo].[Role] (Table)
+       [dbo].[Step] (Table)
+       [dbo].[Todo] (Table)
+       [dbo].[Trip] (Table)
+       [dbo].[User] (Table)
+       [dbo].[FK_AttachementStep__Step] (Clé étrangère)
+       [dbo].[FK_AttachmentTodo__Todo] (Clé étrangère)
+       [dbo].[FK_AttachmentTrip__Trip] (Clé étrangère)
+       [dbo].[FK_Step__IdTrip] (Clé étrangère)
+       [dbo].[PK_Todo__IdStep] (Clé étrangère)
+       [dbo].[PK_Todo__IdMainTodo] (Clé étrangère)
+       [dbo].[FK_Trip__IdUser] (Clé étrangère)
+       [dbo].[CheckUserExists] (Procédure)
+       [dbo].[CreateStep] (Procédure)
+       [dbo].[CreateTodo] (Procédure)
+       [dbo].[CreateTrip] (Procédure)
+       [dbo].[CreateUser] (Procédure)
+       [dbo].[DeleteStep] (Procédure)
+       [dbo].[DeleteTodo] (Procédure)
+       [dbo].[DeleteTrip] (Procédure)
+       [dbo].[DeleteUser] (Procédure)
+       [dbo].[GetAllStep] (Procédure)
+       [dbo].[GetAllTodo] (Procédure)
+       [dbo].[GetAllTrip] (Procédure)
+       [dbo].[GetAllUser] (Procédure)
+       [dbo].[GetStepById] (Procédure)
+       [dbo].[GetStepByStepname] (Procédure)
+       [dbo].[GetTodoById] (Procédure)
+       [dbo].[GetTodoByTodoname] (Procédure)
+       [dbo].[GetTripById] (Procédure)
+       [dbo].[GetTripByTripname] (Procédure)
+       [dbo].[GetUserById] (Procédure)
+       [dbo].[GetUserByUsername] (Procédure)
+       [dbo].[UpdateStep] (Procédure)
+       [dbo].[UpdateTodo] (Procédure)
+       [dbo].[UpdateTrip] (Procédure)
+       [dbo].[UpdateUser] (Procédure)
+
+** Actions de support

@@ -15,12 +15,13 @@ namespace BLL.Mappers
             return new TripDTO()
             {
                 IdTrip = entity.IdTrip,
+                IdUser = entity.IdUser,
                 Name = entity.Name,
                 StartingDate = entity.StartingDate,
                 EndingDate = entity.EndingDate,
                 Budget = entity.Budget,
-                Comments = entity.Comments,
-                IdUser = entity.IdUser,
+                Comments = entity.Comments
+                
             };
         }
 
@@ -29,12 +30,13 @@ namespace BLL.Mappers
             return new TripEntity()
             {
                 IdTrip = dto.IdTrip,
+                IdUser = dto.IdUser,
                 Name = dto.Name,
                 StartingDate= dto.StartingDate,
                 EndingDate= dto.EndingDate,
                 Budget= dto.Budget,
-                Comments= dto.Comments,
-                IdUser= dto.IdUser,            
+                Comments= dto.Comments
+                          
             };
         }
     }

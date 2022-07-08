@@ -12,7 +12,7 @@
 		</CustomData>
 		<CustomData Category="Reference" Type="Assembly">
 			<Metadata Name="LogicalName" Value="DB.dll" />
-			<Metadata Name="FileName" Value="C:\USERS\CORENTIN\DOCUMENTS\CODE\PROJECT_TRIPCOMPANION\TRIPCOMPANION_API\DB\OBJ\DEBUG\DB.DLL" />
+			<Metadata Name="FileName" Value="C:\USERS\STG0765\DOCUMENTS\PROJET FINAL\PROJECT_TRIPCOMPANION\TRIPCOMPANION_API\DB\OBJ\DEBUG\DB.DLL" />
 			<Metadata Name="AssemblyName" Value="DB" />
 			<Metadata Name="PermissionSet" Value="SAFE" />
 			<Metadata Name="Owner" Value="" />
@@ -20,7 +20,7 @@
 			<Metadata Name="IsVisible" Value="True" />
 			<Metadata Name="IsModelAware" Value="True" />
 			<Metadata Name="SkipCreationIfEmpty" Value="True" />
-			<Metadata Name="AssemblySymbolsName" Value="C:\Users\Corentin\Documents\CODE\Project_TripCompanion\TripCompanion_API\DB\obj\Debug\DB.pdb" />
+			<Metadata Name="AssemblySymbolsName" Value="C:\Users\STG0765\Documents\PROJET FINAL\Project_TripCompanion\TripCompanion_API\DB\obj\Debug\DB.pdb" />
 		</CustomData>
 		<CustomData Category="SqlCmdVariables" Type="SqlCmdVariable" />
 	</Header>
@@ -442,10 +442,10 @@ RETURN 0]]></Value>
 		<Element Type="SqlProcedure" Name="[dbo].[CreateTodo]">
 			<Property Name="BodyScript">
 				<Value><![CDATA[
-	Insert into [Todo]([IdMainTodo], [Name], [Done], [Status], [Type], [Priority], [Calendar], 
+	Insert into [Todo]([IdStep],[IdMainTodo], [Name], [Done], [Status], [Type], [Priority], [Calendar], 
 	[Location], [PlannedTime], [PlannedBudget], [Comments])
 	Output inserted.IdTodo
-	Values (@IdMainTodo, @Name, @Done, @Status, @Type, @Priority, @Calendar, @Location,
+	Values (@IdStep, @IdMainTodo, @Name, @Done, @Status, @Type, @Priority, @Calendar, @Location,
 	@PlannedTime, @PlannedBudget, @Comments);
 RETURN 0]]></Value>
 			</Property>
@@ -453,6 +453,9 @@ RETURN 0]]></Value>
 			<Relationship Name="BodyDependencies">
 				<Entry>
 					<References Name="[dbo].[Todo]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Todo].[IdStep]" />
 				</Entry>
 				<Entry>
 					<References Name="[dbo].[Todo].[IdMainTodo]" />
@@ -486,6 +489,9 @@ RETURN 0]]></Value>
 				</Entry>
 				<Entry>
 					<References Name="[dbo].[Todo].[Comments]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[CreateTodo].[@IdStep]" />
 				</Entry>
 				<Entry>
 					<References Name="[dbo].[CreateTodo].[@IdMainTodo]" />
@@ -525,6 +531,21 @@ RETURN 0]]></Value>
 				</Entry>
 			</Relationship>
 			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CreateTodo].[@IdStep]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
 				<Entry>
 					<Element Type="SqlSubroutineParameter" Name="[dbo].[CreateTodo].[@IdMainTodo]">
 						<Relationship Name="Type">
@@ -704,10 +725,10 @@ RETURN 0]]></Value>
 				</Entry>
 			</Relationship>
 			<Annotation Type="SysCommentsObjectAnnotation">
-				<Property Name="Length" Value="603" />
+				<Property Name="Length" Value="636" />
 				<Property Name="StartLine" Value="1" />
 				<Property Name="StartColumn" Value="1" />
-				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[CreateTodo]&#xD;&#xA;&#x9;@IdMainTodo int,&#xD;&#xA;&#x9;@Name nvarchar(50),&#xD;&#xA;&#x9;@Done bit,&#xD;&#xA;&#x9;@Status nvarchar(50),&#xD;&#xA;&#x9;@Type nvarchar(50),&#xD;&#xA;&#x9;@Priority nvarchar(50),&#xD;&#xA;&#x9;@Calendar Datetime,&#xD;&#xA;&#x9;@Location nvarchar(50),&#xD;&#xA;&#x9;@PlannedTime decimal(4,2),&#xD;&#xA;&#x9;@PlannedBudget int,&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;@Comments Text&#xD;&#xA;&#xD;&#xA;AS" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[CreateTodo]&#xD;&#xA;&#x9;@IdStep int,&#xD;&#xA;&#x9;@IdMainTodo int,&#xD;&#xA;&#x9;@Name nvarchar(50),&#xD;&#xA;&#x9;@Done bit,&#xD;&#xA;&#x9;@Status nvarchar(50),&#xD;&#xA;&#x9;@Type nvarchar(50),&#xD;&#xA;&#x9;@Priority nvarchar(50),&#xD;&#xA;&#x9;@Calendar Datetime,&#xD;&#xA;&#x9;@Location nvarchar(50),&#xD;&#xA;&#x9;@PlannedTime decimal(4,2),&#xD;&#xA;&#x9;@PlannedBudget int,&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;@Comments Text&#xD;&#xA;&#xD;&#xA;AS" />
 			</Annotation>
 		</Element>
 		<Element Type="SqlProcedure" Name="[dbo].[CreateTrip]">

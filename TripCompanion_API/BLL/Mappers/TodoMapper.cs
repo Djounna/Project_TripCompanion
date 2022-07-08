@@ -15,6 +15,8 @@ namespace BLL.Mappers
             return new TodoDTO()
             {
                 IdTodo = entity.IdTodo,
+                IdStep = entity.IdStep,
+                IdMainTodo = entity.IdMainTodo,
                 Name = entity.Name,
                 Done = entity.Done,
                 Status = entity.Status,
@@ -27,8 +29,7 @@ namespace BLL.Mappers
                 RealTime = entity.RealTime,
                 RealBudget = entity.RealBudget,
                 Comments = entity.Comments,
-                IdStep = entity.IdStep,
-                IdMainTodo = entity.IdMainTodo
+                
             };
         }
 

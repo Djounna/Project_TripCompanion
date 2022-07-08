@@ -24,8 +24,9 @@ namespace DAL.Repositories
         {
             return new TodoEntity()
             {
+                IdTodo = (int)record[TableId],
                 IdStep = (int)record["IdStep"],
-                IdMainTodo = (int)record["IdMainTodo"],
+                IdMainTodo = record["IdMainTodo"] is DBNull ? null: (int)record["IdMainTodo"],
                 Name = (string)record["Name"],
                 Done = (bool)record["Done"],
                 Status = (string)record["Status"],
@@ -58,9 +59,7 @@ namespace DAL.Repositories
             cmd.AddParameter("Calendar", entity.Calendar);
             cmd.AddParameter("Location", entity.Location);
             cmd.AddParameter("PlannedTime", entity.PlannedTime);
-            cmd.AddParameter("PlannedBudget", entity.PlannedBudget);
-            cmd.AddParameter("RealTime", entity.RealTime);
-            cmd.AddParameter("RealBudget", entity.RealBudget);
+            cmd.AddParameter("PlannedBudget", entity.PlannedBudget);          
             cmd.AddParameter("Comments", entity.Comments);
 
             return (int)_Connection.ExecuteScalar(cmd);
