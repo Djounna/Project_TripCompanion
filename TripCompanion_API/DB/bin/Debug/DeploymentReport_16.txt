@@ -1,0 +1,55 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Create
+       [dbo].[AttachmentStep] (Table)
+       [dbo].[AttachmentTodo] (Table)
+       [dbo].[AttachmentTrip] (Table)
+       [dbo].[Role] (Table)
+       [dbo].[Step] (Table)
+       [dbo].[Todo] (Table)
+       [dbo].[Trip] (Table)
+       [dbo].[User] (Table)
+       [dbo].[FK_AttachementStep__Step] (Foreign Key)
+       [dbo].[FK_AttachmentTodo__Todo] (Foreign Key)
+       [dbo].[FK_AttachmentTrip__Trip] (Foreign Key)
+       [dbo].[FK_Step__IdTrip] (Foreign Key)
+       [dbo].[PK_Todo__IdStep] (Foreign Key)
+       [dbo].[PK_Todo__IdMainTodo] (Foreign Key)
+       [dbo].[FK_Trip__IdUser] (Foreign Key)
+       [dbo].[CheckUserExists] (Procedure)
+       [dbo].[CreateStep] (Procedure)
+       [dbo].[CreateTodo] (Procedure)
+       [dbo].[CreateTrip] (Procedure)
+       [dbo].[CreateUser] (Procedure)
+       [dbo].[DeleteStep] (Procedure)
+       [dbo].[DeleteTodo] (Procedure)
+       [dbo].[DeleteTrip] (Procedure)
+       [dbo].[DeleteUser] (Procedure)
+       [dbo].[GetAllStep] (Procedure)
+       [dbo].[GetAllTodo] (Procedure)
+       [dbo].[GetAllTrip] (Procedure)
+       [dbo].[GetAllUser] (Procedure)
+       [dbo].[GetPasswordHashByUsername] (Procedure)
+       [dbo].[GetStepById] (Procedure)
+       [dbo].[GetStepByStepname] (Procedure)
+       [dbo].[GetTodoById] (Procedure)
+       [dbo].[GetTodoByTodoname] (Procedure)
+       [dbo].[GetTripById] (Procedure)
+       [dbo].[GetTripByTripname] (Procedure)
+       [dbo].[GetUserById] (Procedure)
+       [dbo].[GetUserByUsername] (Procedure)
+       [dbo].[UpdateStep] (Procedure)
+       [dbo].[UpdateTodo] (Procedure)
+       [dbo].[UpdateTrip] (Procedure)
+       [dbo].[UpdateUser] (Procedure)
+
+** Supporting actions

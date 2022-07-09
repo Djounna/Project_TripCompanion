@@ -79,3 +79,6 @@ C:\Users\Corentin\Documents\CODE\Project_TripCompanion\TripCompanion_API\API\obj
 C:\Users\STG0765\Documents\PROJET FINAL\Project_TripCompanion\TripCompanion_API\API\bin\Debug\net6.0\Isopoh.Cryptography.Argon2.dll
 C:\Users\STG0765\Documents\PROJET FINAL\Project_TripCompanion\TripCompanion_API\API\bin\Debug\net6.0\Isopoh.Cryptography.Blake2b.dll
 C:\Users\STG0765\Documents\PROJET FINAL\Project_TripCompanion\TripCompanion_API\API\bin\Debug\net6.0\Isopoh.Cryptography.SecureArray.dll
+C:\Users\Corentin\Documents\CODE\Project_TripCompanion\TripCompanion_API\API\bin\Debug\net6.0\Isopoh.Cryptography.Argon2.dll
+C:\Users\Corentin\Documents\CODE\Project_TripCompanion\TripCompanion_API\API\bin\Debug\net6.0\Isopoh.Cryptography.Blake2b.dll
+C:\Users\Corentin\Documents\CODE\Project_TripCompanion\TripCompanion_API\API\bin\Debug\net6.0\Isopoh.Cryptography.SecureArray.dll
