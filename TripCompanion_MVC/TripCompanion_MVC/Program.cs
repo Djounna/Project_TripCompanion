@@ -1,3 +1,6 @@
+using TripCompanion_MVC.Interfaces;
+using TripCompanion_MVC.Services;
+
 namespace TripCompanion_MVC
 {
     public class Program
@@ -8,6 +11,14 @@ namespace TripCompanion_MVC
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+            //CLient Factory WIth Base Address configuration => User a AddTransient (Source: MSDN)
+            /* A HttpClient service can now be called in the constructor of the service => It will create a new HttpClient. It is equivalent to HttpClientFactory.CreateClient() method */
+            builder.Services.AddHttpClient<IApiConsume, ApiConsume>(httpClient =>
+            {
+                httpClient.BaseAddress = new Uri("https://localhost:7195");
+
+            });
 
             var app = builder.Build();
 
