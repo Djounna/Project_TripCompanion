@@ -16,7 +16,7 @@ namespace TripCompanion_MVC
             /* A HttpClient service can now be called in the constructor of the service => It will create a new HttpClient. It is equivalent to HttpClientFactory.CreateClient() method */
             builder.Services.AddHttpClient<IApiConsume, ApiConsume>(httpClient =>
             {
-                httpClient.BaseAddress = new Uri("https://localhost:7195");
+                httpClient.BaseAddress = new Uri("https://localhost:7195/api");
 
             });
 

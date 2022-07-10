@@ -20,8 +20,9 @@ namespace API.Controllers
         {
             return Ok(userService.GetAll().Select(u => u.ToApi()));
         }
+
         [HttpGet]
-        [Route("/{username}")]
+        [Route("/GetByName/{username}")]
         public IActionResult GetByName(string username)
         {
             return Ok(userService.GetByName(username).ToApi());
@@ -29,7 +30,7 @@ namespace API.Controllers
 
 
         [HttpGet]
-        [Route("/{username}/{password}")]
+        [Route("/GetByCredentials/{username}/{password}")]
         public IActionResult GetCredentials(string username, string password)
         {
             UserApiModel? user = userService.GetByCredentials(username, password).ToApi();

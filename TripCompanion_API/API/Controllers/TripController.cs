@@ -18,10 +18,12 @@ namespace API.Controllers
         }
 
         [HttpGet]
+        [Route("GetAllTrips")]
         public IActionResult GetAll()
         {
             return Ok(tripService.GetAll().Select(t => t.ToApi()));
         }
+
         [HttpGet]
         [Route("/{Tripname}")]
         public IActionResult GetByName(string Tripname)
