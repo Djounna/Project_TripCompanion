@@ -472,24 +472,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Corentin\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\STG0765\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Corentin\\Documents\\CODE\\Project_TripCompanion\\TripCompanion_API\\DAL\\DAL.csproj",
+      "projectUniqueName": "C:\\Users\\STG0765\\Documents\\PROJET FINAL\\Project_TripCompanion\\TripCompanion_API\\DAL\\DAL.csproj",
       "projectName": "DAL",
-      "projectPath": "C:\\Users\\Corentin\\Documents\\CODE\\Project_TripCompanion\\TripCompanion_API\\DAL\\DAL.csproj",
-      "packagesPath": "C:\\Users\\Corentin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Corentin\\Documents\\CODE\\Project_TripCompanion\\TripCompanion_API\\DAL\\obj\\",
+      "projectPath": "C:\\Users\\STG0765\\Documents\\PROJET FINAL\\Project_TripCompanion\\TripCompanion_API\\DAL\\DAL.csproj",
+      "packagesPath": "C:\\Users\\STG0765\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\STG0765\\Documents\\PROJET FINAL\\Project_TripCompanion\\TripCompanion_API\\DAL\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Corentin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\STG0765\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -497,14 +492,15 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Users\\STG0765\\Documents\\MyNuggets": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Corentin\\Documents\\CODE\\Project_TripCompanion\\TripCompanion_API\\Tools.DBConnections\\Tools.DBConnections.csproj": {
-              "projectPath": "C:\\Users\\Corentin\\Documents\\CODE\\Project_TripCompanion\\TripCompanion_API\\Tools.DBConnections\\Tools.DBConnections.csproj"
+            "C:\\Users\\STG0765\\Documents\\PROJET FINAL\\Project_TripCompanion\\TripCompanion_API\\Tools.DBConnections\\Tools.DBConnections.csproj": {
+              "projectPath": "C:\\Users\\STG0765\\Documents\\PROJET FINAL\\Project_TripCompanion\\TripCompanion_API\\Tools.DBConnections\\Tools.DBConnections.csproj"
             }
           }
         }

@@ -8835,24 +8835,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Corentin\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\STG0765\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Corentin\\Documents\\CODE\\Project_TripCompanion\\TripCompanion_MVC\\TripCompanion_MVC\\TripCompanion_MVC.csproj",
+      "projectUniqueName": "C:\\Users\\STG0765\\Documents\\PROJET FINAL\\Project_TripCompanion\\TripCompanion_MVC\\TripCompanion_MVC\\TripCompanion_MVC.csproj",
       "projectName": "TripCompanion_MVC",
-      "projectPath": "C:\\Users\\Corentin\\Documents\\CODE\\Project_TripCompanion\\TripCompanion_MVC\\TripCompanion_MVC\\TripCompanion_MVC.csproj",
-      "packagesPath": "C:\\Users\\Corentin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Corentin\\Documents\\CODE\\Project_TripCompanion\\TripCompanion_MVC\\TripCompanion_MVC\\obj\\",
+      "projectPath": "C:\\Users\\STG0765\\Documents\\PROJET FINAL\\Project_TripCompanion\\TripCompanion_MVC\\TripCompanion_MVC\\TripCompanion_MVC.csproj",
+      "packagesPath": "C:\\Users\\STG0765\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\STG0765\\Documents\\PROJET FINAL\\Project_TripCompanion\\TripCompanion_MVC\\TripCompanion_MVC\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Corentin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\STG0765\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8860,6 +8855,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Users\\STG0765\\Documents\\MyNuggets": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

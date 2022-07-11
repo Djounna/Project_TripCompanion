@@ -18,6 +18,14 @@ namespace TripCompanion_MVC.Controllers
             return View();
         }
 
+       
+
+
+
+
+
+
+
         public IActionResult Privacy()
         {
             return View();

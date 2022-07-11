@@ -23,7 +23,7 @@ namespace API.Controllers
             return Ok(stepService.GetAll().Select(u => u.ToApi()));
         }
         [HttpGet]
-        [Route("/{Stepname}")]
+        [Route("{Stepname}")]
         public IActionResult GetByName(string Stepname)
         {
             return Ok(stepService.GetByName(Stepname).ToApi());

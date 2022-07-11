@@ -23,7 +23,7 @@ namespace API.Controllers
             return Ok(todoService.GetAll().Select(t => t.ToApi()));
         }
         [HttpGet]
-        [Route("/{Todoname}")]
+        [Route("{Todoname}")]
         public IActionResult GetByName(string Todoname)
         {
             return Ok(todoService.GetByName(Todoname).ToApi());
