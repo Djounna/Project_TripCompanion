@@ -34,6 +34,9 @@
               },
               "C:\\Users\\STG0765\\Documents\\PROJET FINAL\\Project_TripCompanion\\TripCompanion_API\\Tools.DBConnections\\Tools.DBConnections.csproj": {
                 "projectPath": "C:\\Users\\STG0765\\Documents\\PROJET FINAL\\Project_TripCompanion\\TripCompanion_API\\Tools.DBConnections\\Tools.DBConnections.csproj"
+              },
+              "C:\\Users\\STG0765\\Documents\\PROJET FINAL\\Project_TripCompanion\\TripCompanion_API\\Tools.JWT\\Tools.JWT.csproj": {
+                "projectPath": "C:\\Users\\STG0765\\Documents\\PROJET FINAL\\Project_TripCompanion\\TripCompanion_API\\Tools.JWT\\Tools.JWT.csproj"
               }
             }
           }
@@ -48,6 +51,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[6.0.6, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.2.3, )"
@@ -239,6 +246,67 @@
             "System.Data.SqlClient": {
               "target": "Package",
               "version": "[4.8.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\STG0765\\Documents\\PROJET FINAL\\Project_TripCompanion\\TripCompanion_API\\Tools.JWT\\Tools.JWT.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\STG0765\\Documents\\PROJET FINAL\\Project_TripCompanion\\TripCompanion_API\\Tools.JWT\\Tools.JWT.csproj",
+        "projectName": "Tools.JWT",
+        "projectPath": "C:\\Users\\STG0765\\Documents\\PROJET FINAL\\Project_TripCompanion\\TripCompanion_API\\Tools.JWT\\Tools.JWT.csproj",
+        "packagesPath": "C:\\Users\\STG0765\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\STG0765\\Documents\\PROJET FINAL\\Project_TripCompanion\\TripCompanion_API\\Tools.JWT\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\STG0765\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\STG0765\\Documents\\MyNuggets": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.21.0, )"
             }
           },
           "imports": [

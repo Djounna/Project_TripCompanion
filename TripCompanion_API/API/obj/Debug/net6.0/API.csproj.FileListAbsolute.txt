@@ -82,3 +82,13 @@ C:\Users\STG0765\Documents\PROJET FINAL\Project_TripCompanion\TripCompanion_API\
 C:\Users\Corentin\Documents\CODE\Project_TripCompanion\TripCompanion_API\API\bin\Debug\net6.0\Isopoh.Cryptography.Argon2.dll
 C:\Users\Corentin\Documents\CODE\Project_TripCompanion\TripCompanion_API\API\bin\Debug\net6.0\Isopoh.Cryptography.Blake2b.dll
 C:\Users\Corentin\Documents\CODE\Project_TripCompanion\TripCompanion_API\API\bin\Debug\net6.0\Isopoh.Cryptography.SecureArray.dll
+C:\Users\STG0765\Documents\PROJET FINAL\Project_TripCompanion\TripCompanion_API\API\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\STG0765\Documents\PROJET FINAL\Project_TripCompanion\TripCompanion_API\API\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\STG0765\Documents\PROJET FINAL\Project_TripCompanion\TripCompanion_API\API\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\STG0765\Documents\PROJET FINAL\Project_TripCompanion\TripCompanion_API\API\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\STG0765\Documents\PROJET FINAL\Project_TripCompanion\TripCompanion_API\API\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\STG0765\Documents\PROJET FINAL\Project_TripCompanion\TripCompanion_API\API\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\STG0765\Documents\PROJET FINAL\Project_TripCompanion\TripCompanion_API\API\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\STG0765\Documents\PROJET FINAL\Project_TripCompanion\TripCompanion_API\API\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\STG0765\Documents\PROJET FINAL\Project_TripCompanion\TripCompanion_API\API\bin\Debug\net6.0\Tools.JWT.dll
+C:\Users\STG0765\Documents\PROJET FINAL\Project_TripCompanion\TripCompanion_API\API\bin\Debug\net6.0\Tools.JWT.pdb

@@ -12,6 +12,14 @@ namespace TripCompanion_MVC
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
+
+            // Add Sessions
+            builder.Services.AddDistributedMemoryCache();
+            builder.Services.AddSession();
+
+
+
+
             //CLient Factory WIth Base Address configuration => Used as AddTransient (Source: MSDN)
             /* A HttpClient service can now be called in the constructor of the service => It will create a new HttpClient. It is equivalent to HttpClientFactory.CreateClient() method */
             builder.Services.AddHttpClient<IApiConsume, ApiConsume>(httpClient =>
@@ -29,6 +37,11 @@ namespace TripCompanion_MVC
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+
+
+            // Middleware Session
+            app.UseSession();
+
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();

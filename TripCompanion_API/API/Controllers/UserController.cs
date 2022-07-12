@@ -2,6 +2,7 @@
 using API.Models;
 using BLL.Services;
 using Microsoft.AspNetCore.Mvc;
+using Tools.JWT;
 
 namespace API.Controllers
 {
@@ -10,9 +11,12 @@ namespace API.Controllers
     public class UserController : ControllerBase
     {
         private UserService userService;
-        public UserController(UserService userService)
+        private JwtService jwtService;
+        public UserController(UserService userService, JwtService jwtService)
         {
             this.userService = userService;
+            this.jwtService = jwtService;
+
         }
         
         [HttpGet]
@@ -44,6 +48,35 @@ namespace API.Controllers
                 return BadRequest(); 
             }
         }
+
+        [HttpGet]
+        [Route("Login/{username}/{password}")]
+        public IActionResult Login(string username, string password)
+        {
+            UserApiModel? user = userService.GetByCredentials(username, password).ToApi();
+
+            if (user != null)
+            {
+                string token = jwtService.CreateToken("user", username);
+
+                ConnectedUser connectedUser = new ConnectedUser()
+                {
+                    IdUser = user.IdUser,
+                    Email = user.Email,
+                    Username = user.Username
+                };
+                connectedUser.Token = token;
+
+                return Ok(connectedUser);
+            }
+            else
+            {
+                return BadRequest();
+            }
+        }
+
+
+
 
         [HttpPost]      
         public IActionResult AddUser(UserApiModel user)
