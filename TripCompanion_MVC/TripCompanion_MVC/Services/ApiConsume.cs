@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using System.Net.Http.Headers;
 using TripCompanion_MVC.Interfaces;
 
 namespace TripCompanion_MVC.Services
@@ -16,9 +17,11 @@ namespace TripCompanion_MVC.Services
         #endregion
 
         #region Generics
-        public async Task<T> GetOne<T>(string chemin)  // TODO : A tester
+        public async Task<T> GetOne<T>(string chemin, string? bearerToken = null)  // TODO : A tester
         {
-           HttpResponseMessage response =  await _httpClient.GetAsync(chemin);
+            _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", bearerToken);
+
+            HttpResponseMessage response =  await _httpClient.GetAsync(chemin);
 
             if (!response.IsSuccessStatusCode) throw new Exception("Cannot retrieve data");
 
@@ -26,8 +29,10 @@ namespace TripCompanion_MVC.Services
            return JsonConvert.DeserializeObject<T>(content);
         }
 
-        public async Task<IEnumerable<T>> GetMany<T>(string chemin) // TODO :  A tester
+        public async Task<IEnumerable<T>> GetMany<T>(string chemin, string? bearerToken = null) // TODO :  A tester
         {
+            _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", bearerToken);
+
             HttpResponseMessage response = await _httpClient.GetAsync(chemin);
 
             if (!response.IsSuccessStatusCode) throw new Exception("Cannot retrieve data");

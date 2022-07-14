@@ -1,3 +1,4 @@
+using System.Net.Http.Headers;
 using TripCompanion_MVC.Interfaces;
 using TripCompanion_MVC.Services;
 
@@ -13,19 +14,23 @@ namespace TripCompanion_MVC
             builder.Services.AddControllersWithViews();
 
 
-            // Add Sessions
+            // ** Add Sessions services 
             builder.Services.AddDistributedMemoryCache();
             builder.Services.AddSession();
 
+            // ** Test => TODO: à voir
+            builder.Services.AddHttpContextAccessor();
+            builder.Services.AddScoped<SessionManager>();
 
 
 
-            //CLient Factory WIth Base Address configuration => Used as AddTransient (Source: MSDN)
+            
+            //** CLient Factory WIth Base Address configuration => Used as AddTransient (Source: MSDN)
             /* A HttpClient service can now be called in the constructor of the service => It will create a new HttpClient. It is equivalent to HttpClientFactory.CreateClient() method */
             builder.Services.AddHttpClient<IApiConsume, ApiConsume>(httpClient =>
             {
                 httpClient.BaseAddress = new Uri("https://localhost:7195/api/");
-
+                
             });
 
             var app = builder.Build();
@@ -39,10 +44,11 @@ namespace TripCompanion_MVC
             }
 
 
-            // Middleware Session
+            // *** Middleware Session
             app.UseSession();
 
 
+            // Classic Middlewares
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
