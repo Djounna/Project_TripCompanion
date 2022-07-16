@@ -7,5 +7,6 @@
         public string Email { get; set; }
         // public string Password { get; set; } // A voir, pas utile selon moi.
         public string Token { get; set; }
+        public string Role { get; set; } // Test
     }
 }

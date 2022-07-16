@@ -27,37 +27,7 @@ namespace TripCompanion_MVC.Controllers
 
        
 
-        //Login
-        public IActionResult Login()
-        {
-            return(View());
-        }
-        public async Task<IActionResult> CheckLogin([FromForm] UserLogin userLogin)
-        {
-            ConnectedUser connectedUser = await _apiConsume.GetOne<ConnectedUser>("User/Login/"+userLogin.Username+"/"+userLogin.Password);
-
-            if(connectedUser == null)
-            {
-                return RedirectToAction("Index");
-            }
-
-            _sessionManager.Token = connectedUser.Token;
-            _sessionManager.IdUser = connectedUser.IdUser;
-
-           // HttpContext.Session.SetString("Token",connectedUser.Token);
-            // HttpContext.Session.SetInt32("IdUser", connectedUser.IdUser);
-
-            return RedirectToAction("Index");
-
-        }
-
-
-
-        //Logout
-        public void Logout()
-        {
-            throw new NotImplementedException();
-        }
+        
 
 
 

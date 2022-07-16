@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System.Net.Http.Headers;
 using TripCompanion_MVC.Interfaces;
+using TripCompanion_MVC.Models;
 
 namespace TripCompanion_MVC.Services
 {
@@ -41,14 +42,14 @@ namespace TripCompanion_MVC.Services
             return JsonConvert.DeserializeObject<IEnumerable<T>>(content);
         }
 
-        public async Task<int> Post<T>(string chemin, T entity)  // EN COURS :  voir pour la valeur de retour, plus voir pour IsSuccessStatusCode faux ?
+        public async Task<T> Post<T>(string chemin, T entity)  // EN COURS :  voir pour la valeur de retour, plus voir pour IsSuccessStatusCode faux ?
         {
             HttpResponseMessage response = await _httpClient.PostAsJsonAsync(chemin, entity);
 
             if (!response.IsSuccessStatusCode) throw new Exception("Cannot create data");
 
             var content = await response.Content.ReadAsStringAsync();
-            return JsonConvert.DeserializeObject<int>(content);
+            return JsonConvert.DeserializeObject<T>(content);
         }
 
         public async Task Put<T>(string chemin, T entity)

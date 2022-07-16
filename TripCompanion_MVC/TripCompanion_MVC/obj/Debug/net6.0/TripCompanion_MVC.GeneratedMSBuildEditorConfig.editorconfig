@@ -15,12 +15,16 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Corentin\Documents\CODE\Project_TripCompanion\TripCompanion_MVC\TripCompanion_MVC
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Corentin/Documents/CODE/Project_TripCompanion/TripCompanion_MVC/TripCompanion_MVC/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+[C:/Users/Corentin/Documents/CODE/Project_TripCompanion/TripCompanion_MVC/TripCompanion_MVC/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Corentin/Documents/CODE/Project_TripCompanion/TripCompanion_MVC/TripCompanion_MVC/Views/Home/Login.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMb2dpbi5jc2h0bWw=
+[C:/Users/Corentin/Documents/CODE/Project_TripCompanion/TripCompanion_MVC/TripCompanion_MVC/Views/Account/SignUp.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxTaWduVXAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Corentin/Documents/CODE/Project_TripCompanion/TripCompanion_MVC/TripCompanion_MVC/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Corentin/Documents/CODE/Project_TripCompanion/TripCompanion_MVC/TripCompanion_MVC/Views/Home/Privacy.cshtml]

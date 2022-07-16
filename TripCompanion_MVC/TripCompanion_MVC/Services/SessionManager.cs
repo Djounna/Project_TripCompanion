@@ -10,10 +10,16 @@
             _session = httpContextAccessor.HttpContext.Session;
         }
 
-        public string Token
+        public string? Token
         {
             get { return _session.GetString(nameof(Token)); }
             set { _session.SetString(nameof(Token), value); }
+        }
+
+        public string? Role
+        {
+            get { return _session.GetString(nameof(Role)); }
+            set { _session.SetString(nameof(Role), value); }
         }
 
         public int? IdUser
@@ -22,6 +28,9 @@
             set { _session.SetInt32(nameof(IdUser), value.Value); }
         }
 
-
+        public void clear() // Nettoyage des variables de sessions. // En Test
+        {
+            _session.Clear();
+        }
     }
 }

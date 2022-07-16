@@ -53,7 +53,7 @@ namespace API.Controllers
         [Route("Login/{username}/{password}")]
         public IActionResult Login(string username, string password)
         {
-            UserApiModel? user = userService.GetByCredentials(username, password).ToApi();
+            UserApiModel? user = userService.GetByCredentials(username, password)?.ToApi();
 
             if (user != null)
             {
@@ -63,7 +63,8 @@ namespace API.Controllers
                 {
                     IdUser = user.IdUser,
                     Email = user.Email,
-                    Username = user.Username
+                    Username = user.Username,
+                    Role = "user"
                 };
                 connectedUser.Token = token;
 
@@ -81,7 +82,6 @@ namespace API.Controllers
         [HttpPost]      
         public IActionResult AddUser(UserApiModel user)
         {
-
             UserApiModel? receivedUser = userService.Insert(user.ToDto()).ToApi();
 
             if (receivedUser != null)
