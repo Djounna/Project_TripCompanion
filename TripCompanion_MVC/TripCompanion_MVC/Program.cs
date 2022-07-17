@@ -18,10 +18,9 @@ namespace TripCompanion_MVC
             builder.Services.AddDistributedMemoryCache();
             builder.Services.AddSession();
 
-            // ** Test => TODO: à voir
+            // ** Add ContexteAccessor services & SessionManager DI
             builder.Services.AddHttpContextAccessor();
             builder.Services.AddScoped<SessionManager>();
-
 
 
             

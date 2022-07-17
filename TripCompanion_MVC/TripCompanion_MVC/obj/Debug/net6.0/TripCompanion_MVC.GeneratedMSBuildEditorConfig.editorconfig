@@ -43,6 +43,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Corentin/Documents/CODE/Project_TripCompanion/TripCompanion_MVC/TripCompanion_MVC/Views/Travel/TravelPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhdmVsXFRyYXZlbFBhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Corentin/Documents/CODE/Project_TripCompanion/TripCompanion_MVC/TripCompanion_MVC/Views/Trip/AllTrips.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJpcFxBbGxUcmlwcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
