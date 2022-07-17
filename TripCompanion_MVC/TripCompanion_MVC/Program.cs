@@ -22,15 +22,22 @@ namespace TripCompanion_MVC
             builder.Services.AddHttpContextAccessor();
             builder.Services.AddScoped<SessionManager>();
 
-
-            
-            //** CLient Factory WIth Base Address configuration => Used as AddTransient (Source: MSDN)
+            // *** DependancyInjection
+            // Services
+            builder.Services.AddTransient<IAccountService, AccountService>();
+            builder.Services.AddTransient<ITripService, TripService>();
+            builder.Services.AddTransient<ITodoService, TodoService>();
+            builder.Services.AddTransient<IStepService, StepService>();
+            // CLient Factory WIth Base Address configuration => Used as AddTransient (Source: MSDN)
             /* A HttpClient service can now be called in the constructor of the service => It will create a new HttpClient. It is equivalent to HttpClientFactory.CreateClient() method */
             builder.Services.AddHttpClient<IApiConsume, ApiConsume>(httpClient =>
             {
                 httpClient.BaseAddress = new Uri("https://localhost:7195/api/");
                 
             });
+            //***
+
+
 
             var app = builder.Build();
 

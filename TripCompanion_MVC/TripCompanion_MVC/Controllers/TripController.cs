@@ -34,6 +34,8 @@ namespace TripCompanion_MVC.Controllers
             Trip trip = await _apiConsume.GetOne<Trip>("Trip/GetTripById"+id);
             return View(trip);
         }
+
+        
         #endregion
     }
 }
