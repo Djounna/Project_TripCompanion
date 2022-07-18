@@ -8,29 +8,34 @@ namespace TodoCompanion_MVC.Controllers
     {
 
         private IApiConsume _apiConsume;
+        ITodoService _todoService;
+        private IStepService _stepService;
         #region Ctor
-        public TodoController(IApiConsume apiConsume)
+        public TodoController(ITodoService todoService, IApiConsume apiConsume)
         {
-            _apiConsume = apiConsume;
+            _apiConsume = apiConsume;       
+            _todoService = todoService;
         }
         #endregion
 
         #region Crud
         public async Task<IActionResult> AllTodos()
         {
-            IEnumerable<Todo> listTodo = await _apiConsume.GetMany<Todo>("Todo");
+            IEnumerable<Todo> listTodo = await _todoService.GetAllTodo();
             return View(listTodo);
         }
+
+        public async Task<IActionResult> AllTodosByStep(int idStep)
+        {
+            IEnumerable<Todo> listTodo = await _todoService.GetAllTodoByStep(idStep);
+            return View(listTodo);
+        }
+
         public async Task<IActionResult> TodoById(int id)
         {
             Todo Todo = await _apiConsume.GetOne<Todo>("Todo/GetTodoById" + id);
             return View(Todo);
         }
         #endregion
-
-        public IActionResult Index()
-        {
-            return View();
-        }
     }
 }

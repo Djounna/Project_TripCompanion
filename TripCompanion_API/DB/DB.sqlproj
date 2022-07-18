@@ -99,6 +99,9 @@
     <Build Include="StoredProcedures\Todo\CreateTodo.sql" />
     <Build Include="StoredProcedures\Todo\UpdateTodo.sql" />
     <Build Include="StoredProcedures\User\GetPasswordHashByUsername.sql" />
+    <Build Include="StoredProcedures\Trip\GetAllTripByUser.sql" />
+    <Build Include="StoredProcedures\Step\GetAllStepByTrip.sql" />
+    <Build Include="StoredProcedures\Todo\GetAllTodoByStep.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Scripts\Seed.sql" />

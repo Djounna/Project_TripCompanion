@@ -22,6 +22,15 @@ namespace API.Controllers
         {
             return Ok(todoService.GetAll().Select(t => t.ToApi()));
         }
+
+        [HttpGet]
+        [Route("GetAllTodoByStep/{idStep}")]
+        public IActionResult GetAllTodoByStep(int idStep)
+        {
+            return Ok(todoService.GetAllTodoByStep(idStep).Select(t => t.ToApi()));
+        }
+
+
         [HttpGet]
         [Route("{Todoname}")]
         public IActionResult GetByName(string Todoname)

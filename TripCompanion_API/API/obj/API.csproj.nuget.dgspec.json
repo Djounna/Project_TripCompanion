@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Corentin\\Documents\\CODE\\Project_TripCompanion\\TripCompanion_API\\API\\API.csproj": {}
+    "C:\\Users\\STG0765\\Documents\\PROJET FINAL\\Project_TripCompanion\\TripCompanion_API\\API\\API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Corentin\\Documents\\CODE\\Project_TripCompanion\\TripCompanion_API\\API\\API.csproj": {
+    "C:\\Users\\STG0765\\Documents\\PROJET FINAL\\Project_TripCompanion\\TripCompanion_API\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Corentin\\Documents\\CODE\\Project_TripCompanion\\TripCompanion_API\\API\\API.csproj",
+        "projectUniqueName": "C:\\Users\\STG0765\\Documents\\PROJET FINAL\\Project_TripCompanion\\TripCompanion_API\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "C:\\Users\\Corentin\\Documents\\CODE\\Project_TripCompanion\\TripCompanion_API\\API\\API.csproj",
-        "packagesPath": "C:\\Users\\Corentin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Corentin\\Documents\\CODE\\Project_TripCompanion\\TripCompanion_API\\API\\obj\\",
+        "projectPath": "C:\\Users\\STG0765\\Documents\\PROJET FINAL\\Project_TripCompanion\\TripCompanion_API\\API\\API.csproj",
+        "packagesPath": "C:\\Users\\STG0765\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\STG0765\\Documents\\PROJET FINAL\\Project_TripCompanion\\TripCompanion_API\\API\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Corentin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\STG0765\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,20 +22,21 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\STG0765\\Documents\\MyNuggets": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Corentin\\Documents\\CODE\\Project_TripCompanion\\TripCompanion_API\\BLL\\BLL.csproj": {
-                "projectPath": "C:\\Users\\Corentin\\Documents\\CODE\\Project_TripCompanion\\TripCompanion_API\\BLL\\BLL.csproj"
+              "C:\\Users\\STG0765\\Documents\\PROJET FINAL\\Project_TripCompanion\\TripCompanion_API\\BLL\\BLL.csproj": {
+                "projectPath": "C:\\Users\\STG0765\\Documents\\PROJET FINAL\\Project_TripCompanion\\TripCompanion_API\\BLL\\BLL.csproj"
               },
-              "C:\\Users\\Corentin\\Documents\\CODE\\Project_TripCompanion\\TripCompanion_API\\Tools.DBConnections\\Tools.DBConnections.csproj": {
-                "projectPath": "C:\\Users\\Corentin\\Documents\\CODE\\Project_TripCompanion\\TripCompanion_API\\Tools.DBConnections\\Tools.DBConnections.csproj"
+              "C:\\Users\\STG0765\\Documents\\PROJET FINAL\\Project_TripCompanion\\TripCompanion_API\\Tools.DBConnections\\Tools.DBConnections.csproj": {
+                "projectPath": "C:\\Users\\STG0765\\Documents\\PROJET FINAL\\Project_TripCompanion\\TripCompanion_API\\Tools.DBConnections\\Tools.DBConnections.csproj"
               },
-              "C:\\Users\\Corentin\\Documents\\CODE\\Project_TripCompanion\\TripCompanion_API\\Tools.JWT\\Tools.JWT.csproj": {
-                "projectPath": "C:\\Users\\Corentin\\Documents\\CODE\\Project_TripCompanion\\TripCompanion_API\\Tools.JWT\\Tools.JWT.csproj"
+              "C:\\Users\\STG0765\\Documents\\PROJET FINAL\\Project_TripCompanion\\TripCompanion_API\\Tools.JWT\\Tools.JWT.csproj": {
+                "projectPath": "C:\\Users\\STG0765\\Documents\\PROJET FINAL\\Project_TripCompanion\\TripCompanion_API\\Tools.JWT\\Tools.JWT.csproj"
               }
             }
           }
@@ -85,21 +82,17 @@
         }
       }
     },
-    "C:\\Users\\Corentin\\Documents\\CODE\\Project_TripCompanion\\TripCompanion_API\\BLL\\BLL.csproj": {
+    "C:\\Users\\STG0765\\Documents\\PROJET FINAL\\Project_TripCompanion\\TripCompanion_API\\BLL\\BLL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Corentin\\Documents\\CODE\\Project_TripCompanion\\TripCompanion_API\\BLL\\BLL.csproj",
+        "projectUniqueName": "C:\\Users\\STG0765\\Documents\\PROJET FINAL\\Project_TripCompanion\\TripCompanion_API\\BLL\\BLL.csproj",
         "projectName": "BLL",
-        "projectPath": "C:\\Users\\Corentin\\Documents\\CODE\\Project_TripCompanion\\TripCompanion_API\\BLL\\BLL.csproj",
-        "packagesPath": "C:\\Users\\Corentin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Corentin\\Documents\\CODE\\Project_TripCompanion\\TripCompanion_API\\BLL\\obj\\",
+        "projectPath": "C:\\Users\\STG0765\\Documents\\PROJET FINAL\\Project_TripCompanion\\TripCompanion_API\\BLL\\BLL.csproj",
+        "packagesPath": "C:\\Users\\STG0765\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\STG0765\\Documents\\PROJET FINAL\\Project_TripCompanion\\TripCompanion_API\\BLL\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Corentin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\STG0765\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -107,14 +100,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\STG0765\\Documents\\MyNuggets": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Corentin\\Documents\\CODE\\Project_TripCompanion\\TripCompanion_API\\DAL\\DAL.csproj": {
-                "projectPath": "C:\\Users\\Corentin\\Documents\\CODE\\Project_TripCompanion\\TripCompanion_API\\DAL\\DAL.csproj"
+              "C:\\Users\\STG0765\\Documents\\PROJET FINAL\\Project_TripCompanion\\TripCompanion_API\\DAL\\DAL.csproj": {
+                "projectPath": "C:\\Users\\STG0765\\Documents\\PROJET FINAL\\Project_TripCompanion\\TripCompanion_API\\DAL\\DAL.csproj"
               }
             }
           }
@@ -153,21 +147,17 @@
         }
       }
     },
-    "C:\\Users\\Corentin\\Documents\\CODE\\Project_TripCompanion\\TripCompanion_API\\DAL\\DAL.csproj": {
+    "C:\\Users\\STG0765\\Documents\\PROJET FINAL\\Project_TripCompanion\\TripCompanion_API\\DAL\\DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Corentin\\Documents\\CODE\\Project_TripCompanion\\TripCompanion_API\\DAL\\DAL.csproj",
+        "projectUniqueName": "C:\\Users\\STG0765\\Documents\\PROJET FINAL\\Project_TripCompanion\\TripCompanion_API\\DAL\\DAL.csproj",
         "projectName": "DAL",
-        "projectPath": "C:\\Users\\Corentin\\Documents\\CODE\\Project_TripCompanion\\TripCompanion_API\\DAL\\DAL.csproj",
-        "packagesPath": "C:\\Users\\Corentin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Corentin\\Documents\\CODE\\Project_TripCompanion\\TripCompanion_API\\DAL\\obj\\",
+        "projectPath": "C:\\Users\\STG0765\\Documents\\PROJET FINAL\\Project_TripCompanion\\TripCompanion_API\\DAL\\DAL.csproj",
+        "packagesPath": "C:\\Users\\STG0765\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\STG0765\\Documents\\PROJET FINAL\\Project_TripCompanion\\TripCompanion_API\\DAL\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Corentin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\STG0765\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -175,14 +165,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\STG0765\\Documents\\MyNuggets": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Corentin\\Documents\\CODE\\Project_TripCompanion\\TripCompanion_API\\Tools.DBConnections\\Tools.DBConnections.csproj": {
-                "projectPath": "C:\\Users\\Corentin\\Documents\\CODE\\Project_TripCompanion\\TripCompanion_API\\Tools.DBConnections\\Tools.DBConnections.csproj"
+              "C:\\Users\\STG0765\\Documents\\PROJET FINAL\\Project_TripCompanion\\TripCompanion_API\\Tools.DBConnections\\Tools.DBConnections.csproj": {
+                "projectPath": "C:\\Users\\STG0765\\Documents\\PROJET FINAL\\Project_TripCompanion\\TripCompanion_API\\Tools.DBConnections\\Tools.DBConnections.csproj"
               }
             }
           }
@@ -215,21 +206,17 @@
         }
       }
     },
-    "C:\\Users\\Corentin\\Documents\\CODE\\Project_TripCompanion\\TripCompanion_API\\Tools.DBConnections\\Tools.DBConnections.csproj": {
+    "C:\\Users\\STG0765\\Documents\\PROJET FINAL\\Project_TripCompanion\\TripCompanion_API\\Tools.DBConnections\\Tools.DBConnections.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Corentin\\Documents\\CODE\\Project_TripCompanion\\TripCompanion_API\\Tools.DBConnections\\Tools.DBConnections.csproj",
+        "projectUniqueName": "C:\\Users\\STG0765\\Documents\\PROJET FINAL\\Project_TripCompanion\\TripCompanion_API\\Tools.DBConnections\\Tools.DBConnections.csproj",
         "projectName": "Tools.DBConnections",
-        "projectPath": "C:\\Users\\Corentin\\Documents\\CODE\\Project_TripCompanion\\TripCompanion_API\\Tools.DBConnections\\Tools.DBConnections.csproj",
-        "packagesPath": "C:\\Users\\Corentin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Corentin\\Documents\\CODE\\Project_TripCompanion\\TripCompanion_API\\Tools.DBConnections\\obj\\",
+        "projectPath": "C:\\Users\\STG0765\\Documents\\PROJET FINAL\\Project_TripCompanion\\TripCompanion_API\\Tools.DBConnections\\Tools.DBConnections.csproj",
+        "packagesPath": "C:\\Users\\STG0765\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\STG0765\\Documents\\PROJET FINAL\\Project_TripCompanion\\TripCompanion_API\\Tools.DBConnections\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Corentin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\STG0765\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -237,6 +224,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\STG0765\\Documents\\MyNuggets": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -279,21 +267,17 @@
         }
       }
     },
-    "C:\\Users\\Corentin\\Documents\\CODE\\Project_TripCompanion\\TripCompanion_API\\Tools.JWT\\Tools.JWT.csproj": {
+    "C:\\Users\\STG0765\\Documents\\PROJET FINAL\\Project_TripCompanion\\TripCompanion_API\\Tools.JWT\\Tools.JWT.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Corentin\\Documents\\CODE\\Project_TripCompanion\\TripCompanion_API\\Tools.JWT\\Tools.JWT.csproj",
+        "projectUniqueName": "C:\\Users\\STG0765\\Documents\\PROJET FINAL\\Project_TripCompanion\\TripCompanion_API\\Tools.JWT\\Tools.JWT.csproj",
         "projectName": "Tools.JWT",
-        "projectPath": "C:\\Users\\Corentin\\Documents\\CODE\\Project_TripCompanion\\TripCompanion_API\\Tools.JWT\\Tools.JWT.csproj",
-        "packagesPath": "C:\\Users\\Corentin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Corentin\\Documents\\CODE\\Project_TripCompanion\\TripCompanion_API\\Tools.JWT\\obj\\",
+        "projectPath": "C:\\Users\\STG0765\\Documents\\PROJET FINAL\\Project_TripCompanion\\TripCompanion_API\\Tools.JWT\\Tools.JWT.csproj",
+        "packagesPath": "C:\\Users\\STG0765\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\STG0765\\Documents\\PROJET FINAL\\Project_TripCompanion\\TripCompanion_API\\Tools.JWT\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Corentin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\STG0765\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -301,6 +285,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\STG0765\\Documents\\MyNuggets": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

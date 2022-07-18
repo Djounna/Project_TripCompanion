@@ -8,13 +8,15 @@ namespace TripCompanion_MVC.Controllers
     public class TravelController : Controller
     {
         private IApiConsume _apiConsume;
+        private ITripService _tripService;
         private readonly SessionManager _sessionManager;
 
         #region Ctor
-        public TravelController(IApiConsume apiConsume, SessionManager sessionManager)
+        public TravelController(ITripService tripService, IApiConsume apiConsume, SessionManager sessionManager)
         {
             _apiConsume = apiConsume;
             _sessionManager = sessionManager;
+            _tripService = tripService;
         }
         #endregion
 
@@ -27,7 +29,7 @@ namespace TripCompanion_MVC.Controllers
         {
             User user = await _apiConsume.GetOne<User>("User/GetUserById"+userId);
 
-            IEnumerable<Trip> listTrip = await _apiConsume.GetMany<Trip>("Trip/GetAllTripsByUser/" + userId, _sessionManager.Token);
+            IEnumerable<Trip> listTrip = await _apiConsume.GetMany<Trip>("Trip/GetAllTripByUser/" + userId, _sessionManager.Token);
 
             return View(user);
         }

@@ -9,9 +9,12 @@ namespace TripCompanion_MVC.Controllers
     {
         private IApiConsume _apiConsume;
         private readonly SessionManager _sessionManager;
+        private ITripService _tripService;
+
         #region Ctor
-        public TripController(IApiConsume apiConsume, SessionManager sessionManager)
+        public TripController(ITripService tripService, IApiConsume apiConsume, SessionManager sessionManager)
         {
+            _tripService = tripService;
             _apiConsume = apiConsume;
             _sessionManager = sessionManager;
         }
@@ -20,18 +23,19 @@ namespace TripCompanion_MVC.Controllers
         #region Crud
         public async Task<IActionResult> AllTrips()
         {
-            IEnumerable<Trip> listTrip = await _apiConsume.GetMany<Trip>("Trip", _sessionManager.Token);
+            IEnumerable<Trip> listTrip = await _tripService.GetAllTrip();
+            return View(listTrip);
+        }
+        
+        public async Task<IActionResult> AllTripsByUser(int idUser) // En cours
+        {
+            IEnumerable<Trip> listTrip = await _tripService.GetAllTripByUser(idUser);                
             return View(listTrip);
         }
 
-        public async Task<IActionResult> AllTripsByUser(int userId) // En cours
-        {
-            IEnumerable<Trip> listTrip = await _apiConsume.GetMany<Trip>("Trip/GetAllTripsByUser/"+userId, _sessionManager.Token);
-            return View(listTrip);
-        }
         public async Task<IActionResult> TripById(int id)
         {
-            Trip trip = await _apiConsume.GetOne<Trip>("Trip/GetTripById"+id);
+            Trip trip = await _tripService.GetTripById(id); 
             return View(trip);
         }
 

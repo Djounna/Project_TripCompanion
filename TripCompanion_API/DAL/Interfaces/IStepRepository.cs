@@ -9,6 +9,7 @@ namespace DAL.Interfaces
 {
     public interface IStepRepository : IRepository<int, StepEntity>
     {
+        IEnumerable<StepEntity> GetAllStepByTrip(int idTrip);
         StepEntity GetByStepname(string name);
     }
 }

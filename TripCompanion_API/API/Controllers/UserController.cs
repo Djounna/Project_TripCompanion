@@ -77,8 +77,6 @@ namespace API.Controllers
         }
 
 
-
-
         [HttpPost]      
         public IActionResult AddUser(UserApiModel user)
         {

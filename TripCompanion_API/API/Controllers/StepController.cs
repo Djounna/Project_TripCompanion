@@ -20,8 +20,17 @@ namespace API.Controllers
         [HttpGet]
         public IActionResult GetAll()
         {
-            return Ok(stepService.GetAll().Select(u => u.ToApi()));
+            return Ok(stepService.GetAll().Select(s => s.ToApi()));
         }
+
+        [HttpGet]
+        [Route("GetAllStepByTrip/{idTrip}")]
+        public IActionResult GetAllStepByTrip(int idTrip)
+        {
+            return Ok(stepService.GetAllStepByTrip(idTrip).Select(s => s.ToApi()));
+        }
+
+
         [HttpGet]
         [Route("{Stepname}")]
         public IActionResult GetByName(string Stepname)

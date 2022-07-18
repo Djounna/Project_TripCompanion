@@ -74,6 +74,16 @@ namespace DAL.Repositories
 
             return _Connection.ExecuteReader(cmd, MapRecordToEntity).SingleOrDefault();
         }
+
+        public virtual IEnumerable<TripEntity> GetAllTripByUser(int idUser)
+        {
+            CommandSP cmd = new CommandSP($"GetAll{TableName}ByUser");
+
+            cmd.AddParameter("IdUser", idUser);
+
+            return _Connection.ExecuteReader(cmd, MapRecordToEntity);
+        }
+
         #endregion
     }
 }

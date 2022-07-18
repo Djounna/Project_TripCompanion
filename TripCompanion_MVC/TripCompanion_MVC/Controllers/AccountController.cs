@@ -9,15 +9,17 @@ namespace TripCompanion_MVC.Controllers
     {
 
         private IApiConsume _apiConsume;
+        private IAccountService _accountService;
         private readonly SessionManager _sessionManager;
         private readonly ILogger<HomeController> _logger;
 
         #region Ctor
-        public AccountController(ILogger<HomeController> logger, IApiConsume apiConsume, SessionManager sessionManager)
+        public AccountController(IAccountService accountService, ILogger<HomeController> logger, IApiConsume apiConsume, SessionManager sessionManager)
         {
             _logger = logger;
             _apiConsume = apiConsume;
             _sessionManager = sessionManager;
+            _accountService = accountService;
         }
         #endregion
 
@@ -30,31 +32,28 @@ namespace TripCompanion_MVC.Controllers
         [HttpPost]
         public async Task<IActionResult> SignUp([FromForm]UserForm userForm)
         {
-            if (!ModelState.IsValid)
+
+            try  // TODO if possible: Try Catch pas propre, à améliorer.
             {
-                TempData["Message"] = "Error : le formulaire n'a pas été correctement complété";
+                if (!ModelState.IsValid)
+                {
+                    TempData["Message"] = "Error : le formulaire n'a pas été correctement complété";
+                    return RedirectToAction("Index", "Home");
+                }
+
+                User createdUser = await _accountService.SignUp(userForm);
+                // TODO: CheckUserExists; if it is => Error message
+                //TempData["Message"] = "Warning: Ce compte utilisateur existe déja, vous pouvez vous identifier.";
+                //return RedirectToAction("Login");
+                TempData["Message"] = "Success : Votre compte a été créé avec succès, vous pouvez maintenant vous identifier";
+
+                return RedirectToAction("Login");
+            }
+            catch (Exception)
+            {
+                TempData["Message"] = "Error : Une erreur s'est produite lors de votre enregistrement, veuillez réessayer";
                 return RedirectToAction("Index", "Home");
             }
-
-            // TODO: CheckUserExists; if it is => Error message
-            //TempData["Message"] = "Warning: Ce compte utilisateur existe déja, vous pouvez vous identifier.";
-            //return RedirectToAction("Login");
-
-
-            User userToPost = new User
-            {
-                IdUser = 0,
-                Username = userForm.Username,
-                Email = userForm.Email,
-                Password = userForm.Password
-            };
-
-            User createdUser = await _apiConsume.Post<User>("User", userToPost);
-
-            TempData["Message"] = "Success : Votre compte a été créé avec succès, vous pouvez maintenant vous identifier";
-
-            return RedirectToAction("Login");
-
         }
         #endregion
 
@@ -69,17 +68,13 @@ namespace TripCompanion_MVC.Controllers
             {
                 // TODO: validation sur modelState ?
 
-                ConnectedUser connectedUser = await _apiConsume.GetOne<ConnectedUser>("User/Login/" + userLogin.Username + "/" + userLogin.Password);
+                ConnectedUser? connectedUser = await _accountService.CheckLogin(userLogin.Username, userLogin.Password);
 
                 if (connectedUser == null)
                 {
                     TempData["Message"] = "Error : Username ou Password incorrect";
                     return RedirectToAction("Index", "Home");
-                }
-
-                _sessionManager.Token = connectedUser.Token;
-                _sessionManager.Role = connectedUser.Role;
-                _sessionManager.IdUser = connectedUser.IdUser;             
+                }           
 
                 return RedirectToAction("Index","Home");
             }
@@ -93,7 +88,7 @@ namespace TripCompanion_MVC.Controllers
         #region Logout
         public IActionResult Logout()
         {
-            _sessionManager.clear();
+            _accountService.Logout();
 
             return RedirectToAction("Index","Home");
         }

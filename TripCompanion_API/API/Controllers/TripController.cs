@@ -1,6 +1,7 @@
 ﻿using API.Mappers;
 using API.Models;
 using BLL.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -21,6 +22,13 @@ namespace API.Controllers
         public IActionResult GetAll()
         {
             return Ok(tripService.GetAll().Select(t => t.ToApi()));
+        }
+
+        [HttpGet]
+        [Route("GetAllTripByUser/{idUser}")]
+        public IActionResult GetAllTripByUser(int idUser)
+        {
+            return Ok(tripService.GetAllTripByUser(idUser).Select(t => t.ToApi()));
         }
 
         [HttpGet]

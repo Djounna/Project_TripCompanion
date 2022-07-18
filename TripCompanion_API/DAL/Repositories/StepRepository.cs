@@ -68,6 +68,15 @@ namespace DAL.Repositories
 
             return _Connection.ExecuteReader(cmd, MapRecordToEntity).SingleOrDefault();
         }
+
+        public virtual IEnumerable<StepEntity> GetAllStepByTrip(int idTrip)
+        {
+            CommandSP cmd = new CommandSP($"GetAll{TableName}ByTrip");
+            cmd.AddParameter("IdTrip", idTrip);
+            return _Connection.ExecuteReader(cmd, MapRecordToEntity);
+
+        }
+
         #endregion
     }
 }

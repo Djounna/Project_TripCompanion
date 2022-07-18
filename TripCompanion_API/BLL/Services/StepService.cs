@@ -23,6 +23,11 @@ namespace BLL.Services
             return stepRepository.GetAll().Select(b => b.ToDTO());
         }
 
+        public IEnumerable<StepDTO> GetAllStepByTrip(int idTrip)
+        {
+            return stepRepository.GetAllStepByTrip(idTrip).Select(b=> b.ToDTO());
+        }
+
         public StepDTO GetByName(string name) // A tester
         {
             return stepRepository.GetByStepname(name).ToDTO();

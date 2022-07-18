@@ -8,31 +8,17 @@ namespace TripCompanion_MVC.Controllers
 {
     public class HomeController : Controller
     {
-        private IApiConsume _apiConsume;
-        private readonly SessionManager _sessionManager;
-
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger, IApiConsume apiConsume, SessionManager sessionManager)
+        public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
-            _apiConsume = apiConsume;
-            _sessionManager = sessionManager;
         }
 
         public IActionResult Index()
         {
             return View();
-        }
-
-       
-
-        
-
-
-
-
-
+        }       
 
         public IActionResult Privacy()
         {

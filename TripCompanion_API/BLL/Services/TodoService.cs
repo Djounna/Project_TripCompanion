@@ -22,6 +22,12 @@ namespace BLL.Services
         {
             return todoRepository.GetAll().Select(b => b.ToDTO());
         }
+        public IEnumerable<TodoDTO> GetAllTodoByStep(int idStep)
+        {
+            return todoRepository.GetAllTodoByStep(idStep).Select(b => b.ToDTO());
+        }
+
+
 
         public TodoDTO GetByName(string name) // A Tester
         {

@@ -13,7 +13,6 @@ namespace TripCompanion_MVC
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
-
             // ** Add Sessions services 
             builder.Services.AddDistributedMemoryCache();
             builder.Services.AddSession();
@@ -26,8 +25,10 @@ namespace TripCompanion_MVC
             // Services
             builder.Services.AddTransient<IAccountService, AccountService>();
             builder.Services.AddTransient<ITripService, TripService>();
-            builder.Services.AddTransient<ITodoService, TodoService>();
             builder.Services.AddTransient<IStepService, StepService>();
+            builder.Services.AddTransient<ITodoService, TodoService>();
+            
+
             // CLient Factory WIth Base Address configuration => Used as AddTransient (Source: MSDN)
             /* A HttpClient service can now be called in the constructor of the service => It will create a new HttpClient. It is equivalent to HttpClientFactory.CreateClient() method */
             builder.Services.AddHttpClient<IApiConsume, ApiConsume>(httpClient =>
@@ -36,8 +37,6 @@ namespace TripCompanion_MVC
                 
             });
             //***
-
-
 
             var app = builder.Build();
 
@@ -49,10 +48,8 @@ namespace TripCompanion_MVC
                 app.UseHsts();
             }
 
-
             // *** Middleware Session
             app.UseSession();
-
 
             // Classic Middlewares
             app.UseHttpsRedirection();

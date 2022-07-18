@@ -9,6 +9,7 @@ namespace DAL.Interfaces
 {
     public interface ITodoRepository : IRepository<int, TodoEntity>
     {
+        IEnumerable<TodoEntity> GetAllTodoByStep(int idStep);
         TodoEntity GetByTodoname(string name);
     }
 }
