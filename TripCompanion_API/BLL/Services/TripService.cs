@@ -22,10 +22,20 @@ namespace BLL.Services
             return tripRepository.GetAll().Select(b => b.ToDTO());
         }
 
+        public TripDTO GetById(int id)
+        {
+            return tripRepository.GetById(id).ToDTO();
+        }
+
         public IEnumerable<TripDTO> GetAllTripByUser(int idUser)
         {
             return tripRepository.GetAllTripByUser(idUser).Select(b => b.ToDTO());
         }
+
+
+
+
+
         public TripDTO GetByName(string name) // A Tester
         {
             return tripRepository.GetByTripname(name).ToDTO();

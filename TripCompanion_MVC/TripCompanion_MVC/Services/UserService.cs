@@ -17,7 +17,7 @@ namespace TripCompanion_MVC.Services
 
         public async Task<User> GetUserById(int id)
         {
-            User user = await _apiConsume.GetOne<User>("Trip/GetUserById" + id);
+            User user = await _apiConsume.GetOne<User>("User/GetUserById/" + id);
             return user;
         }
 

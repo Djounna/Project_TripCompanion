@@ -23,6 +23,11 @@ namespace BLL.Services
         {
             return userRepository.GetAll().Select(b => b.ToDTO());
         }
+
+        public UserDTO GetById(int id)
+        {
+            return userRepository.GetById(id).ToDTO();
+        }
         public UserDTO GetByName(string name)
         {
             return userRepository.GetByUsername(name).ToDTO();

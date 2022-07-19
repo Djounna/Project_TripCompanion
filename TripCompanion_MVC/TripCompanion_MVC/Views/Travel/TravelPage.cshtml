@@ -1,5 +1,5 @@
-﻿
-
+﻿@model User
+@inject SessionManager sessionManager
 
 @{
     ViewData["Title"] = "TravelPage";
@@ -9,11 +9,11 @@
 
 
 
-    <div class = "column-8"">
+    <div class = "row">
 
         <h3>Test Trip</h3>
 
-        @await Component.InvokeAsync("Trips",4);
+        @await Component.InvokeAsync("Trips",@sessionManager.IdUser);
 
         <div class = "column-4">
 

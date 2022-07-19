@@ -30,6 +30,13 @@ namespace API.Controllers
             return Ok(todoService.GetAllTodoByStep(idStep).Select(t => t.ToApi()));
         }
 
+        [HttpGet]
+        [Route("GetTodoById/{id}")]
+        public IActionResult GetById(int id)
+        {
+            return Ok(todoService.GetById(id).ToApi());
+        }
+
 
         [HttpGet]
         [Route("{Todoname}")]

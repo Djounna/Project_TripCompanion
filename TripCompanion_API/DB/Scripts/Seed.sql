@@ -19,7 +19,8 @@ Go
 
 Insert into [User] ([IdUser],[Username],[Password],[Email])
 Values (1, 'Test', 'Test', 'test.test@test.test'),
-       (2, 'Corentin','Corentin','corentin.corentin@test.test');
+       (2, 'Corentin','Corentin','corentin.corentin@test.test'),
+       (3, 'Usertest','Usertest','usertest.usertest@test.test');
 
 Set Identity_Insert [User] Off;
 Go
@@ -28,7 +29,8 @@ Set Identity_Insert [Trip] On;
 Go
 
 Insert into [Trip] ([IdTrip],[IdUser],[Name],[StartingDate],[EndingDate])
-Values(1,2,'France','2022-09-01','2022-09-21');
+Values(1,2,'France','2022-09-01','2022-09-21'),
+        (2,2,'Italie','2022-10-01','2022-10-29');
 
 Set Identity_Insert [Trip] Off;
 Go

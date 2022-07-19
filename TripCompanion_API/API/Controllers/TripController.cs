@@ -31,11 +31,20 @@ namespace API.Controllers
         }
 
         [HttpGet]
+        [Route("GetTripById/{id}")]
+        public IActionResult GetById(int id)
+        {
+            return Ok(tripService.GetById(id).ToApi());
+        }
+
+
+        [HttpGet]
         [Route("{Tripname}")]
         public IActionResult GetByName(string Tripname)
         {
             return Ok(tripService.GetByName(Tripname).ToApi());
         }
+
         [HttpPost]
         public IActionResult AddTrip(TripApiModel Trip)
         {

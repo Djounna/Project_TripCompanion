@@ -30,6 +30,15 @@ namespace API.Controllers
             return Ok(stepService.GetAllStepByTrip(idTrip).Select(s => s.ToApi()));
         }
 
+        [HttpGet]
+        [Route("GetStepById/{id}")]
+        public IActionResult GetById(int id)
+        {
+            return Ok(stepService.GetById(id).ToApi());
+        }
+
+
+
 
         [HttpGet]
         [Route("{Stepname}")]

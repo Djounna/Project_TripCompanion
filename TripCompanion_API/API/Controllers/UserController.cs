@@ -26,6 +26,13 @@ namespace API.Controllers
         }
 
         [HttpGet]
+        [Route("GetUserById/{id}")]
+        public IActionResult GetById(int id)
+        {
+            return Ok(userService.GetById(id).ToApi());
+        }
+
+        [HttpGet]
         [Route("GetByName/{username}")]
         public IActionResult GetByName(string username)
         {

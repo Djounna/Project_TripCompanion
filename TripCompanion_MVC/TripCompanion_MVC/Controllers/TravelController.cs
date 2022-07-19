@@ -36,10 +36,11 @@ namespace TripCompanion_MVC.Controllers
                 TempData["Message"] = "Error: Vous n'êtes pas identifié";
                 return RedirectToAction("Index", "Home");
             } 
-            // User user = await _userService.GetUserById((int)_sessionManager.IdUser;);          
+            User user = await _userService.GetUserById((int)_sessionManager.IdUser);  
+            
             IEnumerable<Trip> listTrip = await _tripService.GetAllTripByUser((int)_sessionManager.IdUser);
 
-            return View(listTrip);
+            return View(user);
         }
 
 

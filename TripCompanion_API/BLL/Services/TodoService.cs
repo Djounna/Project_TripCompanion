@@ -27,6 +27,14 @@ namespace BLL.Services
             return todoRepository.GetAllTodoByStep(idStep).Select(b => b.ToDTO());
         }
 
+        public TodoDTO GetById(int id)
+        {
+            return todoRepository.GetById(id).ToDTO();
+        }
+
+
+
+
 
 
         public TodoDTO GetByName(string name) // A Tester
