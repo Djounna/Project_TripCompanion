@@ -1,4 +1,6 @@
 ﻿
+
+
 @{
     ViewData["Title"] = "TravelPage";
 }
@@ -11,7 +13,7 @@
 
         <h3>Test Trip</h3>
 
-        
+        @await Component.InvokeAsync("Trips",4);
 
         <div class = "column-4">
 

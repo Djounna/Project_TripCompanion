@@ -28,7 +28,13 @@
             set { _session.SetInt32(nameof(IdUser), value.Value); }
         }
 
-        public void clear() // Nettoyage des variables de sessions. // En Test
+        public string? UserName
+        {
+            get { return _session.GetString(nameof(UserName)); }
+            set { _session.SetString(nameof(UserName), value); }
+        }
+
+        public void clear() 
         {
             _session.Clear();
         }

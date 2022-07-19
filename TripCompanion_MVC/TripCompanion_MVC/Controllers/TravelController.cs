@@ -7,16 +7,20 @@ namespace TripCompanion_MVC.Controllers
 {
     public class TravelController : Controller
     {
-        private IApiConsume _apiConsume;
+       
+        private IUserService _userService;
         private ITripService _tripService;
-        private readonly SessionManager _sessionManager;
+        private SessionManager _sessionManager;
+        
 
         #region Ctor
-        public TravelController(ITripService tripService, IApiConsume apiConsume, SessionManager sessionManager)
+        public TravelController(IUserService userService, ITripService tripService,SessionManager sessionManager)
         {
-            _apiConsume = apiConsume;
-            _sessionManager = sessionManager;
+           
             _tripService = tripService;
+            _userService = userService;
+            _sessionManager = sessionManager;
+           
         }
         #endregion
 
@@ -25,13 +29,17 @@ namespace TripCompanion_MVC.Controllers
             return View();
         }
 
-        public async Task<IActionResult> TravelPage(int userId)
+        public async Task<IActionResult> TravelPage()
         {
-            User user = await _apiConsume.GetOne<User>("User/GetUserById"+userId);
+            if (_sessionManager.IdUser == null)// Should'nt happen but just in case
+            {
+                TempData["Message"] = "Error: Vous n'êtes pas identifié";
+                return RedirectToAction("Index", "Home");
+            } 
+            // User user = await _userService.GetUserById((int)_sessionManager.IdUser;);          
+            IEnumerable<Trip> listTrip = await _tripService.GetAllTripByUser((int)_sessionManager.IdUser);
 
-            IEnumerable<Trip> listTrip = await _apiConsume.GetMany<Trip>("Trip/GetAllTripByUser/" + userId, _sessionManager.Token);
-
-            return View(user);
+            return View(listTrip);
         }
 
 

@@ -24,6 +24,7 @@ namespace TripCompanion_MVC
             // *** DependancyInjection
             // Services
             builder.Services.AddTransient<IAccountService, AccountService>();
+            builder.Services.AddTransient<IUserService, UserService>();
             builder.Services.AddTransient<ITripService, TripService>();
             builder.Services.AddTransient<IStepService, StepService>();
             builder.Services.AddTransient<ITodoService, TodoService>();

@@ -11,7 +11,6 @@ namespace API.Controllers
     [ApiController]
     public class TripController : ControllerBase
     {
-
         private TripService tripService;
         public TripController(TripService tripService)
         {
@@ -63,7 +62,6 @@ namespace API.Controllers
         }
 
         [HttpDelete]
-
         public IActionResult DeleteTrip(int id)
         {
             if (tripService.Delete(id))
@@ -74,8 +72,6 @@ namespace API.Controllers
             {
                 return BadRequest();
             }
-
         }
-
     }
 }

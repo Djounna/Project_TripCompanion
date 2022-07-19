@@ -21,7 +21,6 @@ namespace TripCompanion_MVC.Services
             return listTrip;
         }
 
-
         public async Task<IEnumerable<Trip>> GetAllTripByUser(int idUser)
         {
             IEnumerable<Trip> listTrip = await _apiConsume.GetMany<Trip>("Trip/GetAllTripByUser/" + idUser, _sessionManager.Token);

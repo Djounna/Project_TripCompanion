@@ -5,13 +5,13 @@ using TripCompanion_MVC.Models;
 namespace TripCompanion_MVC.ViewComponents
 {
     [ViewComponent(Name="Trips")]
-    public class TripViewComponent : ViewComponent
+    public class TripsViewComponent : ViewComponent
     {
 
         private ITripService _tripService;
 
         #region Ctor
-        public TripViewComponent(ITripService tripService)
+        public TripsViewComponent(ITripService tripService)
         {
             _tripService = tripService;
            
