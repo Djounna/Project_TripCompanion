@@ -33,7 +33,7 @@ namespace TodoCompanion_MVC.Controllers
 
         public async Task<IActionResult> TodoById(int id)
         {
-            Todo Todo = await _apiConsume.GetOne<Todo>("Todo/GetTodoById" + id);
+            Todo Todo = await _apiConsume.GetOne<Todo>("Todo/GetTodoById/" + id);
             return View(Todo);
         }
         #endregion

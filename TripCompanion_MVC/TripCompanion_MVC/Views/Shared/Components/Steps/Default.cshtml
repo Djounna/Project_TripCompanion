@@ -55,6 +55,8 @@
                 @Html.DisplayFor(modelItem => item.IdTrip)
             </td>
             <td>
+                <button class="btnCallAjax2" onclick="GetTodoByStepVC(@item.IdStep)" > test </button>
+
                 @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
                 @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
                 @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
@@ -63,3 +65,7 @@
 }
     </tbody>
 </table>
+
+<div id="view-component-ajax2" >
+    Where TodoVC should appear
+</div>

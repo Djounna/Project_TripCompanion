@@ -18,7 +18,7 @@ namespace TripCompanion_MVC.Services
 
         public async Task<Todo> GetTodoById(int id)
         {
-            Todo todo = await _apiConsume.GetOne<Todo>("Todo/GetTodoById" + id);
+            Todo todo = await _apiConsume.GetOne<Todo>("Todo/GetTodoById/" + id);
             return todo;
         }
         public async Task<IEnumerable<Todo>> GetAllTodo()
@@ -29,7 +29,7 @@ namespace TripCompanion_MVC.Services
 
         public async Task<IEnumerable<Todo>> GetAllTodoByStep(int idStep)
         {
-            IEnumerable<Todo> listTodo = await _apiConsume.GetMany<Todo>("Todo/GetAllTodoByStep" + idStep);
+            IEnumerable<Todo> listTodo = await _apiConsume.GetMany<Todo>("Todo/GetAllTodoByStep/" + idStep);
             return listTodo;
         }
 

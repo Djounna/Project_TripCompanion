@@ -17,7 +17,7 @@ namespace TripCompanion_MVC.Services
         #endregion
         public async Task<Step> GetStepById(int id)
         {
-            Step step = await _apiConsume.GetOne<Step>("Step/GetStepByTripId" + id);
+            Step step = await _apiConsume.GetOne<Step>("Step/GetStepByTripId/" + id);
             return step;
         }
         public async Task<IEnumerable<Step>> GetAllStep()
@@ -28,14 +28,8 @@ namespace TripCompanion_MVC.Services
 
         public async Task<IEnumerable<Step>> GetAllStepByTrip(int idTrip)
         {
-            IEnumerable<Step> listStep = await _apiConsume.GetMany<Step>("Step/GetAllStepByTrip"+idTrip);
+            IEnumerable<Step> listStep = await _apiConsume.GetMany<Step>("Step/GetAllStepByTrip/"+idTrip);
             return listStep;
         }
-
-       
-
-       
-
-
     }
 }

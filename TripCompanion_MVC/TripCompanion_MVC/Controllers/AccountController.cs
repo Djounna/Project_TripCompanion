@@ -8,17 +8,13 @@ namespace TripCompanion_MVC.Controllers
     public class AccountController : Controller
     {
 
-        private IApiConsume _apiConsume;
         private IAccountService _accountService;
-        private readonly SessionManager _sessionManager;
         private readonly ILogger<HomeController> _logger;
 
         #region Ctor
-        public AccountController(IAccountService accountService, ILogger<HomeController> logger, IApiConsume apiConsume, SessionManager sessionManager)
+        public AccountController(IAccountService accountService, ILogger<HomeController> logger)
         {
-            _logger = logger;
-            _apiConsume = apiConsume;
-            _sessionManager = sessionManager;
+            _logger = logger;          
             _accountService = accountService;
         }
         #endregion
@@ -56,7 +52,6 @@ namespace TripCompanion_MVC.Controllers
             }
         }
         #endregion
-
         #region Login
         public IActionResult Login()
         {

@@ -44,6 +44,19 @@ namespace TripCompanion_MVC.Controllers
         }
 
 
+        // Controller needed for the TravelPage View to make an ajax call. Return the ViewComponent "Steps" and "Todos".
+        [HttpGet]
+        public IActionResult GetStepByTripVC(int idTrip)
+        {
+            return ViewComponent("Steps", idTrip);
+        }
+
+        
+        [HttpGet]
+        public IActionResult GetTodoByStepVC(int idStep)
+        {
+            return ViewComponent("Todos", idStep);
+        }
 
 
     }

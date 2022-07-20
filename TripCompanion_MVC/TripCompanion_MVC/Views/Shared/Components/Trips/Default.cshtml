@@ -61,6 +61,8 @@
                 @Html.DisplayFor(modelItem => item.IdUser)
             </td>
             <td>
+                <button class="btnCallAjax" onclick="GetStepByTripVC(@item.IdTrip)" > test </button>
+
                 @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
                 @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
                 @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
@@ -69,3 +71,8 @@
 }
     </tbody>
 </table>
+
+
+<div id="view-component-ajax" >
+    Where StepVC should appear
+</div>

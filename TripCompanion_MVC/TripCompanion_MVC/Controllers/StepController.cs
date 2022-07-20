@@ -23,14 +23,10 @@ namespace StepCompanion_MVC.Controllers
         }
         public async Task<IActionResult> StepById(int id)
         {
-            Step Step = await _apiConsume.GetOne<Step>("Step/GetStepById" + id);
+            Step Step = await _apiConsume.GetOne<Step>("Step/GetStepById/" + id);
             return View(Step);
         }
         #endregion
 
-        public IActionResult Index()
-        {
-            return View();
-        }
     }
 }
