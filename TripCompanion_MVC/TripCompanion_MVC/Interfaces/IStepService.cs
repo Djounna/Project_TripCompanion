@@ -11,7 +11,7 @@ namespace TripCompanion_MVC.Interfaces
 
         Task DeleteStep(int id);
         Task UpdateStep(Step step);
-        Task<Trip> CreateStep(StepForm stepForm);
+        Task<Step> CreateStep(StepForm stepForm);
 
     }
 }

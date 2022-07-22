@@ -12,10 +12,14 @@ namespace BLL.Services
     public class StepService
     {
         private IStepRepository stepRepository;
+        private ITodoRepository todoRepository;
+        private TodoService todoService;
 
-        public StepService(IStepRepository repo)
+        public StepService(IStepRepository stepRepository, ITodoRepository todoRepository, TodoService todoService)
         {
-            this.stepRepository = repo;
+            this.stepRepository = stepRepository;
+            this.todoRepository = todoRepository;
+            this.todoService = todoService;
         }
 
         public IEnumerable<StepDTO> GetAll()
@@ -32,9 +36,6 @@ namespace BLL.Services
         {
             return stepRepository.GetById(id).ToDTO();
         }
-
-
-
 
 
         public StepDTO GetByName(string name) // A tester
@@ -54,7 +55,19 @@ namespace BLL.Services
 
         public bool Delete(int id)
         {
+            DeleteAllTodopByStep(id); // Test en cours
             return stepRepository.Delete(id);
+        }
+
+
+        // Test en cours
+        public void DeleteAllTodopByStep(int id)
+        {
+            IEnumerable<TodoDTO> listTodo = todoRepository.GetAllTodoByStep(id).Select(b => b.ToDTO());
+            foreach (TodoDTO todo in listTodo)
+            {
+                todoService.Delete(todo.IdTodo);
+            }
         }
     }
 }

@@ -11,11 +11,11 @@
     
      <div class="row">
         <div class="col-4" id="StepVC" >
-         Where StepVC should appear
+         
         </div>
 
        <div class="col-8" id="TodoVC" >
-         Where TodoVC should appear
+         
          </div>
      </div>
       
@@ -25,7 +25,7 @@
 <script src="~/lib/jquery/dist/jquery.min.js"></script>
 <script>
 function GetStepByTripVC(idTrip){
-    
+    $("#TodoVC").empty();
     $.ajax({
         url: "https://localhost:7160/Travel/GetStepByTripVC",
         type: "get",

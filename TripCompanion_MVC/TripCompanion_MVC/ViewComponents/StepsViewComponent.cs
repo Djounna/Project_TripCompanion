@@ -26,6 +26,7 @@ namespace TripCompanion_MVC.ViewComponents
                 return View();
             }
             IEnumerable<Step> listStep = await _stepService.GetAllStepByTrip(idTrip);
+            ViewBag.IdTrip = idTrip;
             return View(listStep);
         }
 

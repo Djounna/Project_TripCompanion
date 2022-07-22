@@ -55,6 +55,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Corentin/Documents/CODE/Project_TripCompanion/TripCompanion_MVC/TripCompanion_MVC/Views/Step/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RlcFxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Corentin/Documents/CODE/Project_TripCompanion/TripCompanion_MVC/TripCompanion_MVC/Views/Todo/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVG9kb1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Corentin/Documents/CODE/Project_TripCompanion/TripCompanion_MVC/TripCompanion_MVC/Views/Travel/TravelPage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhdmVsXFRyYXZlbFBhZ2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -65,6 +73,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Corentin/Documents/CODE/Project_TripCompanion/TripCompanion_MVC/TripCompanion_MVC/Views/Trip/AllTripsByUser.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJpcFxBbGxUcmlwc0J5VXNlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Corentin/Documents/CODE/Project_TripCompanion/TripCompanion_MVC/TripCompanion_MVC/Views/Trip/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJpcFxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Corentin/Documents/CODE/Project_TripCompanion/TripCompanion_MVC/TripCompanion_MVC/Views/_ViewImports.cshtml]

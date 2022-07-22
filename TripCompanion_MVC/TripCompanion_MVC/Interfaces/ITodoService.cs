@@ -10,6 +10,6 @@ namespace TripCompanion_MVC.Interfaces
 
         Task DeleteTodo(int id);
         Task UpdateTodo(Todo todo);
-        Task<Trip> CreateTodo(TodoForm todoForm);
+        Task<Todo> CreateTodo(TodoForm todoForm);
     }
 }

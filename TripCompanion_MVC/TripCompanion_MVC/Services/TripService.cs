@@ -57,7 +57,7 @@ namespace TripCompanion_MVC.Services
 
         public async Task DeleteTrip(int id)
         {
-            await _apiConsume.Delete<Trip>("Trip/"+ id);
+            await _apiConsume.Delete<Trip>("Trip/Delete/"+ id);
         }
         #endregion
     }

@@ -1,0 +1,95 @@
+﻿@model TripCompanion_MVC.Models.TodoForm
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Ajoutez une nouvelle Todo à votre Etape</h1>
+
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Done" /> @Html.DisplayNameFor(model => model.Done)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="Status" class="control-label"></label>
+                <input asp-for="Status" class="form-control" />
+                <span asp-validation-for="Status" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Type" class="control-label"></label>
+                <input asp-for="Type" class="form-control" />
+                <span asp-validation-for="Type" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Priority" class="control-label"></label>
+                <input asp-for="Priority" class="form-control" />
+                <span asp-validation-for="Priority" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Calendar" class="control-label"></label>
+                <input asp-for="Calendar" class="form-control" />
+                <span asp-validation-for="Calendar" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Location" class="control-label"></label>
+                <input asp-for="Location" class="form-control" />
+                <span asp-validation-for="Location" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PlannedTime" class="control-label"></label>
+                <input asp-for="PlannedTime" class="form-control" />
+                <span asp-validation-for="PlannedTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PlannedBudget" class="control-label"></label>
+                <input asp-for="PlannedBudget" class="form-control" />
+                <span asp-validation-for="PlannedBudget" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RealTime" class="control-label"></label>
+                <input asp-for="RealTime" class="form-control" />
+                <span asp-validation-for="RealTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RealBudget" class="control-label"></label>
+                <input asp-for="RealBudget" class="form-control" />
+                <span asp-validation-for="RealBudget" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Comments" class="control-label"></label>
+                <input asp-for="Comments" class="form-control" />
+                <span asp-validation-for="Comments" class="text-danger"></span>
+            </div>
+            <div>
+                <input asp-for="IdStep" value=@Model.IdStep Hidden="hidden" class="form-control" />
+            </div>
+            <br />
+
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<hr />
+
+<div>
+    <a class="btn btn-secondary" asp-controller="Travel" asp-action="TravelPage">Retour</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

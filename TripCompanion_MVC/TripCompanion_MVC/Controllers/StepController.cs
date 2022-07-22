@@ -7,12 +7,12 @@ namespace StepCompanion_MVC.Controllers
     public class StepController : Controller
     {
 
-        private IApiConsume _apiConsume;
+        
         private IStepService _stepService;
         #region Ctor
-        public StepController(IApiConsume apiConsume)
+        public StepController(IStepService stepService)
         {
-            _apiConsume = apiConsume;
+            _stepService = stepService;
         }
         #endregion
 
@@ -32,21 +32,23 @@ namespace StepCompanion_MVC.Controllers
 
 
         #region Create
-        public async Task<IActionResult> Create()
+        public IActionResult Create(int idTrip)
         {
-            return View();
+            StepForm stepForm = new StepForm();
+            stepForm.IdTrip = idTrip;
+            return View(stepForm);
         }
         [HttpPost]
         public async Task<IActionResult> Create([FromForm] StepForm stepForm)
         {
             if (!ModelState.IsValid)
             {
-                TempData["Message"] = "Warning : Erreur dans le formualaire";
+                TempData["Message"] = "Warning : Erreur dans le formulaire";
                 return View(stepForm);
             }
 
             await _stepService.CreateStep(stepForm);
-            TempData["Message"] = "Success : Votre voyage a été ajouté avec succès";
+            TempData["Message"] = "Success : Votre étape a été ajoutée avec succès";
             return RedirectToAction("TravelPage", "Travel");
         }
         #endregion

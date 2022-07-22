@@ -31,7 +31,7 @@
                     
            </div>
 
-           <div class = "col-4 alignalign-items-center">
+           <div class = "col-4 align-items-center">
 
                 @Html.DisplayNameFor(model => model.Done) : @Html.DisplayFor(modelItem => item.Done)
                 <br>
@@ -40,14 +40,17 @@
                 @Html.DisplayNameFor(model => model.Type) : @Html.DisplayFor(modelItem => item.Type)
                 <br>
                 <br>
-               <a class="btn btn-info align-self-end" asp-controller="Step" asp-action="Edit" asp-route-id=@item.IdStep> Modifier </a> 
+               <a class="btn btn-info align-self-end" asp-controller="Todo" asp-action="Edit" asp-route-id=@item.IdTodo>Modifier</a>
+               <a class="btn btn-danger btn-sm " asp-controller="Todo" asp-action="Delete" asp-route-idTodo=@item.IdTodo>Supprimer</a>
+
+
 
             </div>                            
         </div>
     }
 
     <div class="m-4 align-self-end">      
-            <a class="btn btn-outline-secondary btn-lg" asp-controller="Step" asp-action="Create">Nouvelle Todo</a>       
+            <a class="btn btn-outline-secondary btn-lg" asp-controller="Todo" asp-action="Create" asp-route-idStep=@ViewBag.IdStep>Nouvelle Todo</a>       
     </div>
 </div>
 

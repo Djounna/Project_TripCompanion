@@ -41,7 +41,7 @@ namespace TripCompanion_MVC.Controllers
         #endregion
 
         #region Create
-        public async Task<IActionResult> Create()
+        public IActionResult Create()
         {           
             return View();
         }
@@ -81,17 +81,14 @@ namespace TripCompanion_MVC.Controllers
         }
         #endregion
         #region Delete
+        
         public async Task<IActionResult> Delete(int idTrip)
         {
-            Trip trip = await _tripService.GetTripById(idTrip);
-            return View(trip);
-        }
-        [HttpPost]
-        public async Task<IActionResult> Delete(Trip trip)
-        {
-            await _tripService.DeleteTrip(trip.IdTrip);
+            await _tripService.DeleteTrip(idTrip);
+            TempData["Message"] = "Success : Ce voyage a bien été supprimé";
             return RedirectToAction("TravelPage", "Travel");
         }
+        
         #endregion
     }
 }

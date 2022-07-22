@@ -70,7 +70,7 @@ namespace API.Controllers
         }
 
         [HttpDelete]
-
+        [Route("Delete/{id}")]
         public IActionResult DeleteTodo(int id)
         {
             if (todoService.Delete(id))

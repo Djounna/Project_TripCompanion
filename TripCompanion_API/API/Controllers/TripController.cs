@@ -71,6 +71,7 @@ namespace API.Controllers
         }
 
         [HttpDelete]
+        [Route("Delete/{id}")]
         public IActionResult DeleteTrip(int id)
         {
             if (tripService.Delete(id))

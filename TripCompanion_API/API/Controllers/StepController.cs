@@ -72,7 +72,7 @@ namespace API.Controllers
         }
 
         [HttpDelete]
-
+        [Route("Delete/{id}")]
         public IActionResult DeleteStep(int id)
         {
             if (stepService.Delete(id))

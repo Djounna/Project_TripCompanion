@@ -7,13 +7,11 @@ namespace TodoCompanion_MVC.Controllers
     public class TodoController : Controller
     {
 
-        private IApiConsume _apiConsume;
-        ITodoService _todoService;
-        private IStepService _stepService;
+        private ITodoService _todoService;
+        
         #region Ctor
-        public TodoController(ITodoService todoService, IApiConsume apiConsume)
-        {
-            _apiConsume = apiConsume;       
+        public TodoController(ITodoService todoService)
+        {       
             _todoService = todoService;
         }
         #endregion
@@ -40,9 +38,11 @@ namespace TodoCompanion_MVC.Controllers
 
 
         #region Create
-        public async Task<IActionResult> Create()
+        public IActionResult Create(int idStep)
         {
-            return View();
+            TodoForm todoForm = new TodoForm();
+            todoForm.IdStep = idStep;
+            return View(todoForm);
         }
         [HttpPost]
         public async Task<IActionResult> Create([FromForm] TodoForm todoForm)

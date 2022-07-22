@@ -12,10 +12,14 @@ namespace BLL.Services
     public class TripService
     {
         private ITripRepository tripRepository;
+        private IStepRepository stepRepository;
+        private StepService stepService;
 
-        public TripService(ITripRepository repo)
+        public TripService(ITripRepository tripRepository, IStepRepository stepRepository, StepService stepService)
         {
-            this.tripRepository = repo;
+            this.tripRepository = tripRepository;
+            this.stepRepository = stepRepository;
+            this.stepService = stepService;
         }
         public IEnumerable<TripDTO> GetAll()
         {
@@ -32,10 +36,6 @@ namespace BLL.Services
             return tripRepository.GetAllTripByUser(idUser).Select(b => b.ToDTO());
         }
 
-
-
-
-
         public TripDTO GetByName(string name) // A Tester
         {
             return tripRepository.GetByTripname(name).ToDTO();
@@ -50,7 +50,18 @@ namespace BLL.Services
         }
         public bool Delete(int id)
         {
+            DeleteAllStepByTrip(id); // Test en cours
             return tripRepository.Delete(id);
+        }
+
+        // Test en cours
+        public void DeleteAllStepByTrip(int id)
+        {
+            IEnumerable<StepDTO> listStep = stepRepository.GetAllStepByTrip(id).Select(b => b.ToDTO());
+            foreach (StepDTO step in listStep)
+            {
+                stepService.Delete(step.IdStep);
+            }
         }
     }
 }
