@@ -31,5 +31,33 @@ namespace TripCompanion_MVC.Services
             IEnumerable<Step> listStep = await _apiConsume.GetMany<Step>("Step/GetAllStepByTrip/"+idTrip);
             return listStep;
         }
+
+        #region CRUD
+        public async Task<Step> CreateStep(StepForm stepForm)
+        {
+            Step stepToPost = new Step
+            {
+                IdStep= 0,
+                Name = stepForm.Name,
+                Budget = stepForm.Budget,
+                Comments = stepForm.Comments,
+                IdTrip = stepForm.IdTrip
+            };
+
+            return await _apiConsume.Post<Step>("Step", stepToPost);
+        }
+
+        public async Task UpdateStep(Step step)
+        {
+            await _apiConsume.Put("Step", step);
+        }
+
+        public async Task DeleteStep(int id)
+        {
+            await _apiConsume.Delete<Step>("Step/" + id);
+        }
+        #endregion
+
+
     }
 }

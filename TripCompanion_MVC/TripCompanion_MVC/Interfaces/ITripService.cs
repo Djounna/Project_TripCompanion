@@ -8,5 +8,8 @@ namespace TripCompanion_MVC.Interfaces
         Task<IEnumerable<Trip>> GetAllTripByUser(int userId);
         Task<Trip> GetTripById(int id);
 
+        Task DeleteTrip(int id);
+        Task UpdateTrip(Trip trip);
+        Task<Trip> CreateTrip(TripForm tripForm);
     }
 }

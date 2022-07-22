@@ -28,8 +28,37 @@ namespace TripCompanion_MVC.Services
         }
         public async Task<Trip> GetTripById(int id)
         {
-            Trip trip = await _apiConsume.GetOne<Trip>("Trip/GetTripById" + id);
+            Trip trip = await _apiConsume.GetOne<Trip>("Trip/GetTripById/" + id);
             return trip;
         }
+
+
+        #region CRUD
+        public async Task<Trip> CreateTrip(TripForm tripForm)
+        {
+            Trip tripToPost = new Trip
+            {
+                IdTrip = 0,
+                Name = tripForm.Name,
+                Budget = tripForm.Budget,
+                Comments = tripForm.Comments,
+                StartingDate = tripForm.StartingDate,
+                EndingDate = tripForm.EndingDate,
+                IdUser = (int)_sessionManager.IdUser               
+            };
+
+            return await _apiConsume.Post<Trip>("Trip", tripToPost);
+        }
+            
+        public async Task UpdateTrip(Trip trip)
+        {         
+            await _apiConsume.Put("Trip", trip);
+        }
+
+        public async Task DeleteTrip(int id)
+        {
+            await _apiConsume.Delete<Trip>("Trip/"+ id);
+        }
+        #endregion
     }
 }

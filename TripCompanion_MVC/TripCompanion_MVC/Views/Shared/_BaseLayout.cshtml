@@ -42,15 +42,19 @@
             @if(sessionManager.Role != "user")
             {
                 <div class="col-md-3 text-end">
-                    <button type="button" class="btn btn-outline-primary me-2"><a asp-controller="Account" asp-action="Login">Login</a></button>
-                    <button type="button" class="btn btn-outline-primary me-2"><a asp-controller="Account" asp-action="SignUp">Sign-up</a></button>
+
+                    <a class="btn btn-outline-primary me-2" asp-controller="Account" asp-action="Login">Login</a>
+                    <a class="btn btn-outline-primary me-2" asp-controller="Account" asp-action="SignUp">Sign-up</a>
+                    
                 </div>
             }
 
             @if(sessionManager.Role == "user")
             {
                 <div class="col-md-3 text-end">
-                    <button type="button" class="btn btn-outline-primary me-2"><a asp-controller="Account" asp-action="Logout">Logout</a></button>
+
+                    <a class="btn btn-outline-primary me-2" asp-controller="Account" asp-action="Logout">Logout</a>
+                    
                 </div>
             }
 

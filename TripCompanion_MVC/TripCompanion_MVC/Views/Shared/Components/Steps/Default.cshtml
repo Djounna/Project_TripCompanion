@@ -4,68 +4,35 @@
     ViewData["Title"] = "Steps";
 }
 
-<h1>Steps</h1>
+<h4>Etapes</h4>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.IdStep)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Name)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Budget)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Time)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Comments)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IdTrip)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
+<div class="m-1 p-3 bg-primary bg-opacity-10 align-items-center justify-content-center">
+
 @foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.IdStep)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Budget)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Time)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Comments)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IdTrip)
-            </td>
-            <td>
-                <button class="btnCallAjax2" onclick="GetTodoByStepVC(@item.IdStep)" > test </button>
 
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+        <div class="row p-3 m-3 bg-light" onclick="GetTodoByStepVC(@item.IdStep)"> 
 
-<div id="view-component-ajax2" >
-    Where TodoVC should appear
+           <div class = "col">
+              
+                @Html.DisplayNameFor(model => model.Name) : @Html.DisplayFor(modelItem => item.Name)
+                <br>
+                @Html.DisplayNameFor(model => model.Budget) : @Html.DisplayFor(modelItem => item.Budget)
+                <br>
+                @Html.DisplayNameFor(model => model.Time) : @Html.DisplayFor(modelItem => item.Time)
+                <br>
+                @Html.DisplayNameFor(model => model.Comments) : @Html.DisplayFor(modelItem => item.Comments)
+            
+           </div>
+
+           <div class = "col justify-content-center">
+
+               <a class="btn btn-info" asp-controller="Step" asp-action="Edit" asp-route-id=@item.IdStep> Modifier </a> 
+
+            </div>                            
+        </div>
+    }
+
+    <div class="m-4 align-self-end">      
+            <a class="btn btn-outline-secondary btn-lg " asp-controller="Step" asp-action="Create">Nouvelle étape</a>       
+    </div>
 </div>

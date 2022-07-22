@@ -4,75 +4,43 @@
     ViewData["Title"] = "Trips";
 }
 
-<h1>Trips</h1>
+<h3 >Mes Voyages</h3>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.IdTrip)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Name)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.StartingDate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.EndingDate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Budget)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Comments)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IdUser)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.IdTrip)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.StartingDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.EndingDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Budget)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Comments)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IdUser)
-            </td>
-            <td>
-                <button class="btnCallAjax" onclick="GetStepByTripVC(@item.IdTrip)" > test </button>
+<div class="row m-1 bg-secondary bg-opacity-10 align-items-center justify-content-sm-start">
 
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+    @foreach (var item in Model)
+    {
+        <div class="col m-4 ">
+
+            <div class="card border " style="width: 18rem;" onclick="GetStepByTripVC(@item.IdTrip)">
+                <img src="..." class="card-img-top" alt="not implemented">
+                <div class="card-body">
+                    <h5 class="card-title text-center"> @Html.DisplayFor(modelItem=> item.Name) </h5>
+                    <h6 class="card-subtitle mb-2 text-muted text-center"> Etapes : </h6>
+                    <p class="card-text">                    
+                        @Html.DisplayNameFor(model => model.Comments) : @Html.DisplayFor(modelItem => item.Comments)
+                    </p>                
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Début : @Html.DisplayFor(modelItem => item.StartingDate)</li>
+                    <li class="list-group-item">Fin : @Html.DisplayFor(modelItem => item.EndingDate)</li>
+                    <li class="list-group-item">@Html.DisplayNameFor(model => model.Budget) : @Html.DisplayFor(modelItem => item.Budget)</li>
+                
+                
+                </ul>
+                <div class="card-body">
+                <a class="btn btn-info" asp-controller="Trip" asp-action="Edit" asp-route-id=@item.IdTrip> Modifier </a>
+                </div>
+            </div>
 
 
-<div id="view-component-ajax" >
-    Where StepVC should appear
+        </div>
+    }
+
+    <div class="col">
+        
+            <a class="btn btn-outline-secondary btn-lg" asp-controller="Trip" asp-action="Create">Nouveau voyage</a>
+       
+    </div>
+
 </div>
