@@ -18,11 +18,33 @@
          
          </div>
      </div>
+
+     <div class="m-3" id="TravelMap"></div>
       
 </div>
 
+
+
+
 @section Scripts{
 <script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+<!-- Leaflet Script -->
+<script>
+
+var map = L.map('TravelMap').setView([51.505, -0.09], 13);
+var marker = L.marker([51.5, -0.09]).addTo(map);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '© OpenStreetMap'
+}).addTo(map);
+
+
+
+</script>
+
+<!-- My Scripts : Dynamic Steps and Todos-->
 <script>
 function GetStepByTripVC(idTrip){
     $("#TodoVC").empty();
@@ -39,9 +61,7 @@ function GetStepByTripVC(idTrip){
         }
     });
 }
-
 function GetTodoByStepVC(idStep){
-   
     $.ajax({
         url: "https://localhost:7160/Travel/GetTodoByStepVC",
         type: "get",
@@ -55,47 +75,6 @@ function GetTodoByStepVC(idStep){
         }
     });
 }
-
-    /*
-$(document).ready(function(){
- $.fn.GetStepVC = function (idTrip) {
-    console.log("test");
-    console.log(idTrip);
-    $.ajax({
-        url: "https://localhost:7160/Step/GetStepsVC",
-        type: "get",
-        dataType: "html",
-        beforeSend: function (x) {
-        },
-        data: {idTrip: idTrip },
-        success: function (result) {
-            console.log(result);
-            $("#view-component-ajax").html(result);
-        }
-    });
-};
-});
-*/
-
-
-/*
-$(".btnCallAjax").click(function () {
-    console.log("test");
-    console.log($("#idTrip").val());
-    $.ajax({
-        url: "https://localhost:7160/Step/GetStepsVC",
-        type: "get",
-        dataType: "html",
-        beforeSend: function (x) {
-        },
-        data: {idTrip: },
-        success: function (result) {
-            console.log(result);
-            $("#view-component-ajax").html(result);
-        }
-    });
-});
-*/
 
 </script>
 }

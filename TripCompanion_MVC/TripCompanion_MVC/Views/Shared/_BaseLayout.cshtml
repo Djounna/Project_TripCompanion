@@ -12,7 +12,15 @@
     <link rel="stylesheet" href="~/css/mystyle.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/TripCompanion_MVC.styles.css" asp-append-version="true" />
    
+    <!--Toastr Lib Css-->
     <link rel="stylesheet" href="~/lib/toastr/toastr.min.css" asp-append-version="true"/>
+
+    <!--Leaflet Lib Css-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+   integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+   crossorigin=""/>
+
+
 </head>
 
 <span id="message" class="d-none">@TempData["Message"]</span>
@@ -94,8 +102,16 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+
+    <!-- Toastr Lib -->
     <script src="~/lib/toastr/toastr.min.js"></script>
+    <!-- Toastr personnal Script-->
     <script src="~/js/toast-notification.js" asp-append-version="true"></script>
+
+    <!-- Leaflet Lib-->
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+   integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+   crossorigin=""></script>
     @await RenderSectionAsync("Scripts", required: false)
 
   </body>
