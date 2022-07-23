@@ -58,8 +58,9 @@ namespace DAL.Repositories
             cmd.AddParameter("Budget", entity.Budget);
             cmd.AddParameter("Time", entity.Time);
             cmd.AddParameter("Comments", entity.Comments);
+            cmd.AddParameter("IdTrip", entity.IdTrip);
 
-            return (int)_Connection.ExecuteScalar(cmd) == 1;
+            return (int)_Connection.ExecuteScalar(cmd) > 0;
         }
         public virtual StepEntity GetByStepname(string name)
         {

@@ -17,7 +17,7 @@ namespace TripCompanion_MVC.Services
         #endregion
         public async Task<Step> GetStepById(int id)
         {
-            Step step = await _apiConsume.GetOne<Step>("Step/GetStepByTripId/" + id);
+            Step step = await _apiConsume.GetOne<Step>("Step/GetStepById/" + id);
             return step;
         }
         public async Task<IEnumerable<Step>> GetAllStep()

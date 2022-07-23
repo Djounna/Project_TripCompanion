@@ -1,5 +1,6 @@
 ﻿CREATE PROCEDURE [dbo].[UpdateTodo]
 	@IdTodo int,
+	@IdStep int,
 	@IdMainTodo int,
 	@Name nvarchar(50),
 	@Done bit,
@@ -15,8 +16,9 @@
 	@Comments Text
 AS
 	Update [Todo]
-	Set [IdMainTodo]=@IdMainTodo, [Name]=@Name, [Done]=@Done, [Status]=@Status, [Type]=@Type,
+	Set [IdMainTodo]=@IdMainTodo, [IdStep]=@IdStep, [Name]=@Name, [Done]=@Done, [Status]=@Status, [Type]=@Type,
 	[Priority]=@Priority, [Calendar]=@Calendar, [Location]=@Location, [RealTime]=@RealTime, [RealBudget]=@RealBudget,
 	[PlannedTime]=@PlannedTime, [PlannedBudget]=@PlannedBudget, [Comments]=@Comments
+	Output Inserted.IdStep
 	Where [IdTodo]=@IdTodo;
 RETURN 0

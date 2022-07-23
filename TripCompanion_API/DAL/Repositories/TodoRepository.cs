@@ -87,7 +87,7 @@ namespace DAL.Repositories
             cmd.AddParameter("RealBudget", entity.RealBudget);
             cmd.AddParameter("Comments", entity.Comments);
 
-            return (int)_Connection.ExecuteScalar(cmd) == 1;
+            return (int)_Connection.ExecuteScalar(cmd) > 0 ;
         }
         public virtual TodoEntity GetByTodoname(string name)
         {

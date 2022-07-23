@@ -5,7 +5,7 @@ namespace TripCompanion_MVC.Models
     public class Step
     {
         public int IdStep { get; set; }
-        [Display(Name="Nom"), Required, MinLength(4),MaxLength(20)]
+        [Display(Name="Nom"), Required, MinLength(4),MaxLength(50)]
         public string Name { get; set; }
         [Display(Name="Budget"),Range(1,int.MaxValue)]
         public int? Budget { get; set; }
@@ -19,7 +19,7 @@ namespace TripCompanion_MVC.Models
 
     public class StepForm // Post Form
     {
-        [Display(Name = "Nom"), Required, MinLength(4), MaxLength(20)]
+        [Display(Name = "Nom"), Required, MinLength(4), MaxLength(50)]
         public string Name { get; set; }
         [Display(Name = "Budget"), Range(1, int.MaxValue)]
         public int? Budget { get; set; }

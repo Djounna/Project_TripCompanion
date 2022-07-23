@@ -81,7 +81,11 @@ namespace TripCompanion_MVC.Controllers
         }
         #endregion
         #region Delete
-        
+        //public async Task<IActionResult> Delete(int idTrip)
+        //{
+        //    Torip trip = await _tripService.GetTodoById(idTrip);
+        //    return View(trip);
+        //}
         public async Task<IActionResult> Delete(int idTrip)
         {
             await _tripService.DeleteTrip(idTrip);

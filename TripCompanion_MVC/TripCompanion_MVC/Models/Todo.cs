@@ -6,7 +6,7 @@ namespace TripCompanion_MVC.Models
     {
         public int IdTodo { get; set; }
         [Display(Name="Nom")]
-        [Required,MinLength(4),MaxLength(20)]
+        [Required,MinLength(4),MaxLength(50)]
         public string Name { get; set; }
         [Display(Name="Fait")]
         [Required]
@@ -40,7 +40,7 @@ namespace TripCompanion_MVC.Models
     public class TodoForm // Post Form
     {
         [Display(Name = "Nom")]
-        [Required, MinLength(4), MaxLength(20)]
+        [Required, MinLength(4), MaxLength(50)]
         public string Name { get; set; }
         [Display(Name = "Fait")]
         [Required]

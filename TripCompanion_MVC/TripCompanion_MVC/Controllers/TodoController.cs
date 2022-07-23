@@ -74,21 +74,22 @@ namespace TodoCompanion_MVC.Controllers
                 return View(todo);
             }
             await _todoService.UpdateTodo(todo);
-            TempData["Message"] = "Success : Votre voyage a été mis à jour avec succès";
+            TempData["Message"] = "Success : Cette Todo a été mise à jour avec succès";
             return RedirectToAction("TravelPage", "Travel");
 
         }
         #endregion
         #region Delete
+        //public async Task<IActionResult> Delete(int idTodo)
+        //{
+        //    Todo Todo = await _todoService.GetTodoById(idTodo);
+        //    return View(Todo);
+        //}
+        [HttpPost]
         public async Task<IActionResult> Delete(int idTodo)
         {
-            Todo Todo = await _todoService.GetTodoById(idTodo);
-            return View(Todo);
-        }
-        [HttpPost]
-        public async Task<IActionResult> Delete(Todo todo)
-        {
-            await _todoService.DeleteTodo(todo.IdTodo);
+            await _todoService.DeleteTodo(idTodo);
+            TempData["Message"] = "Success : Cette a bien été supprimée";
             return RedirectToAction("TravelPage", "Travel");
         }
         #endregion

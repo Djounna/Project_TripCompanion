@@ -58,7 +58,7 @@ namespace TripCompanion_MVC.Services
 
         public async Task UpdateTodo(Todo todo)
         {
-            await _apiConsume.Put("Todo", todo);
+            await _apiConsume.Put<Todo>("Todo", todo);
         }
 
         public async Task DeleteTodo(int id)

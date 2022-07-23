@@ -7,7 +7,7 @@ namespace TripCompanion_MVC.Models
     {
         public int IdTrip { get; set; }
         [Display(Name="Nom")]
-        [Required,MinLength(4),MaxLength(20)]
+        [Required,MinLength(4),MaxLength(50)]
         public string Name { get; set; }
         [Display(Name="Date de début")]
         [Required]
@@ -27,7 +27,7 @@ namespace TripCompanion_MVC.Models
     public class TripForm // For Post Form
     {
         [Display(Name = "Nom")]
-        [Required,MinLength(4), MaxLength(20)]
+        [Required,MinLength(4), MaxLength(50)]
         public string Name { get; set; }
         [Display(Name = "Date de début")]
         [Required]

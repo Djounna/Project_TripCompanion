@@ -40,7 +40,7 @@
                 @Html.DisplayNameFor(model => model.Type) : @Html.DisplayFor(modelItem => item.Type)
                 <br>
                 <br>
-               <a class="btn btn-info align-self-end" asp-controller="Todo" asp-action="Edit" asp-route-id=@item.IdTodo>Modifier</a>
+               <a class="btn btn-info align-self-end" asp-controller="Todo" asp-action="Edit" asp-route-idTodo=@item.IdTodo>Modifier</a>
                <a class="btn btn-danger btn-sm " asp-controller="Todo" asp-action="Delete" asp-route-idTodo=@item.IdTodo>Supprimer</a>
 
 

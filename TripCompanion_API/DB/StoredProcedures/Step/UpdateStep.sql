@@ -9,6 +9,7 @@
 	
 AS
 	Update [Step]
-	Set [IdTrip]=@IdTrip, [Name]=@Name, [Budget]=@Budget, [Time]=@Time, [Comments]=@Comments 
+	Set [IdTrip]=@IdTrip, [Name]=@Name, [Budget]=@Budget, [Time]=@Time, [Comments]=@Comments
+	Output Inserted.IdTrip
 	Where [IdStep] = @IdStep
 RETURN 0

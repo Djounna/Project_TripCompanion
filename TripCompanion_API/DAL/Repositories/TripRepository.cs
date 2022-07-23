@@ -65,7 +65,7 @@ namespace DAL.Repositories
             cmd.AddParameter("Comments", entity.Comments);
             cmd.AddParameter("IdUser", entity.IdUser);
 
-            return (int)_Connection.ExecuteScalar(cmd) == 1;
+            return (int)_Connection.ExecuteScalar(cmd) > 0;
         }
         public virtual TripEntity GetByTripname(string Tripname)
         {

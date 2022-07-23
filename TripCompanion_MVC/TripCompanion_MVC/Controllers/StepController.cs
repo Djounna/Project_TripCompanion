@@ -68,21 +68,22 @@ namespace StepCompanion_MVC.Controllers
                 return View(step);
             }
             await _stepService.UpdateStep(step);
-            TempData["Message"] = "Success : Votre voyage a été mis à jour avec succès";
+            TempData["Message"] = "Success : Cette étape a été mise à jour avec succès";
             return RedirectToAction("TravelPage", "Travel");
 
         }
         #endregion
         #region Delete
+        //public async Task<IActionResult> Delete(int idStep)
+        //{
+        //    Step Step = await _stepService.GetStepById(idStep);
+        //    return View(Step);
+        //}
+        [HttpPost]
         public async Task<IActionResult> Delete(int idStep)
         {
-            Step Step = await _stepService.GetStepById(idStep);
-            return View(Step);
-        }
-        [HttpPost]
-        public async Task<IActionResult> Delete(Step Step)
-        {
-            await _stepService.DeleteStep(Step.IdStep);
+            await _stepService.DeleteStep(idStep);
+            TempData["Message"] = "Success : Cette étape a bien été supprimée";
             return RedirectToAction("TravelPage", "Travel");
         }
         #endregion
