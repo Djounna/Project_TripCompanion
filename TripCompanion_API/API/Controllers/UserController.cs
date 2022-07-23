@@ -1,6 +1,7 @@
 ﻿using API.Mappers;
 using API.Models;
 using BLL.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Tools.JWT;
 
@@ -8,6 +9,7 @@ namespace API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class UserController : ControllerBase
     {
         private UserService userService;
@@ -41,6 +43,7 @@ namespace API.Controllers
 
 
         [HttpGet]
+        [AllowAnonymous]
         [Route("{username}/{password}")]
         public IActionResult GetCredentials(string username, string password)
         {
@@ -57,6 +60,7 @@ namespace API.Controllers
         }
 
         [HttpGet]
+        [AllowAnonymous]
         [Route("Login/{username}/{password}")]
         public IActionResult Login(string username, string password)
         {
@@ -85,6 +89,7 @@ namespace API.Controllers
 
 
         [HttpPost]      
+        [AllowAnonymous]
         public IActionResult AddUser(UserApiModel user)
         {
             UserApiModel? receivedUser = userService.Insert(user.ToDto()).ToApi();
@@ -98,6 +103,7 @@ namespace API.Controllers
                 return new BadRequestObjectResult(user); // return BadRequest();
             }
         }
+
         [HttpPut]
         public IActionResult UpdateUser(UserApiModel user)
         {

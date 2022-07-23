@@ -17,17 +17,17 @@ namespace TripCompanion_MVC.Services
         #endregion
         public async Task<Todo> GetTodoById(int id)
         {
-            Todo todo = await _apiConsume.GetOne<Todo>("Todo/GetTodoById/" + id);
+            Todo todo = await _apiConsume.GetOne<Todo>("Todo/GetTodoById/" + id, _sessionManager.Token);
             return todo;
         }
         public async Task<IEnumerable<Todo>> GetAllTodo()
         {
-            IEnumerable<Todo> listTodo = await _apiConsume.GetMany<Todo>("Todo");
+            IEnumerable<Todo> listTodo = await _apiConsume.GetMany<Todo>("Todo", _sessionManager.Token);
             return listTodo;
         }
         public async Task<IEnumerable<Todo>> GetAllTodoByStep(int idStep)
         {
-            IEnumerable<Todo> listTodo = await _apiConsume.GetMany<Todo>("Todo/GetAllTodoByStep/" + idStep);
+            IEnumerable<Todo> listTodo = await _apiConsume.GetMany<Todo>("Todo/GetAllTodoByStep/" + idStep, _sessionManager.Token);
             return listTodo;
         }
 
@@ -53,17 +53,17 @@ namespace TripCompanion_MVC.Services
                 IdStep = todoForm.IdStep
             };
 
-            return await _apiConsume.Post<Todo>("Todo", todoToPost);
+            return await _apiConsume.Post<Todo>("Todo", todoToPost, _sessionManager.Token);
         }
 
         public async Task UpdateTodo(Todo todo)
         {
-            await _apiConsume.Put<Todo>("Todo", todo);
+            await _apiConsume.Put<Todo>("Todo", todo, _sessionManager.Token);
         }
 
         public async Task DeleteTodo(int id)
         {
-            await _apiConsume.Delete<Todo>("Todo/" + id);
+            await _apiConsume.Delete<Todo>("Todo/" + id, _sessionManager.Token);
         }
         #endregion
 

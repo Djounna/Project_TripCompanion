@@ -17,18 +17,18 @@ namespace TripCompanion_MVC.Services
         #endregion
         public async Task<Step> GetStepById(int id)
         {
-            Step step = await _apiConsume.GetOne<Step>("Step/GetStepById/" + id);
+            Step step = await _apiConsume.GetOne<Step>("Step/GetStepById/" + id, _sessionManager.Token);
             return step;
         }
         public async Task<IEnumerable<Step>> GetAllStep()
         {
-            IEnumerable<Step> listStep = await _apiConsume.GetMany<Step>("Step");
+            IEnumerable<Step> listStep = await _apiConsume.GetMany<Step>("Step", _sessionManager.Token);
             return listStep;
         }
 
         public async Task<IEnumerable<Step>> GetAllStepByTrip(int idTrip)
         {
-            IEnumerable<Step> listStep = await _apiConsume.GetMany<Step>("Step/GetAllStepByTrip/"+idTrip);
+            IEnumerable<Step> listStep = await _apiConsume.GetMany<Step>("Step/GetAllStepByTrip/"+idTrip, _sessionManager.Token);
             return listStep;
         }
 
@@ -44,17 +44,17 @@ namespace TripCompanion_MVC.Services
                 IdTrip = stepForm.IdTrip
             };
 
-            return await _apiConsume.Post<Step>("Step", stepToPost);
+            return await _apiConsume.Post<Step>("Step", stepToPost, _sessionManager.Token);
         }
 
         public async Task UpdateStep(Step step)
         {
-            await _apiConsume.Put("Step", step);
+            await _apiConsume.Put("Step", step, _sessionManager.Token);
         }
 
         public async Task DeleteStep(int id)
         {
-            await _apiConsume.Delete<Step>("Step/" + id);
+            await _apiConsume.Delete<Step>("Step/" + id, _sessionManager.Token);
         }
         #endregion
 

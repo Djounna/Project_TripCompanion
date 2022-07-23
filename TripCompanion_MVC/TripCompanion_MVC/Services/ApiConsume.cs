@@ -42,8 +42,10 @@ namespace TripCompanion_MVC.Services
             return JsonConvert.DeserializeObject<IEnumerable<T>>(content);
         }
 
-        public async Task<T> Post<T>(string chemin, T entity)  // EN COURS :  voir pour la valeur de retour, plus voir pour IsSuccessStatusCode faux ?
+        public async Task<T> Post<T>(string chemin, T entity, string? bearerToken=null)  // EN COURS :  voir pour la valeur de retour, plus voir pour IsSuccessStatusCode faux ?
         {
+            _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", bearerToken);
+
             HttpResponseMessage response = await _httpClient.PostAsJsonAsync(chemin, entity);
 
             if (!response.IsSuccessStatusCode) throw new Exception("Cannot create data");
@@ -52,16 +54,20 @@ namespace TripCompanion_MVC.Services
             return JsonConvert.DeserializeObject<T>(content);
         }
 
-        public async Task Put<T>(string chemin, T entity)
+        public async Task Put<T>(string chemin, T entity, string? bearerToken=null)
         {
+            _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", bearerToken);
+
             HttpResponseMessage response = await _httpClient.PutAsJsonAsync(chemin, entity);
 
             if (!response.IsSuccessStatusCode) throw new Exception("Cannot udpate data");
         }
 
 
-        public async Task Delete<T>(string chemin) // EN COURS : voir pour la valeur de retour
+        public async Task Delete<T>(string chemin, string? bearerToken=null) // EN COURS : voir pour la valeur de retour
         {
+            _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", bearerToken);
+
             HttpResponseMessage response = await _httpClient.DeleteAsync(chemin);
 
             if (!response.IsSuccessStatusCode) throw new Exception("Cannot delete data");

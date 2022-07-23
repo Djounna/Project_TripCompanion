@@ -1,4 +1,5 @@
 
+using API.Middleware;
 using BLL.Services;
 using DAL.Interfaces;
 using DAL.Repositories;
@@ -53,19 +54,19 @@ namespace API
             builder.Services.AddScoped<JwtService>();
 
             //JWT : Vérification de la validation du token   : WIP: test en cours      
-            builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-                .AddJwtBearer(options =>
-                {
-                    options.TokenValidationParameters = new TokenValidationParameters
-                    {
-                        ValidateIssuerSigningKey = true,
-                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration.GetSection("JwtToken").GetSection("Signature").ToString())),
-                        ValidateIssuer = false,
-                        ValidIssuer = builder.Configuration.GetSection("JwtToken").GetSection("Issuer").Value,
-                        ValidateAudience = false,
-                        ValidAudience = builder.Configuration.GetSection("JwtToken").GetSection("Audience").Value
-                    };
-                });
+            //builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+            //    .AddJwtBearer(options =>
+            //    {
+            //        options.TokenValidationParameters = new TokenValidationParameters
+            //        {
+            //            ValidateIssuerSigningKey = true,
+            //            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration.GetSection("JwtToken").GetSection("Signature").ToString())),
+            //            ValidateIssuer = false,
+            //            ValidIssuer = builder.Configuration.GetSection("JwtToken").GetSection("Issuer").Value,
+            //            ValidateAudience = false,
+            //            ValidAudience = builder.Configuration.GetSection("JwtToken").GetSection("Audience").Value
+            //        };
+            //    });
 
             var app = builder.Build();
 
@@ -78,7 +79,9 @@ namespace API
 
             app.UseHttpsRedirection();
 
-            app.UseAuthentication(); // Ajout, test en cours
+            app.UseMiddleware<JwtMiddleware>(); // Test En cours
+
+            //app.UseAuthentication(); // Ajout, test en cours
 
             app.UseAuthorization();
 
