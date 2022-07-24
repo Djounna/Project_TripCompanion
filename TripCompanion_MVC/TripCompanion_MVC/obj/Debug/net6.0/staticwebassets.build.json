@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "N+7V0Vcsomcc6QR4R8rCXGHFsBoLPShxt6/xmR/43fk=",
+  "Hash": "z/pa6ui1kfKJ1lJIzLJlTEw0umlkfDUtxDrpePjU0sY=",
   "Source": "TripCompanion_MVC",
   "BasePath": "_content/TripCompanion_MVC",
   "Mode": "Default",
@@ -168,6 +168,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\Corentin\\Documents\\CODE\\Project_TripCompanion\\TripCompanion_MVC\\TripCompanion_MVC\\wwwroot\\js\\map-localisation.js",
+      "SourceId": "TripCompanion_MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Corentin\\Documents\\CODE\\Project_TripCompanion\\TripCompanion_MVC\\TripCompanion_MVC\\wwwroot\\",
+      "BasePath": "_content/TripCompanion_MVC",
+      "RelativePath": "js/map-localisation.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\map-localisation.js"
     },
     {
       "Identity": "C:\\Users\\Corentin\\Documents\\CODE\\Project_TripCompanion\\TripCompanion_MVC\\TripCompanion_MVC\\wwwroot\\js\\site.js",

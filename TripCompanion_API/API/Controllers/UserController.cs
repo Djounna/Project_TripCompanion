@@ -130,6 +130,18 @@ namespace API.Controllers
            
         }
 
+        // For Test Purposes
+        [HttpGet]
+        [Route("Nominatim")]
+        [AllowAnonymous]
+        public async Task<IActionResult> Test()
+        {
+            HttpClient client = new HttpClient();
+            HttpResponseMessage response = await client.GetAsync("https://nominatim.openstreetmap.org/search?q=namur&format=jsonv2");
+            var content = await response.Content.ReadAsStringAsync();
+            return Ok(content);
+        }
+
 
     }
 }

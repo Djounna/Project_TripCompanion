@@ -9,6 +9,8 @@
             
         @await Component.InvokeAsync("Trips",@sessionManager.IdUser)
     
+         <div class="m-3" id="TravelMap"></div>
+
      <div class="row">
         <div class="col-4" id="StepVC" >
          
@@ -19,7 +21,7 @@
          </div>
      </div>
 
-     <div class="m-3" id="TravelMap"></div>
+    
       
 </div>
 
@@ -28,20 +30,38 @@
 
 @section Scripts{
 <script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/js/map-localisation.js"></script>
 
-<!-- Leaflet Script -->
+<!-- Leaflet Loaging Script -->
 <script>
+$(document).ready(function () {
+    var map = L.map('TravelMap').setView([51.505, -0.09], 13);
+    var marker = L.marker([51.5, -0.09]).addTo(map);
 
-var map = L.map('TravelMap').setView([51.505, -0.09], 13);
-var marker = L.marker([51.5, -0.09]).addTo(map);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '© OpenStreetMap'
+    }).addTo(map);
+});
+</script>
 
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19,
-    attribution: '© OpenStreetMap'
-}).addTo(map);
-
-
-
+<!-- Script -->
+<script>
+    function UpdateMap(location){
+            console.log(location);
+            $.ajax({
+            url: "https://localhost:7160/Travel/MapCoordinates",
+            type: "get",
+            dataType: "html",
+            beforeSend: function (x) {
+            },
+            data: {location: location},
+            success: function (result) {
+                console.log(result);
+                ShowMap(result[0],result[1]);
+            }
+        });
+    }
 </script>
 
 <!-- My Scripts : Dynamic Steps and Todos-->

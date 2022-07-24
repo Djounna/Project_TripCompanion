@@ -1,6 +1,7 @@
 using System.Net.Http.Headers;
 using TripCompanion_MVC.Interfaces;
 using TripCompanion_MVC.Services;
+using TripCompanion_MVC.Services.ApiExternal;
 
 namespace TripCompanion_MVC
 {
@@ -38,6 +39,21 @@ namespace TripCompanion_MVC
                 
             });
             //***
+            builder.Services.AddHttpClient<NominatimAPI>(httpClient =>
+            {
+                httpClient.BaseAddress = new Uri("https://nominatim.openstreetmap.org/");
+
+            });
+            //***
+            builder.Services.AddHttpClient<GeoapifyAPI>(httpClient =>
+            {
+                httpClient.BaseAddress = new Uri("https://api.geoapify.com/v1/geocode/");
+
+            });
+
+
+
+            /*********************************************************************************************************************************************/
 
             var app = builder.Build();
 
