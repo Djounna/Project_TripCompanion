@@ -4,7 +4,7 @@
     ViewData["Title"] = "Default";
 }
 
-<h4>Todos</h4>
+<h4 class="text-center">To do</h4>
 
 <div class="m-1 p-3 bg-info bg-opacity-10 align-items-center justify-content-center">
 
@@ -15,8 +15,7 @@
            <div class = "col">
                              
                 @Html.DisplayNameFor(model => model.Name) : @Html.DisplayFor(modelItem => item.Name)
-                <br>
-               
+                <br>              
                 @Html.DisplayNameFor(model => model.Priority) : @Html.DisplayFor(modelItem => item.Priority)
                 <br>
                 @Html.DisplayNameFor(model => model.Calendar) : @Html.DisplayFor(modelItem => item.Calendar)
@@ -46,7 +45,8 @@
                <br>
                 @if(item.Location != null)
                 {
-                    <button class="btn btn-primary" onclick="UpdateMap(@item.Location)" >Voir sur la carte</button>
+                    Console.WriteLine(@item.Location);
+                    <button class="btn btn-primary" onclick="UpdateMap('@item.Location')" >Voir sur la carte</button>
                 }
                 
             </div>                            

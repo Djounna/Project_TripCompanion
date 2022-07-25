@@ -67,9 +67,17 @@ namespace TripCompanion_MVC.Controllers
 
         #region ExternalAPI controllers
 
-        public async Task<string[]> MapCoordinates(string location)
+        public async Task<IActionResult> MapCoordinates(string location)
         {
-           return await _geoapifyApi.Search(location);           
+            GeoapifyAPI.CoordonateResult result = await _geoapifyApi.Search(location);
+
+            // TODO Cleanup this ♥
+            return Ok(new
+            {
+                lat = result.Lat,
+                lon = result.Long
+                               
+            });
         }
 
         #endregion

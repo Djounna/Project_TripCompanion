@@ -4,9 +4,7 @@
     ViewData["Title"] = "SignUp";
 }
 
-<h1>SignUp</h1>
-
-<h4>UserForm</h4>
+<h3 class="h3 mb-3 fw-normal">Complétez le formulaire afin de vous enregister</h3>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -27,6 +25,7 @@
                 <input asp-for="Password" class="form-control" />
                 <span asp-validation-for="Password" class="text-danger"></span>
             </div>
+            <br />
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
@@ -34,8 +33,10 @@
     </div>
 </div>
 
+<hr />
+
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a class="btn btn-secondary" asp-controller="Home" asp-action="Index">Retour</a>
 </div>
 
 @section Scripts {

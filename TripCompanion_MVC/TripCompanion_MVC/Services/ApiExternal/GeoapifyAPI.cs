@@ -7,6 +7,11 @@ namespace TripCompanion_MVC.Services.ApiExternal
 {
     public class GeoapifyAPI
     {
+        public class CoordonateResult
+        {
+            public double Long { get; set; }
+            public double Lat { get; set; }
+        }
 
         private readonly HttpClient _httpClient;
 
@@ -15,12 +20,10 @@ namespace TripCompanion_MVC.Services.ApiExternal
             _httpClient = httpClient;
         }
 
-        public async Task<string[]> Search(string query)
+        public async Task<CoordonateResult> Search(string query)
         {
-            string testquery = "14, rue francois dufer, namur";
-
             var values = new Dictionary<string, string>();
-            values.Add("text", testquery);
+            values.Add("text", query);
             values.Add("format", "json");
             values.Add("apiKey", "d522ca0618f841a1944c2acfffa2f30c");
 
@@ -32,19 +35,12 @@ namespace TripCompanion_MVC.Services.ApiExternal
 
             var content = await response.Content.ReadAsStringAsync();
             GeoapifyResult result =  JsonConvert.DeserializeObject<GeoapifyResult>(content);
-            string lon, lat;
-            lon = result.results[0].lon; 
-            lat = result.results[0].lat;
 
-            StringBuilder sb = new();
-            sb.Append(lat);
-            sb.Append(",");
-            sb.Append(lon);
-
-            string[] array = new string[2];
-            array[0] = lon;
-            array[1] = lat;
-            return array;
+            return new CoordonateResult
+            {
+                Long = result.results[0].lon,
+                Lat = result.results[0].lat
+            };
         }
     }
 }

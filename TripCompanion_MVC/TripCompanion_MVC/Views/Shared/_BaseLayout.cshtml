@@ -14,12 +14,10 @@
    
     <!--Toastr Lib Css-->
     <link rel="stylesheet" href="~/lib/toastr/toastr.min.css" asp-append-version="true"/>
-
     <!--Leaflet Lib Css-->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
    integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
    crossorigin=""/>
-
 
 </head>
 
@@ -36,15 +34,14 @@
 
       <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
         <li><a href="#" class="nav-link px-2 link-secondary">Home</a></li>
-        <li><a href="#" class="nav-link px-2 link-dark">Features</a></li>
 
                @if(sessionManager.Role == "user")
                 {
                    <li><a asp-controller="Travel" asp-action="TravelPage" asp-route-idUser=@sessionManager.IdUser class="nav-link px-2 link-dark">Mes Voyages</a></li> 
                 }
                 
-        <li><a href="#" class="nav-link px-2 link-dark">FAQs</a></li>
-        <li><a asp-controller="Travel" asp-action="TravelPage" class="nav-link px-2 link-dark">About</a></li>
+        <li><a asp-controller="Home" asp-action="FAQ" class="nav-link px-2 link-dark">FAQ</a></li>
+        <li><a asp-controller="Home" asp-action="About" class="nav-link px-2 link-dark">About</a></li>
       </ul>
 
             @if(sessionManager.Role != "user")
@@ -61,11 +58,12 @@
             {
                 <div class="col-md-3 text-end">
 
+                    <p>Utilisateur : @sessionManager.UserName</p>
+
                     <a class="btn btn-outline-primary me-2" asp-controller="Account" asp-action="Logout">Logout</a>
                     
                 </div>
             }
-
 
     </header>
   </div>
@@ -84,16 +82,15 @@
 
 
 <!-- Start Footer -->
-   <div class="container>
+   <div class="container">
     <footer class="py-3 my-4">
       <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>      
+        <li class="nav-item"><a asp-controller="Home" asp-action="Prix" class="nav-link px-2 text-muted">Prix</a></li>
+        <li class="nav-item"><a asp-controller="Home" asp-action="FAQ" class="nav-link px-2 text-muted">FAQs</a></li>
+        <li class="nav-item"><a asp-controller="Home" asp-action="About" class="nav-link px-2 text-muted">About</a></li>
       </ul>
-      <p class="text-center text-muted">© 2022 Company, Inc</p>
+      <p class="text-center text-muted">© 2022 Corentin</p>
     </footer>
   </div>
   <!-- End Footer -->

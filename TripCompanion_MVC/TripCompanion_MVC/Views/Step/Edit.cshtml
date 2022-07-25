@@ -4,9 +4,9 @@
     ViewData["Title"] = "Edit";
 }
 
-
 <h4>Modifiez cette étape</h4>
 <hr />
+
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Edit">
@@ -17,7 +17,6 @@
             <div class="form-group">                
                 <input asp-for="IdTrip" value=@Model.IdTrip class="form-control"  hidden="hidden" />          
             </div>
-
 
             <div class="form-group">
                 <label asp-for="Name" class="control-label"></label>
