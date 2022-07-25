@@ -8,6 +8,5 @@
 	[Comments] TEXT,
 
 	Constraint PK_Step primary key ([IdStep]),
-	Constraint FK_Step__IdTrip Foreign key ([IdTrip]) references [Trip]([IdTrip]),
-	Constraint UK_StepName unique ([Name])
+	Constraint FK_Step__IdTrip Foreign key ([IdTrip]) references [Trip]([IdTrip])
 )

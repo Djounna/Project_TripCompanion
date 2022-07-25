@@ -9,7 +9,6 @@
 	[IdUser] int not null,
 
 	Constraint PK_Trip primary key ([IdTrip]),
-	Constraint FK_Trip__IdUser foreign key ([IdUser]) references [User]([IdUser]),
-	Constraint UK_Trip_Name unique ([Name])
+	Constraint FK_Trip__IdUser foreign key ([IdUser]) references [User]([IdUser])
 
 )

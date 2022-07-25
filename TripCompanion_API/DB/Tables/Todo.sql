@@ -18,6 +18,5 @@
 
    Constraint PK_Todo primary key ([IdTodo]),
    Constraint PK_Todo__IdStep foreign key ([IdStep]) references [Step]([IdStep]),
-   Constraint PK_Todo__IdMainTodo foreign key ([IdMainTodo]) references [Todo]([IdTodo]),
-   Constraint UK_TodoName unique ([Name])
+   Constraint PK_Todo__IdMainTodo foreign key ([IdMainTodo]) references [Todo]([IdTodo])
 )

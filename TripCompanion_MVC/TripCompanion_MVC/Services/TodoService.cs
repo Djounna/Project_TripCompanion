@@ -63,7 +63,7 @@ namespace TripCompanion_MVC.Services
 
         public async Task DeleteTodo(int id)
         {
-            await _apiConsume.Delete<Todo>("Todo/" + id, _sessionManager.Token);
+            await _apiConsume.Delete<Todo>("Todo/Delete/" + id, _sessionManager.Token);
         }
         #endregion
 

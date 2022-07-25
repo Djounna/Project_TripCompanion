@@ -54,7 +54,7 @@ namespace TripCompanion_MVC.Services
 
         public async Task DeleteStep(int id)
         {
-            await _apiConsume.Delete<Step>("Step/" + id, _sessionManager.Token);
+            await _apiConsume.Delete<Step>("Step/Delete/" + id, _sessionManager.Token);
         }
         #endregion
 

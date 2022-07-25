@@ -85,7 +85,7 @@ namespace TodoCompanion_MVC.Controllers
         //    Todo Todo = await _todoService.GetTodoById(idTodo);
         //    return View(Todo);
         //}
-        [HttpPost]
+        
         public async Task<IActionResult> Delete(int idTodo)
         {
             await _todoService.DeleteTodo(idTodo);

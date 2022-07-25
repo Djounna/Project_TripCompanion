@@ -4,10 +4,56 @@
 @{
     ViewData["Title"] = "Home Page";
 }
+    
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-10 col-sm-8 col-lg-6">
+        <img src="~/assets/images/Background_Paris1.jpg" class = "rounded d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" loading="lazy" width="700" height="500">
+      </div>
+      <div class="col-lg-6">
+        <h1 class="display-4 fw-bold lh-1 mb-3" >Trip Companion </h1>
+        <h3 class="display-6 fw-bold lh-1 mb-3 text-info">Votre compagnon de voyages</h3>
+        <p class="lead">Organisez rapidement et facilement vos voyages de rèves, suivez aisément votre parcours et noter vos coups de coeur</p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+         <a class="btn btn-primary btn-lg px-4 me-md-2" asp-controller="Account" asp-action="Login" >Login</a>
+          <a class="btn btn-outline-secondary btn-lg px-4" asp-controller="Account" asp-action="SignUp">Sign Up</a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+      <div class="col d-flex align-items-start">
+        <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+          <svg class="bi" width="1em" height="1em"><use xlink:href="#toggles2"></use></svg>
+        </div>
+        <div>
+            <img src="~/assets/icones/Icon_Notebook.jpg" class="d-block mx-lg-auto img-fluid" alt="Portefeuille" loading="lazy" width="100" height="80">
+          <h2>Organiser vos voyages</h2>
+        <p>Créez et sauvegardez vos voyages, ajoutez-y des étapes, organiser vos visitez et listez les choses à ne pas manquer</p>
+         
+        </div>
+      </div>
+      <div class="col d-flex align-items-start">
+        <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+          <svg class="bi" width="1em" height="1em"><use xlink:href="#cpu-fill"></use></svg>
+        </div>
+        <div>
+            <img src="~/assets/icones/Icon_Portefeuille.jpg" class="d-block mx-lg-auto img-fluid" alt="Portefeuille" loading="lazy" width="100" height="80">
+           <h2>Controler votre budget</h2>
+            <p>Prévoyez le budget de vos visites, restaurants, sorties et contrôlez que vous ne dépasser pas votre limite</p>
+          
+        </div>
+      </div>
+      <div class="col d-flex align-items-start">
+        <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+          <svg class="bi" width="1em" height="1em"><use xlink:href="#tools"></use></svg>
+        </div>
+        <div>
+            <img src="~/assets/icones/Icon_Map.png" class="d-block mx-lg-auto img-fluid" alt="Portefeuille" loading="lazy" width="100" height="80">
+          <h2>Informations en temps réel</h2>
+        <p>Accéder à la localisation de l'endroit et aux prévisions météorologiquesen temps réel</p>
+          
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
-
-
+        </div>
+      </div>
+    </div>
+  
