@@ -12,26 +12,28 @@
     {
         <div class="col m-2 ">
 
-            <div class="card border " style="width: 18rem;" onclick="GetStepByTripVC(@item.IdTrip)">
-                <img src="..." class="card-img-top" alt="not implemented">
+            <div class="card border" style="width: 15rem;" onclick="GetStepByTripVC(@item.IdTrip)">              
                 <div class="card-body">
                     <h5 class="card-title text-center"> @Html.DisplayFor(modelItem=> item.Name) </h5>
        
                     <p class="card-text">
-                        @Html.DisplayNameFor(model => model.Comments) : @Html.DisplayFor(modelItem => item.Comments)
+                        
                     </p>
+
+             
                 </div>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">Début : @Html.DisplayFor(modelItem => item.StartingDate)</li>
                     <li class="list-group-item">Fin : @Html.DisplayFor(modelItem => item.EndingDate)</li>
                     <li class="list-group-item">@Html.DisplayNameFor(model => model.Budget) : @Html.DisplayFor(modelItem => item.Budget)</li>
-
-
+                    <li class="list-group-item">@Html.DisplayFor(modelItem => item.Comments)</li>
                 </ul>
+
                 <div class="card-body d-flex flex-row justify-content-evenly">
                     <a class="btn btn-info" asp-controller="Trip" asp-action="Edit" asp-route-idTrip=@item.IdTrip>Modifier</a>
                     <a class="btn btn-danger btn-sm align-self-center" asp-controller="Trip" asp-action="Delete" asp-route-idTrip=@item.IdTrip>Supprimer</a>
-                </div>
+                </div>           
+
             </div>
 
 

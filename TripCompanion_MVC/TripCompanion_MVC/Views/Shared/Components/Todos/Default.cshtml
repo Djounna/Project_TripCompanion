@@ -10,7 +10,7 @@
 
 @foreach (var item in Model) {
 
-        <div class="row p-3 m-3 bg-light"> 
+        <div class="row shadow p-3 m-3 bg-light rounded"> 
 
            <div class = "col">
                              
@@ -34,20 +34,21 @@
 
                 @Html.DisplayNameFor(model => model.Done) : @Html.DisplayFor(modelItem => item.Done)
                 <br>
-                @Html.DisplayNameFor(model => model.Status) :@Html.DisplayFor(modelItem => item.Status)
+                @Html.DisplayNameFor(model => model.Status) : @Html.DisplayFor(modelItem => item.Status)
                 <br>
                 @Html.DisplayNameFor(model => model.Type) : @Html.DisplayFor(modelItem => item.Type)
                 <br>
-                <br>
-
-               <a class="btn btn-info align-self-end" asp-controller="Todo" asp-action="Edit" asp-route-idTodo=@item.IdTodo>Modifier</a>
-               <a class="btn btn-danger btn-sm " asp-controller="Todo" asp-action="Delete" asp-route-idTodo=@item.IdTodo>Supprimer</a>
-               <br>
                 @if(item.Location != null)
                 {
                     Console.WriteLine(@item.Location);
-                    <button class="btn btn-primary" onclick="UpdateMap('@item.Location')" >Voir sur la carte</button>
+                    <button class=" m-1 btn btn-primary" onclick="UpdateMap('@item.Location')" >Voir sur la carte</button>
                 }
+                <br>
+                <br>
+               <a class=" m-1 btn btn-info align-self-end" asp-controller="Todo" asp-action="Edit" asp-route-idTodo=@item.IdTodo>Modifier</a>
+               <a class=" m-1 btn btn-danger btn-sm " asp-controller="Todo" asp-action="Delete" asp-route-idTodo=@item.IdTodo>Supprimer</a>
+               
+                
                 
             </div>                            
         </div>
