@@ -12,7 +12,7 @@
 		</CustomData>
 		<CustomData Category="Reference" Type="Assembly">
 			<Metadata Name="LogicalName" Value="DB.dll" />
-			<Metadata Name="FileName" Value="C:\USERS\CORENTIN\DOCUMENTS\CODE\PROJECT_TRIPCOMPANION\TRIPCOMPANION_API\DB\OBJ\DEBUG\DB.DLL" />
+			<Metadata Name="FileName" Value="C:\USERS\STG0765\DOCUMENTS\PROJET FINAL\PROJECT_TRIPCOMPANION\TRIPCOMPANION_API\DB\OBJ\DEBUG\DB.DLL" />
 			<Metadata Name="AssemblyName" Value="DB" />
 			<Metadata Name="PermissionSet" Value="SAFE" />
 			<Metadata Name="Owner" Value="" />
@@ -20,7 +20,7 @@
 			<Metadata Name="IsVisible" Value="True" />
 			<Metadata Name="IsModelAware" Value="True" />
 			<Metadata Name="SkipCreationIfEmpty" Value="True" />
-			<Metadata Name="AssemblySymbolsName" Value="C:\Users\Corentin\Documents\CODE\Project_TripCompanion\TripCompanion_API\DB\obj\Debug\DB.pdb" />
+			<Metadata Name="AssemblySymbolsName" Value="C:\Users\STG0765\Documents\PROJET FINAL\Project_TripCompanion\TripCompanion_API\DB\obj\Debug\DB.pdb" />
 		</CustomData>
 		<CustomData Category="SqlCmdVariables" Type="SqlCmdVariable" />
 	</Header>
@@ -2317,7 +2317,6 @@ RETURN 0]]></Value>
 			</Relationship>
 			<AttachedAnnotation Disambiguator="12" />
 			<AttachedAnnotation Disambiguator="9" />
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="19" />
 		</Element>
 		<Element Type="SqlTable" Name="[dbo].[Todo]">
 			<Property Name="IsAnsiNullsOn" Value="True" />
@@ -2571,7 +2570,6 @@ RETURN 0]]></Value>
 			<AttachedAnnotation Disambiguator="13" />
 			<AttachedAnnotation Disambiguator="15" />
 			<AttachedAnnotation Disambiguator="14" />
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="20" />
 		</Element>
 		<Element Type="SqlTable" Name="[dbo].[Trip]">
 			<Property Name="IsAnsiNullsOn" Value="True" />
@@ -2696,7 +2694,6 @@ RETURN 0]]></Value>
 			</Relationship>
 			<AttachedAnnotation Disambiguator="16" />
 			<AttachedAnnotation Disambiguator="10" />
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="21" />
 		</Element>
 		<Element Type="SqlUniqueConstraint" Name="[dbo].[UK_Email]">
 			<Relationship Name="ColumnSpecifications">
@@ -2715,7 +2712,7 @@ RETURN 0]]></Value>
 					<References Name="[dbo].[User]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="22" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="19" />
 		</Element>
 		<Element Type="SqlUniqueConstraint" Name="[dbo].[UK_RoleName]">
 			<Relationship Name="ColumnSpecifications">
@@ -2736,63 +2733,6 @@ RETURN 0]]></Value>
 			</Relationship>
 			<AttachedAnnotation Disambiguator="18" />
 		</Element>
-		<Element Type="SqlUniqueConstraint" Name="[dbo].[UK_StepName]">
-			<Relationship Name="ColumnSpecifications">
-				<Entry>
-					<Element Type="SqlIndexedColumnSpecification">
-						<Relationship Name="Column">
-							<Entry>
-								<References Name="[dbo].[Step].[Name]" />
-							</Entry>
-						</Relationship>
-					</Element>
-				</Entry>
-			</Relationship>
-			<Relationship Name="DefiningTable">
-				<Entry>
-					<References Name="[dbo].[Step]" />
-				</Entry>
-			</Relationship>
-			<AttachedAnnotation Disambiguator="19" />
-		</Element>
-		<Element Type="SqlUniqueConstraint" Name="[dbo].[UK_TodoName]">
-			<Relationship Name="ColumnSpecifications">
-				<Entry>
-					<Element Type="SqlIndexedColumnSpecification">
-						<Relationship Name="Column">
-							<Entry>
-								<References Name="[dbo].[Todo].[Name]" />
-							</Entry>
-						</Relationship>
-					</Element>
-				</Entry>
-			</Relationship>
-			<Relationship Name="DefiningTable">
-				<Entry>
-					<References Name="[dbo].[Todo]" />
-				</Entry>
-			</Relationship>
-			<AttachedAnnotation Disambiguator="20" />
-		</Element>
-		<Element Type="SqlUniqueConstraint" Name="[dbo].[UK_Trip_Name]">
-			<Relationship Name="ColumnSpecifications">
-				<Entry>
-					<Element Type="SqlIndexedColumnSpecification">
-						<Relationship Name="Column">
-							<Entry>
-								<References Name="[dbo].[Trip].[Name]" />
-							</Entry>
-						</Relationship>
-					</Element>
-				</Entry>
-			</Relationship>
-			<Relationship Name="DefiningTable">
-				<Entry>
-					<References Name="[dbo].[Trip]" />
-				</Entry>
-			</Relationship>
-			<AttachedAnnotation Disambiguator="21" />
-		</Element>
 		<Element Type="SqlUniqueConstraint" Name="[dbo].[UK_Username]">
 			<Relationship Name="ColumnSpecifications">
 				<Entry>
@@ -2810,13 +2750,14 @@ RETURN 0]]></Value>
 					<References Name="[dbo].[User]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="23" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="20" />
 		</Element>
 		<Element Type="SqlProcedure" Name="[dbo].[UpdateStep]">
 			<Property Name="BodyScript">
 				<Value><![CDATA[
 	Update [Step]
-	Set [IdTrip]=@IdTrip, [Name]=@Name, [Budget]=@Budget, [Time]=@Time, [Comments]=@Comments 
+	Set [IdTrip]=@IdTrip, [Name]=@Name, [Budget]=@Budget, [Time]=@Time, [Comments]=@Comments
+	Output Inserted.IdTrip
 	Where [IdStep] = @IdStep
 RETURN 0]]></Value>
 			</Property>
@@ -2963,7 +2904,7 @@ RETURN 0]]></Value>
 				</Entry>
 			</Relationship>
 			<Annotation Type="SysCommentsObjectAnnotation">
-				<Property Name="Length" Value="295" />
+				<Property Name="Length" Value="319" />
 				<Property Name="StartLine" Value="1" />
 				<Property Name="StartColumn" Value="1" />
 				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[UpdateStep]&#xD;&#xA;&#x9;@IdStep int,&#xD;&#xA;&#x9;@IdTrip int,&#xD;&#xA;&#xD;&#xA;&#x9;@Name nvarchar(50),&#xD;&#xA;&#x9;@Budget int,&#xD;&#xA;&#x9;@Time decimal(4,2),&#xD;&#xA;&#x9;@Comments Text&#xD;&#xA;&#x9;&#xD;&#xA;AS" />
@@ -2973,9 +2914,10 @@ RETURN 0]]></Value>
 			<Property Name="BodyScript">
 				<Value><![CDATA[
 	Update [Todo]
-	Set [IdMainTodo]=@IdMainTodo, [Name]=@Name, [Done]=@Done, [Status]=@Status, [Type]=@Type,
+	Set [IdMainTodo]=@IdMainTodo, [IdStep]=@IdStep, [Name]=@Name, [Done]=@Done, [Status]=@Status, [Type]=@Type,
 	[Priority]=@Priority, [Calendar]=@Calendar, [Location]=@Location, [RealTime]=@RealTime, [RealBudget]=@RealBudget,
 	[PlannedTime]=@PlannedTime, [PlannedBudget]=@PlannedBudget, [Comments]=@Comments
+	Output Inserted.IdStep
 	Where [IdTodo]=@IdTodo;
 RETURN 0]]></Value>
 			</Property>
@@ -2989,6 +2931,12 @@ RETURN 0]]></Value>
 				</Entry>
 				<Entry>
 					<References Name="[dbo].[UpdateTodo].[@IdMainTodo]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Todo].[IdStep]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpdateTodo].[@IdStep]" />
 				</Entry>
 				<Entry>
 					<References Name="[dbo].[Todo].[Name]" />
@@ -3072,6 +3020,21 @@ RETURN 0]]></Value>
 			<Relationship Name="Parameters">
 				<Entry>
 					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpdateTodo].[@IdTodo]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpdateTodo].[@IdStep]">
 						<Relationship Name="Type">
 							<Entry>
 								<Element Type="SqlTypeSpecifier">
@@ -3296,18 +3259,19 @@ RETURN 0]]></Value>
 				</Entry>
 			</Relationship>
 			<Annotation Type="SysCommentsObjectAnnotation">
-				<Property Name="Length" Value="684" />
+				<Property Name="Length" Value="742" />
 				<Property Name="StartLine" Value="1" />
 				<Property Name="StartColumn" Value="1" />
-				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[UpdateTodo]&#xD;&#xA;&#x9;@IdTodo int,&#xD;&#xA;&#x9;@IdMainTodo int,&#xD;&#xA;&#x9;@Name nvarchar(50),&#xD;&#xA;&#x9;@Done bit,&#xD;&#xA;&#x9;@Status nvarchar(50),&#xD;&#xA;&#x9;@Type nvarchar(50),&#xD;&#xA;&#x9;@Priority nvarchar(50),&#xD;&#xA;&#x9;@Calendar Datetime,&#xD;&#xA;&#x9;@Location nvarchar(50),&#xD;&#xA;&#x9;@PlannedTime decimal(4,2),&#xD;&#xA;&#x9;@PlannedBudget int,&#xD;&#xA;&#x9;@RealTime decimal(4,2),&#xD;&#xA;&#x9;@RealBudget int,&#xD;&#xA;&#x9;@Comments Text&#xD;&#xA;AS" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[UpdateTodo]&#xD;&#xA;&#x9;@IdTodo int,&#xD;&#xA;&#x9;@IdStep int,&#xD;&#xA;&#x9;@IdMainTodo int,&#xD;&#xA;&#x9;@Name nvarchar(50),&#xD;&#xA;&#x9;@Done bit,&#xD;&#xA;&#x9;@Status nvarchar(50),&#xD;&#xA;&#x9;@Type nvarchar(50),&#xD;&#xA;&#x9;@Priority nvarchar(50),&#xD;&#xA;&#x9;@Calendar Datetime,&#xD;&#xA;&#x9;@Location nvarchar(50),&#xD;&#xA;&#x9;@PlannedTime decimal(4,2),&#xD;&#xA;&#x9;@PlannedBudget int,&#xD;&#xA;&#x9;@RealTime decimal(4,2),&#xD;&#xA;&#x9;@RealBudget int,&#xD;&#xA;&#x9;@Comments Text&#xD;&#xA;AS" />
 			</Annotation>
 		</Element>
 		<Element Type="SqlProcedure" Name="[dbo].[UpdateTrip]">
 			<Property Name="BodyScript">
 				<Value><![CDATA[
 	Update [Trip]
-	Set [Name]=@Name, [StartingDate]=@StartingDate, [EndingDate]=@EndingDate, [Budget]=@Budget, [Comments]=@Comments
-	Where IdTrip = @IdTrip
+	Set [Name]=@Name, [StartingDate]=@StartingDate, [EndingDate]=@EndingDate, [Budget]=@Budget, [Comments]=@Comments, [IdUser]=@IdUser
+	output Inserted.IdUser
+	Where [IdTrip] = @IdTrip
 RETURN 0]]></Value>
 			</Property>
 			<Property Name="IsAnsiNullsOn" Value="True" />
@@ -3346,6 +3310,12 @@ RETURN 0]]></Value>
 					<References Name="[dbo].[UpdateTrip].[@Comments]" />
 				</Entry>
 				<Entry>
+					<References Name="[dbo].[Trip].[IdUser]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpdateTrip].[@IdUser]" />
+				</Entry>
+				<Entry>
 					<References Name="[dbo].[Trip].[IdTrip]" />
 				</Entry>
 				<Entry>
@@ -3355,6 +3325,21 @@ RETURN 0]]></Value>
 			<Relationship Name="Parameters">
 				<Entry>
 					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpdateTrip].[@IdTrip]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpdateTrip].[@IdUser]">
 						<Relationship Name="Type">
 							<Entry>
 								<Element Type="SqlTypeSpecifier">
@@ -3451,10 +3436,10 @@ RETURN 0]]></Value>
 				</Entry>
 			</Relationship>
 			<Annotation Type="SysCommentsObjectAnnotation">
-				<Property Name="Length" Value="319" />
+				<Property Name="Length" Value="379" />
 				<Property Name="StartLine" Value="1" />
 				<Property Name="StartColumn" Value="1" />
-				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[UpdateTrip]&#xD;&#xA;&#x9;@IdTrip int,&#xD;&#xA;&#x9;@Name nvarchar(50),&#xD;&#xA;&#x9;@StartingDate Date,&#xD;&#xA;&#x9;@EndingDate Date,&#xD;&#xA;&#x9;@Budget int,&#xD;&#xA;&#x9;@Comments Text&#xD;&#xA;&#x9;&#xD;&#xA;AS" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[UpdateTrip]&#xD;&#xA;&#x9;@IdTrip int,&#xD;&#xA;&#x9;@IdUser int,&#xD;&#xA;&#x9;@Name nvarchar(50),&#xD;&#xA;&#x9;@StartingDate Date,&#xD;&#xA;&#x9;@EndingDate Date,&#xD;&#xA;&#x9;@Budget int,&#xD;&#xA;&#x9;@Comments Text&#xD;&#xA;&#x9;&#xD;&#xA;AS" />
 			</Annotation>
 		</Element>
 		<Element Type="SqlProcedure" Name="[dbo].[UpdateUser]">
@@ -3650,8 +3635,8 @@ RETURN 0]]></Value>
 				</Entry>
 			</Relationship>
 			<AttachedAnnotation Disambiguator="17" />
-			<AttachedAnnotation Disambiguator="23" />
-			<AttachedAnnotation Disambiguator="22" />
+			<AttachedAnnotation Disambiguator="20" />
+			<AttachedAnnotation Disambiguator="19" />
 		</Element>
 	</Model>
 </DataSchemaModel>

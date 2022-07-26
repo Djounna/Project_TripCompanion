@@ -69,8 +69,9 @@ namespace TripCompanion_MVC.Controllers
                 {
                     TempData["Message"] = "Error : Username ou Password incorrect";
                     return RedirectToAction("Index", "Home");
-                }           
+                }
 
+                TempData["Message"] = "Success: Vous êtes bien identifié";
                 return RedirectToAction("Index","Home");
             }
             catch (Exception)

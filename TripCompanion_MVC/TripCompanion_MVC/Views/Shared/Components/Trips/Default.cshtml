@@ -15,12 +15,7 @@
             <div class="card border" style="width: 15rem;" onclick="GetStepByTripVC(@item.IdTrip)">              
                 <div class="card-body">
                     <h5 class="card-title text-center"> @Html.DisplayFor(modelItem=> item.Name) </h5>
-       
-                    <p class="card-text">
-                        
-                    </p>
-
-             
+                  
                 </div>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">Début : @Html.DisplayFor(modelItem => item.StartingDate)</li>
@@ -35,7 +30,6 @@
                 </div>           
 
             </div>
-
 
         </div>
     }

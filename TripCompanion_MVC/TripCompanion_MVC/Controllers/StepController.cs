@@ -79,7 +79,7 @@ namespace StepCompanion_MVC.Controllers
         //    Step Step = await _stepService.GetStepById(idStep);
         //    return View(Step);
         //}
-        [HttpPost]
+        
         public async Task<IActionResult> Delete(int idStep)
         {
             await _stepService.DeleteStep(idStep);

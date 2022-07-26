@@ -19,7 +19,7 @@
             </div>
             <div class="form-group form-check">
                 <label class="form-check-label">
-                    <input class="form-check-input" asp-for="Done" /> @Html.DisplayNameFor(model => model.Done)
+                    <input Hidden="hidden" class="form-check-input" asp-for="Done" /> 
                 </label>
             </div>
             <div class="form-group">
@@ -48,8 +48,8 @@
                 <span asp-validation-for="Location" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="PlannedTime" class="control-label"></label>
-                <input asp-for="PlannedTime" class="form-control" />
+                <label asp-for="PlannedTime" Hidden="hidden" class="control-label"></label>
+                <input asp-for="PlannedTime" Hidden="hidden" class="form-control" />
                 <span asp-validation-for="PlannedTime" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -58,8 +58,8 @@
                 <span asp-validation-for="PlannedBudget" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="RealTime" class="control-label"></label>
-                <input asp-for="RealTime" class="form-control" />
+                <label asp-for="RealTime" Hidden="hidden" class="control-label"></label>
+                <input asp-for="RealTime" hidden="hidden" class="form-control" />
                 <span asp-validation-for="RealTime" class="text-danger"></span>
             </div>
             <div class="form-group">

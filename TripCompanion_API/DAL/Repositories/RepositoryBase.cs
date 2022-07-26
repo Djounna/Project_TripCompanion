@@ -31,7 +31,6 @@ namespace DAL.Repositories
 
             return _Connection.ExecuteReader(cmd, MapRecordToEntity);
         }
-
         public virtual TEntity GetById(TKey id)
         {
             CommandSP cmd = new CommandSP($"Get{TableName}ById");
@@ -39,7 +38,6 @@ namespace DAL.Repositories
 
             return _Connection.ExecuteReader(cmd, MapRecordToEntity).SingleOrDefault();
         }
-
         public abstract TKey Insert(TEntity entity);
 
         public abstract bool Update(TKey id, TEntity entity);

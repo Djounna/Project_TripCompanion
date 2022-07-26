@@ -15,17 +15,22 @@
            <div class = "col">
                              
                 @Html.DisplayNameFor(model => model.Name) : @Html.DisplayFor(modelItem => item.Name)
-                <br>              
+                <br> 
+                @Html.DisplayNameFor(model => model.Status) : @Html.DisplayFor(modelItem => item.Status)
+                <br>
+                @Html.DisplayNameFor(model => model.Type) : @Html.DisplayFor(modelItem => item.Type)
+                <br>
                 @Html.DisplayNameFor(model => model.Priority) : @Html.DisplayFor(modelItem => item.Priority)
                 <br>
                 @Html.DisplayNameFor(model => model.Calendar) : @Html.DisplayFor(modelItem => item.Calendar)
                 <br>
                 @Html.DisplayNameFor(model => model.Location) : @Html.DisplayFor(modelItem => item.Location)
                 <br>
-                @Html.DisplayNameFor(model => model.PlannedTime) : @Html.DisplayFor(modelItem => item.PlannedTime)
-                <br>
+                
                 @Html.DisplayNameFor(model => model.PlannedBudget) : @Html.DisplayFor(modelItem => item.PlannedBudget)
                 <br> 
+                @Html.DisplayNameFor(model => model.RealBudget) : @Html.DisplayFor(modelItem => item.RealBudget)
+                <br>
                 @Html.DisplayNameFor(model => model.Comments) : @Html.DisplayFor(modelItem => item.Comments)
                     
            </div>
@@ -34,9 +39,6 @@
 
                 @Html.DisplayNameFor(model => model.Done) : @Html.DisplayFor(modelItem => item.Done)
                 <br>
-                @Html.DisplayNameFor(model => model.Status) : @Html.DisplayFor(modelItem => item.Status)
-                <br>
-                @Html.DisplayNameFor(model => model.Type) : @Html.DisplayFor(modelItem => item.Type)
                 <br>
                 @if(item.Location != null)
                 {
