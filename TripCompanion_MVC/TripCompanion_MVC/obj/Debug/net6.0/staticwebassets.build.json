@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Z4w3OuxyqcR1v1Vd1VHJddi0XM95jv280vbdQgpdogI=",
+  "Hash": "vPeKoX0Laysr19cQyOAGcrSHgtFIZ7hh1mwYVYXiebY=",
   "Source": "TripCompanion_MVC",
   "BasePath": "_content/TripCompanion_MVC",
   "Mode": "Default",
@@ -338,6 +338,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\toast-notification.js"
+    },
+    {
+      "Identity": "C:\\Users\\STG0765\\Documents\\PROJET FINAL\\Project_TripCompanion\\TripCompanion_MVC\\TripCompanion_MVC\\wwwroot\\js\\weatherfetch.js",
+      "SourceId": "TripCompanion_MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\STG0765\\Documents\\PROJET FINAL\\Project_TripCompanion\\TripCompanion_MVC\\TripCompanion_MVC\\wwwroot\\",
+      "BasePath": "_content/TripCompanion_MVC",
+      "RelativePath": "js/weatherfetch.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\weatherfetch.js"
     },
     {
       "Identity": "C:\\Users\\STG0765\\Documents\\PROJET FINAL\\Project_TripCompanion\\TripCompanion_MVC\\TripCompanion_MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",

@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.WebUtilities;
 using Newtonsoft.Json;
+using TripCompanion_MVC.Models.ApiResults;
 
 namespace TripCompanion_MVC.Services.ApiExternal
 {
@@ -7,8 +8,8 @@ namespace TripCompanion_MVC.Services.ApiExternal
     {
         public class WeatherResult
         {
-            public double Long { get; set; }
-            public double Lat { get; set; }
+            public double temp { get; set; } // Temperature
+            public double hum { get; set; } // Humidity
         }
 
         private readonly HttpClient _httpClient;
@@ -20,23 +21,28 @@ namespace TripCompanion_MVC.Services.ApiExternal
 
         public async Task<WeatherResult> Search(string lat, string lon)
         {
-            var values = new Dictionary<string, string>();
-            values.Add("lat",lat);
-            values.Add("lon", lon);
-            values.Add("apiKey", "");
+            string latb = lat.Substring(0, 5);
+            string lonb = lon.Substring(0, 5);
 
-            var uri = QueryHelpers.AddQueryString("search", values);
+            var values = new Dictionary<string, string>();
+            values.Add("lat",latb);
+            values.Add("lon", lonb);
+            values.Add("units", "metric");
+            values.Add("APPID", "605a7f4a36bb08a5d53facb9c7b33e16");
+
+            var uri = QueryHelpers.AddQueryString("weather", values);
 
             var response = await _httpClient.GetAsync(uri);
 
             if (!response.IsSuccessStatusCode) throw new Exception("Cannot retrieve data");
 
             var content = await response.Content.ReadAsStringAsync();
-            //OpenWeatherMapResult result = JsonConvert.DeserializeObject<OpenWeatherMapResult>(content);
+            OpenWeatherMapResult result = JsonConvert.DeserializeObject<OpenWeatherMapResult>(content);
 
             return new WeatherResult
             {
-                
+                temp = result.main.Temp,
+                hum = result.main.Humidity
             };
         }
 

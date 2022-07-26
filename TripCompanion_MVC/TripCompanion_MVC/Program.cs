@@ -50,8 +50,13 @@ namespace TripCompanion_MVC
                 httpClient.BaseAddress = new Uri("https://api.geoapify.com/v1/geocode/");
 
             });
+            //***
+            builder.Services.AddHttpClient<OpenWeatherMapAPI>(httpClient =>
+            {
+                httpClient.BaseAddress = new Uri("https://api.openweathermap.org/data/2.5/");
 
-
+            });
+            
 
             /*********************************************************************************************************************************************/
 

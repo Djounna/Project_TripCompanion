@@ -12,19 +12,18 @@ namespace TripCompanion_MVC.Controllers
         private IUserService _userService;
         private ITripService _tripService;
         private SessionManager _sessionManager;
-        private NominatimAPI _nominatimApi;
+        
         private GeoapifyAPI _geoapifyApi;
+        private OpenWeatherMapAPI _openWeatherMapApi;
         
         #region Ctor
-        public TravelController(IUserService userService, ITripService tripService,SessionManager sessionManager, NominatimAPI nominatimAPI, GeoapifyAPI geoapifyAPI)
-        {
-           
+        public TravelController(IUserService userService, ITripService tripService,SessionManager sessionManager, GeoapifyAPI geoapifyAPI, OpenWeatherMapAPI openWeatherMapAPI)
+        {          
             _tripService = tripService;
             _userService = userService;
             _sessionManager = sessionManager;
-            _nominatimApi = nominatimAPI;
             _geoapifyApi = geoapifyAPI;
-           
+            _openWeatherMapApi = openWeatherMapAPI;          
         }
         #endregion
 
@@ -77,6 +76,17 @@ namespace TripCompanion_MVC.Controllers
                 lat = result.Lat,
                 lon = result.Long
                                
+            });
+        }
+
+        public async Task<IActionResult> WeatherMap(string lat, string lon)
+        {
+            OpenWeatherMapAPI.WeatherResult result = await _openWeatherMapApi.Search(lat, lon);
+
+            return Ok(new
+            {
+                temp = result.temp,
+                hum = result.hum
             });
         }
 

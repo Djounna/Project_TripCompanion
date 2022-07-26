@@ -9,7 +9,18 @@
             
         @await Component.InvokeAsync("Trips",@sessionManager.IdUser)
     
-         <div class="m-3" id="TravelMap"></div>
+        <div class="row">
+
+             <div class=" col-9 m-3" id="TravelMap"></div>
+
+             <div class=" col m-3 border rounded">
+                 <h6>Informations</h6>
+                 <p>Température : <span id="temperature"></span></p>
+                 <p>Humidité : <span id="humidity"></span></p>
+
+             </div>
+
+         </div>
 
      <div class="row">
         <div class="col-4" id="StepVC" >
@@ -28,6 +39,13 @@
 <script src="~/lib/jquery/dist/jquery.min.js"></script>
 <script src="~/js/map-localisation.js"></script>
 <script src="~/js/loadmap.js"></script>
+<script src="~/js/weatherfetch.js"></script>
+
+
+<!-- OpenWeatherMap Scrip -->
+<script>
+
+</script>
 
 <!-- Leaflet Loaging Script -->
 <script>
@@ -54,6 +72,7 @@
                 console.log(data)
 
                 ShowMap(data.lat, data.lon);
+                WeatherFetch(data.lat, data.lon); // test
             }
         });
     }
