@@ -49,25 +49,39 @@ namespace API.Controllers
         [HttpPost]
         public IActionResult AddTrip(TripApiModel Trip)
         {
-            if (tripService.Insert(Trip.ToDto()))
+            try
             {
-                return Ok(Trip);
+                if (tripService.Insert(Trip.ToDto()))
+                {
+                    return Ok(Trip);
+                }
+                else
+                {
+                    return new BadRequestObjectResult(Trip); // return BadRequest();
+                }
             }
-            else
+            catch (Exception)
             {
-                return new BadRequestObjectResult(Trip); // return BadRequest();
+                return BadRequest();
             }
         }
         [HttpPut]
         public IActionResult UpdateTrip(TripApiModel Trip)
         {
-            if (tripService.Update(Trip.ToDto()))
+            try
             {
-                return Ok(Trip);
+                if (tripService.Update(Trip.ToDto()))
+                {
+                    return Ok(Trip);
+                }
+                else
+                {
+                    return new BadRequestObjectResult(Trip);  //return BadRequest();
+                }
             }
-            else
+            catch (Exception)
             {
-                return new BadRequestObjectResult(Trip);  //return BadRequest();
+                return BadRequest();
             }
         }
 
@@ -75,11 +89,18 @@ namespace API.Controllers
         [Route("Delete/{id}")]
         public IActionResult DeleteTrip(int id)
         {
-            if (tripService.Delete(id))
+            try
             {
-                return Ok();
+                if (tripService.Delete(id))
+                {
+                    return Ok();
+                }
+                else
+                {
+                    return BadRequest();
+                }
             }
-            else
+            catch (Exception)
             {
                 return BadRequest();
             }

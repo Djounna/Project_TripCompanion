@@ -48,35 +48,59 @@ namespace TripCompanion_MVC.Controllers
         [HttpPost]
         public async Task<IActionResult> Create([FromForm]TripForm tripForm)
         {
-            if (!ModelState.IsValid)
+            try
             {
-                TempData["Message"] = "Warning : Erreur dans le formualaire";
-                return View(tripForm);
-            }
+                if (!ModelState.IsValid)
+                {
+                    TempData["Message"] = "Warning : Erreur dans le formulaire";
+                    return View(tripForm);
+                }
 
-             await _tripService.CreateTrip(tripForm);
-            TempData["Message"] = "Success : Votre voyage a été ajouté avec succès";
-            return RedirectToAction("TravelPage","Travel");
+                await _tripService.CreateTrip(tripForm);
+                TempData["Message"] = "Success : Votre voyage a été ajouté avec succès";
+                return RedirectToAction("TravelPage", "Travel");
+            }
+            catch (Exception)
+            {
+                TempData["Message"] = "Error: Un problème s'est produit ";
+                return RedirectToAction("TravelPage", "Travel");
+            }
          }
         #endregion
 
         #region Update
         public async Task<IActionResult> Edit(int idTrip)
         {
-            Trip trip = await _tripService.GetTripById(idTrip);
-            return View(trip);
+            try
+            {
+                Trip trip = await _tripService.GetTripById(idTrip);
+                return View(trip);
+            }
+            catch (Exception)
+            {
+                TempData["Message"] = "Error: Un problème s'est produit ";
+                return RedirectToAction("TravelPage", "Travel");
+            }
         }
         [HttpPost]
         public async Task<IActionResult> Edit(Trip trip)
         {
-            if (!ModelState.IsValid)
+            try
             {
-                TempData["Message"] = "Warning : Erreur dans le formulaire ";
-                return View(trip);
+                if (!ModelState.IsValid)
+                {
+                    TempData["Message"] = "Warning : Erreur dans le formulaire ";
+                    return View(trip);
+                }
+                await _tripService.UpdateTrip(trip);
+                TempData["Message"] = "Success : Votre voyage a été mis à jour avec succès";
+                return RedirectToAction("TravelPage", "Travel");
             }
-            await _tripService.UpdateTrip(trip);
-            TempData["Message"] = "Success : Votre voyage a été mis à jour avec succès";
-            return RedirectToAction("TravelPage", "Travel");
+            catch (Exception)
+            {
+                TempData["Message"] = "Error: Un problème s'est produit ";
+                return RedirectToAction("TravelPage", "Travel");
+            }
 
         }
         #endregion
@@ -88,9 +112,17 @@ namespace TripCompanion_MVC.Controllers
         //}
         public async Task<IActionResult> Delete(int idTrip)
         {
-            await _tripService.DeleteTrip(idTrip);
-            TempData["Message"] = "Success : Ce voyage a bien été supprimé";
-            return RedirectToAction("TravelPage", "Travel");
+            try
+            {
+                await _tripService.DeleteTrip(idTrip);
+                TempData["Message"] = "Success : Ce voyage a bien été supprimé";
+                return RedirectToAction("TravelPage", "Travel");
+            }
+            catch (Exception)
+            {
+                TempData["Message"] = "Error: Un problème s'est produit ";
+                return RedirectToAction("TravelPage", "Travel");
+            }
         }
         
         #endregion

@@ -47,35 +47,59 @@ namespace TodoCompanion_MVC.Controllers
         [HttpPost]
         public async Task<IActionResult> Create([FromForm] TodoForm todoForm)
         {
-            if (!ModelState.IsValid)
+            try
             {
-                TempData["Message"] = "Warning : Erreur dans le formualaire";
-                return View(todoForm);
-            }
+                if (!ModelState.IsValid)
+                {
+                    TempData["Message"] = "Warning : Erreur dans le formualaire";
+                    return View(todoForm);
+                }
 
-            await _todoService.CreateTodo(todoForm);
-            TempData["Message"] = "Success : Votre voyage a été ajouté avec succès";
-            return RedirectToAction("TravelPage", "Travel");
+                await _todoService.CreateTodo(todoForm);
+                TempData["Message"] = "Success : Votre voyage a été ajouté avec succès";
+                return RedirectToAction("TravelPage", "Travel");
+            }
+            catch (Exception)
+            {
+                TempData["Message"] = "Error: Un problème s'est produit ";
+                return RedirectToAction("TravelPage", "Travel");
+            }
         }
         #endregion
 
         #region Update
         public async Task<IActionResult> Edit(int idTodo)
         {
-            Todo Todo = await _todoService.GetTodoById(idTodo);
-            return View(Todo);
+            try
+            {
+                Todo Todo = await _todoService.GetTodoById(idTodo);
+                return View(Todo);
+            }
+            catch (Exception)
+            {
+                TempData["Message"] = "Error: Un problème s'est produit ";
+                return RedirectToAction("TravelPage", "Travel");
+            }
         }
         [HttpPost]
         public async Task<IActionResult> Edit(Todo todo)
         {
-            if (!ModelState.IsValid)
+            try
             {
-                TempData["Message"] = "Warning : Erreur dans le formulaire ";
-                return View(todo);
+                if (!ModelState.IsValid)
+                {
+                    TempData["Message"] = "Warning : Erreur dans le formulaire ";
+                    return View(todo);
+                }
+                await _todoService.UpdateTodo(todo);
+                TempData["Message"] = "Success : Cette Todo a été mise à jour avec succès";
+                return RedirectToAction("TravelPage", "Travel");
             }
-            await _todoService.UpdateTodo(todo);
-            TempData["Message"] = "Success : Cette Todo a été mise à jour avec succès";
-            return RedirectToAction("TravelPage", "Travel");
+            catch (Exception)
+            {
+                TempData["Message"] = "Error: Un problème s'est produit ";
+                return RedirectToAction("TravelPage", "Travel");
+            }
 
         }
         #endregion
@@ -88,9 +112,17 @@ namespace TodoCompanion_MVC.Controllers
         
         public async Task<IActionResult> Delete(int idTodo)
         {
-            await _todoService.DeleteTodo(idTodo);
-            TempData["Message"] = "Success : Cette a bien été supprimée";
-            return RedirectToAction("TravelPage", "Travel");
+            try
+            {
+                await _todoService.DeleteTodo(idTodo);
+                TempData["Message"] = "Success : Cette a bien été supprimée";
+                return RedirectToAction("TravelPage", "Travel");
+            }
+            catch (Exception)
+            {
+                TempData["Message"] = "Error: Un problème s'est produit ";
+                return RedirectToAction("TravelPage", "Travel");
+            }
         }
         #endregion
 

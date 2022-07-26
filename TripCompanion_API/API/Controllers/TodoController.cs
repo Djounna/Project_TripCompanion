@@ -49,25 +49,39 @@ namespace API.Controllers
         [HttpPost]
         public IActionResult AddTodo(TodoApiModel Todo)
         {
-            if (todoService.Insert(Todo.ToDto()))
+            try
             {
-                return Ok(Todo);
+                if (todoService.Insert(Todo.ToDto()))
+                {
+                    return Ok(Todo);
+                }
+                else
+                {
+                    return new BadRequestObjectResult(Todo); // return BadRequest();
+                }
             }
-            else
+            catch (Exception)
             {
-                return new BadRequestObjectResult(Todo); // return BadRequest();
+                return BadRequest();
             }
         }
         [HttpPut]
         public IActionResult UpdateTodo(TodoApiModel Todo)
         {
-            if (todoService.Update(Todo.ToDto()))
+            try
             {
-                return Ok(Todo);
+                if (todoService.Update(Todo.ToDto()))
+                {
+                    return Ok(Todo);
+                }
+                else
+                {
+                    return new BadRequestObjectResult(Todo);  //return BadRequest();
+                }
             }
-            else
+            catch (Exception)
             {
-                return new BadRequestObjectResult(Todo);  //return BadRequest();
+                return BadRequest();
             }
         }
 
@@ -75,11 +89,18 @@ namespace API.Controllers
         [Route("Delete/{id}")]
         public IActionResult DeleteTodo(int id)
         {
-            if (todoService.Delete(id))
+            try
             {
-                return Ok();
+                if (todoService.Delete(id))
+                {
+                    return Ok();
+                }
+                else
+                {
+                    return BadRequest();
+                }
             }
-            else
+            catch (Exception)
             {
                 return BadRequest();
             }

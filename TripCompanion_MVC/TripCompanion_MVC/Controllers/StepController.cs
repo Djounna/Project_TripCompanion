@@ -41,35 +41,59 @@ namespace StepCompanion_MVC.Controllers
         [HttpPost]
         public async Task<IActionResult> Create([FromForm] StepForm stepForm)
         {
-            if (!ModelState.IsValid)
+            try
             {
-                TempData["Message"] = "Warning : Erreur dans le formulaire";
-                return View(stepForm);
-            }
+                if (!ModelState.IsValid)
+                {
+                    TempData["Message"] = "Warning : Erreur dans le formulaire";
+                    return View(stepForm);
+                }
 
-            await _stepService.CreateStep(stepForm);
-            TempData["Message"] = "Success : Votre étape a été ajoutée avec succès";
-            return RedirectToAction("TravelPage", "Travel");
+                await _stepService.CreateStep(stepForm);
+                TempData["Message"] = "Success : Votre étape a été ajoutée avec succès";
+                return RedirectToAction("TravelPage", "Travel");
+            }
+            catch (Exception)
+            {
+                TempData["Message"] = "Error: Un problème s'est produit ";
+                return RedirectToAction("TravelPage", "Travel");
+            }
         }
         #endregion
 
         #region Update
         public async Task<IActionResult> Edit(int idStep)
         {
-            Step Step = await _stepService.GetStepById(idStep);
-            return View(Step);
+            try
+            {
+                Step Step = await _stepService.GetStepById(idStep);
+                return View(Step);
+            }
+            catch (Exception)
+            {
+                TempData["Message"] = "Error: Un problème s'est produit ";
+                return RedirectToAction("TravelPage", "Travel");
+            }
         }
         [HttpPost]
         public async Task<IActionResult> Edit(Step step)
         {
-            if (!ModelState.IsValid)
+            try
             {
-                TempData["Message"] = "Warning : Erreur dans le formulaire ";
-                return View(step);
+                if (!ModelState.IsValid)
+                {
+                    TempData["Message"] = "Warning : Erreur dans le formulaire ";
+                    return View(step);
+                }
+                await _stepService.UpdateStep(step);
+                TempData["Message"] = "Success : Cette étape a été mise à jour avec succès";
+                return RedirectToAction("TravelPage", "Travel");
             }
-            await _stepService.UpdateStep(step);
-            TempData["Message"] = "Success : Cette étape a été mise à jour avec succès";
-            return RedirectToAction("TravelPage", "Travel");
+            catch (Exception)
+            {
+                TempData["Message"] = "Error: Un problème s'est produit ";
+                return RedirectToAction("TravelPage", "Travel");
+            }
 
         }
         #endregion
@@ -82,9 +106,17 @@ namespace StepCompanion_MVC.Controllers
         
         public async Task<IActionResult> Delete(int idStep)
         {
-            await _stepService.DeleteStep(idStep);
-            TempData["Message"] = "Success : Cette étape a bien été supprimée";
-            return RedirectToAction("TravelPage", "Travel");
+            try
+            {
+                await _stepService.DeleteStep(idStep);
+                TempData["Message"] = "Success : Cette étape a bien été supprimée";
+                return RedirectToAction("TravelPage", "Travel");
+            }
+            catch (Exception)
+            {
+                TempData["Message"] = "Error: Un problème s'est produit ";
+                return RedirectToAction("TravelPage", "Travel");
+            }
         }
         #endregion
 

@@ -92,15 +92,22 @@ namespace API.Controllers
         [AllowAnonymous]
         public IActionResult AddUser(UserApiModel user)
         {
-            UserApiModel? receivedUser = userService.Insert(user.ToDto()).ToApi();
+            try
+            {
+                UserApiModel? receivedUser = userService.Insert(user.ToDto()).ToApi();
 
-            if (receivedUser != null)
-            {
-                return Ok(receivedUser);
+                if (receivedUser != null)
+                {
+                    return Ok(receivedUser);
+                }
+                else
+                {
+                    return new BadRequestObjectResult(user); // return BadRequest();
+                }
             }
-            else
+            catch (Exception)
             {
-                return new BadRequestObjectResult(user); // return BadRequest();
+                return BadRequest();
             }
         }
 

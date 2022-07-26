@@ -48,25 +48,39 @@ namespace API.Controllers
         [HttpPost]
         public IActionResult AddStep(StepApiModel Step)
         {
-            if (stepService.Insert(Step.ToDto()))
+            try
             {
-                return Ok(Step);
+                if (stepService.Insert(Step.ToDto()))
+                {
+                    return Ok(Step);
+                }
+                else
+                {
+                    return new BadRequestObjectResult(Step); // return BadRequest();
+                }
             }
-            else
+            catch (Exception)
             {
-                return new BadRequestObjectResult(Step); // return BadRequest();
+                return BadRequest();
             }
         }
         [HttpPut]
         public IActionResult UpdateStep(StepApiModel Step)
         {
-            if (stepService.Update(Step.ToDto()))
+            try
             {
-                return Ok(Step);
+                if (stepService.Update(Step.ToDto()))
+                {
+                    return Ok(Step);
+                }
+                else
+                {
+                    return new BadRequestObjectResult(Step);  //return BadRequest();
+                }
             }
-            else
+            catch (Exception)
             {
-                return new BadRequestObjectResult(Step);  //return BadRequest();
+                return BadRequest();
             }
         }
 
@@ -74,11 +88,18 @@ namespace API.Controllers
         [Route("Delete/{id}")]
         public IActionResult DeleteStep(int id)
         {
-            if (stepService.Delete(id))
+            try
             {
-                return Ok();
+                if (stepService.Delete(id))
+                {
+                    return Ok();
+                }
+                else
+                {
+                    return BadRequest();
+                }
             }
-            else
+            catch (Exception)
             {
                 return BadRequest();
             }
