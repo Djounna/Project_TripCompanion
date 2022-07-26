@@ -66,8 +66,6 @@ namespace API
 
             app.UseMiddleware<JwtMiddleware>(); // Test En cours
 
-            //app.UseAuthentication(); // Ajout, test en cours
-
             app.UseAuthorization();
 
             app.MapControllers();
