@@ -12,7 +12,7 @@
 		</CustomData>
 		<CustomData Category="Reference" Type="Assembly">
 			<Metadata Name="LogicalName" Value="DB.dll" />
-			<Metadata Name="FileName" Value="C:\USERS\STG0765\DOCUMENTS\PROJET FINAL\PROJECT_TRIPCOMPANION\TRIPCOMPANION_API\DB\OBJ\DEBUG\DB.DLL" />
+			<Metadata Name="FileName" Value="C:\USERS\CORENTIN\DOCUMENTS\CODE\PROJECT_TRIPCOMPANION\TRIPCOMPANION_API\DB\OBJ\DEBUG\DB.DLL" />
 			<Metadata Name="AssemblyName" Value="DB" />
 			<Metadata Name="PermissionSet" Value="SAFE" />
 			<Metadata Name="Owner" Value="" />
@@ -20,7 +20,7 @@
 			<Metadata Name="IsVisible" Value="True" />
 			<Metadata Name="IsModelAware" Value="True" />
 			<Metadata Name="SkipCreationIfEmpty" Value="True" />
-			<Metadata Name="AssemblySymbolsName" Value="C:\Users\STG0765\Documents\PROJET FINAL\Project_TripCompanion\TripCompanion_API\DB\obj\Debug\DB.pdb" />
+			<Metadata Name="AssemblySymbolsName" Value="C:\Users\Corentin\Documents\CODE\Project_TripCompanion\TripCompanion_API\DB\obj\Debug\DB.pdb" />
 		</CustomData>
 		<CustomData Category="SqlCmdVariables" Type="SqlCmdVariable" />
 	</Header>
