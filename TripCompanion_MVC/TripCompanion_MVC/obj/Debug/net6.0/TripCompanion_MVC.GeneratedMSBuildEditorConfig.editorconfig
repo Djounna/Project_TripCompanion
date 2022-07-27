@@ -8,97 +8,97 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = TripCompanion_MVC
 build_property.RootNamespace = TripCompanion_MVC
-build_property.ProjectDir = C:\Users\Corentin\Documents\CODE\Project_TripCompanion\TripCompanion_MVC\TripCompanion_MVC\
+build_property.ProjectDir = C:\Users\STG0765\Documents\PROJET FINAL\Project_TripCompanion\TripCompanion_MVC\TripCompanion_MVC\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Corentin\Documents\CODE\Project_TripCompanion\TripCompanion_MVC\TripCompanion_MVC
+build_property.MSBuildProjectDirectory = C:\Users\STG0765\Documents\PROJET FINAL\Project_TripCompanion\TripCompanion_MVC\TripCompanion_MVC
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Corentin/Documents/CODE/Project_TripCompanion/TripCompanion_MVC/TripCompanion_MVC/Views/Account/Login.cshtml]
+[C:/Users/STG0765/Documents/PROJET FINAL/Project_TripCompanion/TripCompanion_MVC/TripCompanion_MVC/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Corentin/Documents/CODE/Project_TripCompanion/TripCompanion_MVC/TripCompanion_MVC/Views/Account/SignUp.cshtml]
+[C:/Users/STG0765/Documents/PROJET FINAL/Project_TripCompanion/TripCompanion_MVC/TripCompanion_MVC/Views/Account/SignUp.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxTaWduVXAuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Corentin/Documents/CODE/Project_TripCompanion/TripCompanion_MVC/TripCompanion_MVC/Views/Home/Index.cshtml]
+[C:/Users/STG0765/Documents/PROJET FINAL/Project_TripCompanion/TripCompanion_MVC/TripCompanion_MVC/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Corentin/Documents/CODE/Project_TripCompanion/TripCompanion_MVC/TripCompanion_MVC/Views/Home/Privacy.cshtml]
+[C:/Users/STG0765/Documents/PROJET FINAL/Project_TripCompanion/TripCompanion_MVC/TripCompanion_MVC/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Corentin/Documents/CODE/Project_TripCompanion/TripCompanion_MVC/TripCompanion_MVC/Views/Shared/Components/Steps/Default.cshtml]
+[C:/Users/STG0765/Documents/PROJET FINAL/Project_TripCompanion/TripCompanion_MVC/TripCompanion_MVC/Views/Shared/Components/Steps/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcU3RlcHNcRGVmYXVsdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Corentin/Documents/CODE/Project_TripCompanion/TripCompanion_MVC/TripCompanion_MVC/Views/Shared/Components/Todos/Default.cshtml]
+[C:/Users/STG0765/Documents/PROJET FINAL/Project_TripCompanion/TripCompanion_MVC/TripCompanion_MVC/Views/Shared/Components/Todos/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcVG9kb3NcRGVmYXVsdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Corentin/Documents/CODE/Project_TripCompanion/TripCompanion_MVC/TripCompanion_MVC/Views/Shared/Components/Trips/Default.cshtml]
+[C:/Users/STG0765/Documents/PROJET FINAL/Project_TripCompanion/TripCompanion_MVC/TripCompanion_MVC/Views/Shared/Components/Trips/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcVHJpcHNcRGVmYXVsdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Corentin/Documents/CODE/Project_TripCompanion/TripCompanion_MVC/TripCompanion_MVC/Views/Shared/Error.cshtml]
+[C:/Users/STG0765/Documents/PROJET FINAL/Project_TripCompanion/TripCompanion_MVC/TripCompanion_MVC/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Corentin/Documents/CODE/Project_TripCompanion/TripCompanion_MVC/TripCompanion_MVC/Views/Shared/_BaseLayout.cshtml]
+[C:/Users/STG0765/Documents/PROJET FINAL/Project_TripCompanion/TripCompanion_MVC/TripCompanion_MVC/Views/Shared/_BaseLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9CYXNlTGF5b3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Corentin/Documents/CODE/Project_TripCompanion/TripCompanion_MVC/TripCompanion_MVC/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/STG0765/Documents/PROJET FINAL/Project_TripCompanion/TripCompanion_MVC/TripCompanion_MVC/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Corentin/Documents/CODE/Project_TripCompanion/TripCompanion_MVC/TripCompanion_MVC/Views/Step/Create.cshtml]
+[C:/Users/STG0765/Documents/PROJET FINAL/Project_TripCompanion/TripCompanion_MVC/TripCompanion_MVC/Views/Step/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RlcFxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Corentin/Documents/CODE/Project_TripCompanion/TripCompanion_MVC/TripCompanion_MVC/Views/Step/Edit.cshtml]
+[C:/Users/STG0765/Documents/PROJET FINAL/Project_TripCompanion/TripCompanion_MVC/TripCompanion_MVC/Views/Step/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RlcFxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Corentin/Documents/CODE/Project_TripCompanion/TripCompanion_MVC/TripCompanion_MVC/Views/Todo/Create.cshtml]
+[C:/Users/STG0765/Documents/PROJET FINAL/Project_TripCompanion/TripCompanion_MVC/TripCompanion_MVC/Views/Todo/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVG9kb1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Corentin/Documents/CODE/Project_TripCompanion/TripCompanion_MVC/TripCompanion_MVC/Views/Todo/Edit.cshtml]
+[C:/Users/STG0765/Documents/PROJET FINAL/Project_TripCompanion/TripCompanion_MVC/TripCompanion_MVC/Views/Todo/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVG9kb1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Corentin/Documents/CODE/Project_TripCompanion/TripCompanion_MVC/TripCompanion_MVC/Views/Travel/TravelPage.cshtml]
+[C:/Users/STG0765/Documents/PROJET FINAL/Project_TripCompanion/TripCompanion_MVC/TripCompanion_MVC/Views/Travel/TravelPage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhdmVsXFRyYXZlbFBhZ2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Corentin/Documents/CODE/Project_TripCompanion/TripCompanion_MVC/TripCompanion_MVC/Views/Trip/AllTrips.cshtml]
+[C:/Users/STG0765/Documents/PROJET FINAL/Project_TripCompanion/TripCompanion_MVC/TripCompanion_MVC/Views/Trip/AllTrips.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJpcFxBbGxUcmlwcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Corentin/Documents/CODE/Project_TripCompanion/TripCompanion_MVC/TripCompanion_MVC/Views/Trip/AllTripsByUser.cshtml]
+[C:/Users/STG0765/Documents/PROJET FINAL/Project_TripCompanion/TripCompanion_MVC/TripCompanion_MVC/Views/Trip/AllTripsByUser.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJpcFxBbGxUcmlwc0J5VXNlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Corentin/Documents/CODE/Project_TripCompanion/TripCompanion_MVC/TripCompanion_MVC/Views/Trip/Create.cshtml]
+[C:/Users/STG0765/Documents/PROJET FINAL/Project_TripCompanion/TripCompanion_MVC/TripCompanion_MVC/Views/Trip/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJpcFxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Corentin/Documents/CODE/Project_TripCompanion/TripCompanion_MVC/TripCompanion_MVC/Views/Trip/Edit.cshtml]
+[C:/Users/STG0765/Documents/PROJET FINAL/Project_TripCompanion/TripCompanion_MVC/TripCompanion_MVC/Views/Trip/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJpcFxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Corentin/Documents/CODE/Project_TripCompanion/TripCompanion_MVC/TripCompanion_MVC/Views/_ViewImports.cshtml]
+[C:/Users/STG0765/Documents/PROJET FINAL/Project_TripCompanion/TripCompanion_MVC/TripCompanion_MVC/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Corentin/Documents/CODE/Project_TripCompanion/TripCompanion_MVC/TripCompanion_MVC/Views/_ViewStart.cshtml]
+[C:/Users/STG0765/Documents/PROJET FINAL/Project_TripCompanion/TripCompanion_MVC/TripCompanion_MVC/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Corentin/Documents/CODE/Project_TripCompanion/TripCompanion_MVC/TripCompanion_MVC/Views/Shared/_Layout.cshtml]
+[C:/Users/STG0765/Documents/PROJET FINAL/Project_TripCompanion/TripCompanion_MVC/TripCompanion_MVC/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-32fd62mymq

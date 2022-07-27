@@ -31,7 +31,7 @@ namespace API
             builder.Services.AddTransient<Connection>((service) =>
             {
                 return new Connection(
-                    builder.Configuration.GetConnectionString("DBhome")
+                    builder.Configuration.GetConnectionString("DBbf")
                 );
             });
 
