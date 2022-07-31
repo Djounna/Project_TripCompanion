@@ -1,0 +1,103 @@
+<mxfile host="65bd71144e">
+    <diagram id="cCq-e8GAgsVm7-UR-blC" name="Page-1">
+        <mxGraphModel dx="1204" dy="790" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="9" value="Body" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;align=left;" vertex="1" parent="1">
+                    <mxGeometry x="70" y="170" width="700" height="730" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="Trip Details With Pictures ?" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="110" y="190" width="420" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="Different Todo , with Pictures ?" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="110" y="320" width="120" height="530" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="Todo 1" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="130" y="382.5" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="Todo 2" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="130" y="472.5" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="Todo 3" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="130" y="637.5" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="230" y="320" width="300" height="530" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="Header" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="64" y="80" width="716" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="Footer" style="rounded=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="61" y="920" width="706" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="Todo Details, With Picures ?" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="270" y="360" width="220" height="450" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="WeatherForecast" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="550" y="195" width="200" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="Step Details, wit pictures ?" style="rounded=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="110" y="260" width="420" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;labelBackgroundColor=none;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="120" y="250" width="50" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;labelBackgroundColor=none;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="170" y="250" width="50" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;labelBackgroundColor=none;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="230" y="250" width="50" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;labelBackgroundColor=none;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="285" y="250" width="50" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="" style="endArrow=classic;html=1;exitX=0.085;exitY=-0.083;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="16" target="23">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="390" y="380" as="sourcePoint"/>
+                        <mxPoint x="40" y="170" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="23" value="Different steps" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="430" y="240" width="90" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="Map" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="550" y="600" width="200" height="250" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="Wiki ... Link" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="550" y="340" width="200" height="230" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" value="For smaller screen, will be added in the bottom of the page as a row" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;labelBackgroundColor=none;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="910" y="340" width="140" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=50;entryPerimeter=0;" edge="1" parent="1" source="24" target="27">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="730" y="720" as="sourcePoint"/>
+                        <mxPoint x="780" y="670" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="29" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=25;entryPerimeter=0;" edge="1" parent="1" source="25" target="27">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="670" y="540" as="sourcePoint"/>
+                        <mxPoint x="720" y="490" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="30" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="15" target="27">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="670" y="540" as="sourcePoint"/>
+                        <mxPoint x="720" y="490" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="32" value="WeatherForecast" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="810" y="442.5" width="100" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="33" value="Wiki ... Link" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="920" y="442.5" width="130" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" value="Map" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="1060" y="442.5" width="90" height="50" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
