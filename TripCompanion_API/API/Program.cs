@@ -1,6 +1,7 @@
 
 using API.Middleware;
 using BLL.Services;
+using DAL.ApiRepos;
 using DAL.Interfaces;
 using DAL.Repositories;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -26,7 +27,6 @@ namespace API
 
             // Config Injection
             // - DB Connection
-            //string _connectionstring = builder.Configuration.GetConnectionString("DBbf");
 
             builder.Services.AddTransient<Connection>((service) =>
             {
@@ -53,6 +53,21 @@ namespace API
             builder.Services.AddScoped<JwtSecurityTokenHandler>();
             builder.Services.AddScoped<JwtService>();
 
+            //HTTPClient Factory
+            //***
+            builder.Services.AddHttpClient<GeoapifyAPI>(httpClient =>
+            {
+                httpClient.BaseAddress = new Uri("https://api.geoapify.com/v1/geocode/");
+
+            });
+            //***
+            builder.Services.AddHttpClient<OpenWeatherMapAPI>(httpClient =>
+            {
+                httpClient.BaseAddress = new Uri("https://api.openweathermap.org/data/2.5/");
+
+            });
+
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -64,7 +79,7 @@ namespace API
 
             app.UseHttpsRedirection();
 
-            app.UseMiddleware<JwtMiddleware>(); // Test En cours
+            app.UseMiddleware<JwtMiddleware>(); 
 
             app.UseAuthorization();
 
