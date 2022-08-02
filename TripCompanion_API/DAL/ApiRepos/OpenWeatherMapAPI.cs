@@ -42,8 +42,8 @@ namespace DAL.ApiRepos
 
             return new WeatherEntity
             {
-                temperature = result.main.Temp,
-                humidity = result.main.Humidity
+                Temperature = result.main.Temp,
+                Humidity = result.main.Humidity
             };
         }
 

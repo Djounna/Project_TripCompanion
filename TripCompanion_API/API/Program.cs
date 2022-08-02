@@ -10,6 +10,10 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Text;
 using Tools.Connections;
 using Tools.JWT;
+using AutoMapper;
+using BLL.Mappers;
+using API.Mappers;
+using BLL.APIServices;
 
 namespace API
 {
@@ -40,12 +44,18 @@ namespace API
             builder.Services.AddTransient<ITripRepository, TripRepository>();
             builder.Services.AddTransient<IStepRepository, StepRepository>();
             builder.Services.AddTransient<ITodoRepository, TodoRepository>();
+            builder.Services.AddTransient<GeoapifyAPI>();
+            builder.Services.AddTransient<OpenWeatherMapAPI>();
+
 
             // BLL // TODO: to make into IUserService etc ... ?
             builder.Services.AddTransient<UserService>();
             builder.Services.AddTransient<TripService>();
             builder.Services.AddTransient<StepService>();
             builder.Services.AddTransient<TodoService>();
+            builder.Services.AddTransient<WeatherService>();
+            builder.Services.AddTransient<LocalizationService>();
+
 
             //JWT config
             JwtConfig config = builder.Configuration.GetSection("JwtToken").Get<JwtConfig>();
@@ -66,6 +76,10 @@ namespace API
                 httpClient.BaseAddress = new Uri("https://api.openweathermap.org/data/2.5/");
 
             });
+
+
+            //Automapper Services DI
+            builder.Services.AddAutoMapper(typeof(BLLMappingProfile),typeof(APIMappingProfile));
 
 
             var app = builder.Build();

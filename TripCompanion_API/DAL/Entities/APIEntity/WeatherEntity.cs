@@ -8,7 +8,7 @@ namespace DAL.Entities.APIEntity
 {
     public class WeatherEntity
     {
-        public double temperature { get; set; } // Temperature
-        public double humidity { get; set; } // Humidity
+        public double Temperature { get; set; }
+        public double Humidity { get; set; } 
     }
 }
