@@ -1,5 +1,7 @@
-﻿using AutoMapper;
+﻿using API.Models.APIApiModels;
+using AutoMapper;
 using BLL.APIServices;
+using BLL.DTO.APIDtos;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -16,6 +18,13 @@ namespace API.Controllers.APIControllers
         {
             _mapper = mapper;
             _localizationService = localizationService;
+        }
+
+        [HttpGet]
+        public async Task<ActionResult> SearchLocation(string query)
+        {
+            LocalizationDTO loc = await _localizationService.SearchLocation(query);
+            return Ok(_mapper.Map<LocalizationApiModel>(loc));
         }
     }
 }

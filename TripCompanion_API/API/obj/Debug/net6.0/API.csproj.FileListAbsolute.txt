@@ -102,3 +102,7 @@ C:\Users\Corentin\Documents\CODE\Project_TripCompanion\TripCompanion_API\API\bin
 C:\Users\Corentin\Documents\CODE\Project_TripCompanion\TripCompanion_API\API\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\Corentin\Documents\CODE\Project_TripCompanion\TripCompanion_API\API\bin\Debug\net6.0\Tools.JWT.dll
 C:\Users\Corentin\Documents\CODE\Project_TripCompanion\TripCompanion_API\API\bin\Debug\net6.0\Tools.JWT.pdb
+C:\Users\Corentin\Documents\CODE\Project_TripCompanion\TripCompanion_API\API\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\Corentin\Documents\CODE\Project_TripCompanion\TripCompanion_API\API\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\Corentin\Documents\CODE\Project_TripCompanion\TripCompanion_API\API\bin\Debug\net6.0\Microsoft.Extensions.Configuration.UserSecrets.dll
+C:\Users\Corentin\Documents\CODE\Project_TripCompanion\TripCompanion_API\API\bin\Debug\net6.0\Newtonsoft.Json.dll

@@ -27,7 +27,7 @@ namespace DAL.ApiRepos
             var values = new Dictionary<string, string>();
             values.Add("text", query);
             values.Add("format", "json");
-            values.Add("apiKey", _config["Geoapify:ApiKey"]);
+            values.Add("apiKey", _config["Geoapify:ApiKey"]); 
 
             var uri = QueryHelpers.AddQueryString("search", values);
 
