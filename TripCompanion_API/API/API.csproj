@@ -16,6 +16,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BLL\BLL.csproj" />
+    <ProjectReference Include="..\DAL_EF\DAL_EF.csproj" />
     <ProjectReference Include="..\Tools.DBConnections\Tools.DBConnections.csproj" />
     <ProjectReference Include="..\Tools.JWT\Tools.JWT.csproj" />
   </ItemGroup>

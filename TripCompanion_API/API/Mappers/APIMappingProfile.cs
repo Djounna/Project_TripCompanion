@@ -1,6 +1,8 @@
-﻿using API.Models.APIApiModels;
+﻿using API.Models;
+using API.Models.APIApiModels;
 using AutoMapper;
 using BLL.DTO.APIDtos;
+using DAL_EF.Entities;
 
 namespace API.Mappers
 {
@@ -10,6 +12,7 @@ namespace API.Mappers
         {
             CreateMap<WeatherDTO, WeatherApiModel>();
             CreateMap<LocalizationDTO, LocalizationApiModel>();
+            CreateMap<User, UserApiModel>().ReverseMap();
         }
     }
 }

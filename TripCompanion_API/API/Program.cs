@@ -14,6 +14,10 @@ using AutoMapper;
 using BLL.Mappers;
 using API.Mappers;
 using BLL.APIServices;
+using DAL_EF.Entities;
+using DAL_EF.DataAccess;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 
 namespace API
 {
@@ -38,6 +42,11 @@ namespace API
                     builder.Configuration.GetConnectionString("DBhome")
                 );
             });
+
+            // EF
+            builder.Services.AddDbContext<TripCompanionContext>(
+                options => options.UseSqlServer(builder.Configuration.GetConnectionString("DBhome")));
+            builder.Services.AddTransient<IUserDataAccess, UserDataAccess>();
 
             // DAL
             builder.Services.AddTransient<IUserRepository, UserRepository>();

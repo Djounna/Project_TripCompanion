@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DAL", "DAL\DAL.csproj", "{A
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BLL", "BLL\BLL.csproj", "{309C7DA7-BD8E-4B33-AACD-57D3D83B7E8D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tools.JWT", "Tools.JWT\Tools.JWT.csproj", "{C672E6CF-BE36-4C40-B6A3-5AE56E3F928A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tools.JWT", "Tools.JWT\Tools.JWT.csproj", "{C672E6CF-BE36-4C40-B6A3-5AE56E3F928A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL_EF", "DAL_EF\DAL_EF.csproj", "{BD1E45AA-B7D8-4EE3-9EB2-EBF50C2F9C7A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,6 +49,10 @@ Global
 		{C672E6CF-BE36-4C40-B6A3-5AE56E3F928A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C672E6CF-BE36-4C40-B6A3-5AE56E3F928A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C672E6CF-BE36-4C40-B6A3-5AE56E3F928A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD1E45AA-B7D8-4EE3-9EB2-EBF50C2F9C7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD1E45AA-B7D8-4EE3-9EB2-EBF50C2F9C7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD1E45AA-B7D8-4EE3-9EB2-EBF50C2F9C7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD1E45AA-B7D8-4EE3-9EB2-EBF50C2F9C7A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
